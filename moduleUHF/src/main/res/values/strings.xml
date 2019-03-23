@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">moduleUHF</string>
+    <string name="action_settings">Settings</string>
+    <string name="Read_EPC">Read EPC</string>
+    <string name="Read_numerical_order">Number</string>
+    <string name="Read_EPC_data">EPC</string>
+    <string name="Read_EPC_num">Count </string>
+    <string name="Read_TID">TID</string>
+    <string name="stopRead_EPC">Stop Read</string>
+    <string name="stopRead_TID">StopTID</string>
+    <string name="magicpower">Transmit power</string>
+    <string name="Power_out">Transmit Power:</string>
+    <string name="Power_out_Read">Read the transmit power</string>
+    <string name="Power_out_Setting">Set the transmit power</string>
+    <string name="SetpowerFail">Setting power failure</string>
+    <string name="SetpowerSuccess">Set power success</string>
+    <string name="ReadpowerFail">Read power failure</string>
+    <string name="ReadpowerSuccess">Read power success</string>
+    <string name="setpowerhint">Please input the transmit power</string>
+    <string name="powerabout">Power range 1200-2800</string>
+    <string name="Search">Search</string>
+    <string name="Lable_Write">Tag Writer</string>
+    <string name="Lable_Read_Memory">Read label</string>
+    <string name="Lable_Password">Access Password (2word):</string>
+    <string name="Lable_start_address_hint">Start address(word)</string>
+    <string name="Lable_Length">ReadLength(word)</string>
+    <string name="Lable_data">Data(HEX)</string>
+    <string name="Lable_data_write">Data ready to be written</string>
+    <string name="Lable_result">Result:</string>
+    <string name="Lable_write_null">Please enter the write data</string>
+    <string name="Lock_TAG">Lockout Tag</string>
+    <string name="Kill_Tag">Kill Tag</string>
+    <string name="lable_open">open</string>
+    <string name="lable_lock">lock</string>
+    <string name="lable_Perma_Open">Perma Open</string>
+    <string name="lable_Perma_not_RW">Perma not R/W</string>
+    <string name="App_version">version:</string>
+    <string name="initializing">initializing...</string>
+    <string name="savesuccess"> Data is successfully saved</string>
+    <string name="savefailed">Data save failed</string>
+    <string name="savedata">Save the data</string>
+    <string name="saveing">Are derived data, please wait a moment</string>
+    <string name="nodata"> No save the data </string>
+    <string name="menuRead">Read/Write</string>
+    <string name="menuSet">Setup power </string>
+    <string name="menuLock">Lock/Kill </string>
+    <string name="menuexport">Export Data </string>
+    <string name="menucleardata">Clear Data</string>
+    <string name="menuhelp">Help</string>
+    <string name="WriteError00">"OK"</string>
+    <string name="WriteErrorB3">"Error:The specified label data store does not exist; or the label does not support a specified length of EPC, such as XPC"</string>
+    <string name="WriteErrorB4">"Error:The specified tag data store is locked and / or permanently locked, and the lock state is not writable or unreadable"</string>
+    <string name="WriteErrorBB">"Error:The label does not receive enough energy to write"</string>
+    <string name="WriteErrorBF">"Error:Tag does not support Error-code return"</string>
+    <string name="WriteErrorB0">"Error:unknown error"</string>
+    <string name="WriteError10">"Error:The label does not have the presence or the specified EPC code is incorrect"</string>
+    <string name="WriteError16">"Error:Access Password error"</string>
+    <string name="ReadError09">"Error:The label does not have the presence or the specified EPC code is incorrect"</string>
+    <string name="ReadError16">"Access Password error"</string>
+    <string name="ReadErrorA3">"Error:he address offset or the length of the data in the instruction parameter is incorrect, such as the length of the read data over the header data storage area"</string>
+    <string name="ReadErrorA4">"Error:The specified tag data store is locked and / or permanently locked, and the lock state is not writable or unreadable
+"</string>
+    <string name="ReadErrorA0">"Error:unknown error"</string>
+
+</resources>

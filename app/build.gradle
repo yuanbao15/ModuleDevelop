@@ -1,0 +1,53 @@
+apply plugin: 'com.android.application'
+
+android {
+
+    compileSdkVersion Integer.parseInt(project.ANDROID_BUILD_SDK_VERSION)
+
+    //useLibrary 'org.apache.http.legacy'
+
+
+    defaultConfig {
+        applicationId project.ANDROID_BUILD_APP_PKG
+        targetSdkVersion Integer.parseInt(project.ANDROID_BUILD_TARGET_SDK_VERSION)
+        versionCode Integer.parseInt(project.ANDROID_BUILD_VERSION_CODE)
+        versionName project.ANDROID_BUILD_VERSION_NAME
+	    multiDexEnabled true
+        minSdkVersion 16
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    sourceSets{
+        main{
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+}
+
+repositories{
+    flatDir{
+        dirs 'libs'
+    }
+}
+//  compileSdkVersion 与compile'com.android.support'的大版本号需要一致有yb
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:multidex:1.0.1'
+
+
+    //5个模块+1            +1
+    compile project(':moduleDemo')
+    compile project(':moduleScrollPicture')
+    compile project(':moduleSyncInterface')
+    compile project(':moduleRefresh')
+    compile project(':moduleAppdelegate')
+    compile project(':moduleApi')
+    compile project(':modulePdf')
+    compile project(':moduleUHF')
+    compile project(':moduleNFC')
+}

@@ -1,0 +1,6 @@
+int drawable mo_scrollpicture_img_switcher_bg 0x7f080001
+int drawable mo_scrollpicture_img_switcher_bg0 0x7f080002
+int drawable mo_scrollpicture_img_switcher_bg1 0x7f080003
+int drawable mo_scrollpicture_img_switcher_bg2 0x7f080004
+int drawable mo_scrollpicture_img_switcher_bg3 0x7f080005
+int string app_name 0x7f140001

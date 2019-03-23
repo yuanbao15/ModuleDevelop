@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:background="#3266CD"
+        android:gravity="center_vertical">
+
+        <ImageButton
+            android:id="@+id/btn_main_back"
+            android:layout_width="45dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/button_selector"
+            android:gravity="center"
+            android:scaleType="fitXY"
+            android:src="@drawable/backmenu" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_weight="1"
+            android:text="UHF Reader"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/status_text"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textEPC"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center_vertical"
+        android:hint="epc"
+        android:textColor="@color/black"
+        android:textSize="18dp" />
+
+    <Button
+        android:id="@+id/btn_readepc"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/btn_bg"
+        android:text="@string/Read_EPC"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+    <RadioGroup
+        android:id="@+id/sex"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/item_content_big_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <RadioButton
+            android:id="@+id/Radio_RFU"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="RFU"
+            android:textColor="@color/black" />
+
+        <RadioButton
+            android:id="@+id/Radio_EPC"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="EPC"
+            android:textColor="@color/black" />
+
+        <RadioButton
+            android:id="@+id/Radio_TID"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TID"
+            android:textColor="@color/black" />
+
+        <RadioButton
+            android:id="@+id/Radio_USER"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="USER"
+            android:textColor="@color/black" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:background="@drawable/item_content_big_bg"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.5"
+            android:text="@string/Lable_Password"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:background="@null"
+            android:hint="00000000"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:background="@drawable/item_content_big_bg"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.5"
+            android:text="@string/Lable_start_address_hint"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/address"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="1.5"
+            android:background="@null"
+
+            android:hint="0"
+            android:inputType="number"
+            android:textSize="18dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:background="@drawable/item_content_big_bg"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.5"
+            android:text="@string/Lable_Length"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/datalength"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1.5"
+            android:background="@null"
+            android:hint="6"
+            android:inputType="number"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tx_line"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_gravity="bottom"
+                android:text="@string/Lable_data"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/inputdata"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1.5"
+                android:background="@null"
+                android:hint="E20056789123356789356120"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/tx_line"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="3dp"
+                android:background="@color/gray"
+                android:gravity="center" />
+
+            <Button
+                android:id="@+id/btn_xiebiaoqian"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1.5"
+                android:background="@drawable/btn_bg"
+                android:text="@string/Lable_Write"
+                android:textColor="@color/white"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/tx_line"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/gray"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="@string/Lable_result"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/resultView"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_weight="2"
+                android:hint="CONSOLE"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
+
+            <Button
+                android:id="@+id/btn_dubiaoqian"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_bg"
+                android:text="@string/Lable_Read_Memory"
+                android:textColor="@color/white"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/tx_resultView"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="#ffc"
+                android:gravity="center"
+                android:hint="操作结果输出控制台"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="10dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

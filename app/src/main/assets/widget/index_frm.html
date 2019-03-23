@@ -1,0 +1,281 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, initial-scale=1.0, width=device-width"/>
+    <meta name="format-detection" content="telephone=no, email=no, date=no, address=no">
+    <title>WinA</title>
+    <link rel="stylesheet" type="text/css" href="css/api.css" />
+    <link rel="stylesheet" type="text/css" href="css/box.css" />
+    <script type="text/javascript" src="script/public.js"></script>
+	<script type="text/javascript" src="script/jquery-1.8.2.min.js"></script>
+    <style>
+    	p{
+    		color:#999;
+    		padding:5px;
+    	}
+    </style>
+	<script type="text/javascript">
+	    
+		var uzmoduledemo = null;
+		var scrollPicture = null;
+		var moduleApi = null;	//test中加上去的yb
+		var modulePdf = null;
+		var moduleUHF = null;
+		var moduleNFC = null;
+
+		apiready = function(){
+	    	uzmoduledemo = api.require('moduleDemo');
+	    	scrollPicture = api.require('scrollPicture');
+			moduleApi = api.require('moduleApi');
+			modulePdf = api.require('modulePdf');
+			moduleUHF = api.require('moduleUHF');
+			moduleNFC = api.require('moduleNFC');
+	    }
+	    
+		function showAlert(){
+			var param = {msg:"Hello APICloud!"};
+	        uzmoduledemo.showAlert(param, function(ret, err){
+	        	alert(JSON.stringify(ret));
+	        });
+		}
+
+		function BMshowAlert(){
+			var param = {msg:"Hello APICloud!"};
+			api.require('ModuleB').showAlert(param);
+		}
+
+		function AMaddView(){
+			var param = {x:20,y:20,w:200,h:200};
+	        api.require('ModuleA').addView(param);
+		}
+		
+		function startActivity(){
+			var param = {appParam:"Hello APICloud!"};
+	        uzmoduledemo.startActivity(param);
+		}
+		<!--带返回结果值的-->
+		function startActivityForResult(){
+			var param = {appParam:"Hello APICloud!"};
+			var resultCallback = function(ret, err){
+				document.getElementById("activity_result").innerHTML = JSON.stringify(ret);
+			}
+	        uzmoduledemo.startActivityForResult(param, resultCallback);
+		}
+
+		function CMstartActivity(){
+			var param = {appParam:"Hello APICloud!"};
+	        api.require('ModuleC').startActivity(param);
+		}
+
+		function CMstartActivityForResult(){
+			var param = {appParam:"Hello APICloud!"};
+			var resultCallback = function(ret, err){
+				document.getElementById("activity_result").innerHTML = JSON.stringify(ret);
+			}
+	        api.require('ModuleC').startActivityForResult(param, resultCallback);
+		}
+		
+		function vibrate(){
+			var mill = document.getElementById("vibrate").value;
+			var param = {milliseconds:mill};
+	        uzmoduledemo.vibrate(param);
+		}
+		
+		function stopVibrate(){
+	        uzmoduledemo.stopVibrate();
+		}
+		
+		function addView(){
+			var param = {x:20,y:20,w:200,h:200};
+	        uzmoduledemo.addView(param);
+		}
+		
+		function removeView(){
+		
+	        uzmoduledemo.removeView();
+		}
+
+		function testopen(){
+			var sw = document.getElementById("sw").value;
+			scrollPicture.open({
+				x:0,
+				y:30,
+				w:sw,
+				h:200,
+				fixedOn:'index_frm', //固定在名为'index_frm'的frame上
+				//fixed:false //跟随网页滚动
+			}, function(ret, err){
+				alert(JSON.stringify(ret));
+			});
+		}
+		
+		function testclose(){
+			scrollPicture.close();
+		}
+		
+		function toRefrash(){
+			api.refreshHeaderLoading();
+		}
+		
+		function stopRefrash(){
+			api.refreshHeaderLoadDone();
+		}
+		
+		function setRefrashHeader(){
+			api.setCustomRefreshHeaderInfo({
+			    arrowImage: 'widget://image/refresh.png'
+			}, function( ret, err ){
+			    ;
+			});
+			alert('设置成功，再进入下拉刷新状态看看图片是否变啦！');
+		}
+		
+		var sModule = null;
+		
+		function syncInterface(what){
+			if(!sModule){
+				sModule = api.require('syncModule');
+			}
+			var ret = null;
+			if(0 == what){
+				ret = sModule.int();
+			}else if(1 == what){
+				ret = sModule.float();
+			}else if(2 == what){
+				ret = sModule.boolean();
+			}else if(3 == what){
+				ret = sModule.string();
+			}else if(4 == what){
+				ret = sModule.json();
+			}else if(5 == what){
+				ret = sModule.jsonay();
+			}else{
+				return;
+			}
+			if(typeof ret === 'object'){
+				alert("获取结果为对象！\n结果：" + JSON.stringify(ret));
+			}else{
+				alert("获取结果为基本数据!\n结果：" + ret);
+			}
+		}
+		//yb
+	    function testApi(){
+			var params = {msg:'hello bob,from apicloud test'};
+			moduleApi.testApi(params);
+		}
+		function testPdfMark(){
+			var params = {filePath:'/storage/emulated/0/UZMap/1234.pdf'};
+			modulePdf.startActivity(params);
+		}
+		function testUHF(){
+			var params = {name:'yb'};
+			moduleUHF.startActivity(params);
+		}
+		function readUHF(){
+			var params = {name:'yb'};
+			moduleUHF.readUHF(params);
+		}
+        function writeUHF(){
+        	var str = $("#uhf_str").val();
+			var params = {
+				str:str
+			};
+			moduleUHF.writeUHF(params);
+		}
+		function readNFC(){
+			var blockIndex = $("#nfc_str").val();
+			var params = {
+				blockIndex:blockIndex
+			};
+			moduleNFC.readNFC(params, function(ret, err){
+                if (ret) {
+                    var data = ret.data;
+                    $("#nfc_result").val(JSON.stringify(data));
+                    alert(JSON.stringify(ret));
+                } else {
+                    alert(JSON.stringify(err));
+                }
+            });
+		}
+		function readNFC4Blocks(){
+			var blockIndex = $("#nfc_str").val();
+			var params = {
+				blockIndex : blockIndex,
+				blockNum : 4
+			};
+			moduleNFC.readNFC(params, function(ret, err){
+                if (ret) {
+                    var data = ret.data;
+                    $("#nfc_result").val(JSON.stringify(data));
+                    alert(JSON.stringify(ret));
+                } else {
+                    alert(JSON.stringify(err));
+                }
+            });
+		}
+	</script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="main">
+        	<br>
+			<div class='itemtitle'>0、readNFC_yb</div>
+			    <div><input type="text" id="nfc_str" value="0"/><div>
+                <div><input type="text" id="nfc_result"/><div>
+				<div class="clickbtn" tapmode="active" onclick="readNFC()" >yb-测试高频NFC读单块的方法</div>
+				<div class="clickbtn" tapmode="active" onclick="readNFC4Blocks()" >yb-测试高频NFC读4块的方法</div>
+            <div class='itemtitle'>0、writeUHF_yb</div>
+				<div><input type="text" id="uhf_str"/><div>
+                <div class="clickbtn" tapmode="active" onclick="writeUHF()" >yb-测试UHF超高频写的方法</div>
+			<div class='itemtitle'>0、readUHF_yb</div>
+				<div class="clickbtn" tapmode="active" onclick="readUHF()" >yb-测试UHF超高频读的方法</div>
+			<div class='itemtitle'>0、testUHFActivity_yb</div>
+				<div class="clickbtn" tapmode="active" onclick="testUHF()" >yb-测试UHF超高频读写的activity</div>
+			<div class='itemtitle'>0、testMyPdfMark_yb</div>
+				<div class="clickbtn" tapmode="active" onclick="testPdfMark()" >yb-测试读取标记pdf的activity</div>
+			<div class='itemtitle'>0、testApi_yb</div>
+				<div class="clickbtn" tapmode="active" onclick="testApi()" >yb-测试moduleApi</div>
+			<div class='itemtitle'>1、弹出对话框</div>
+				<div class="clickbtn" tapmode="active" onclick="showAlert()" >点击弹出</div>     
+			<div class='itemtitle'>2、启动Activity</div>
+				<div class="clickbtn" tapmode="active" onclick="startActivity()" >startActivity</div>
+				<div class="clickbtn" tapmode="active" onclick="startActivityForResult()" >startActivityForResult</div>
+				<div style="font-size:0.8em;">acticity返回值:</div>
+            	<div id="activity_result" style="width:100%;word-wrap: break-word;word-break: normal;"></div><br><br>
+			<div class='itemtitle'>3、调用设备震动</div>
+				<lable>设置震动时间，单位：毫秒</lable><br>
+				<input type="number" id="vibrate" value="20000" />
+				<div class="clickbtn" tapmode="active" onclick="vibrate()" >开始震动</div>
+				<div class="clickbtn" tapmode="active" onclick="stopVibrate()" >停止震动</div>
+			<div class='itemtitle'>4、自定义UI模块</div>
+				<div class="clickbtn" tapmode="active" onclick="addView()" >添加自定义View到当前Window</div> 
+				<div class="clickbtn" tapmode="active" onclick="removeView()" >从当前Window移除自定义View</div>     
+			<div class='itemtitle'>5、简单ScrollPicture模块</div>
+				<lable>输入ScrollPicture的宽度</lable><br>
+				<input type="number" id="sw" value="300"/>
+				<div class="clickbtn" tapmode="active" onclick="testopen()" >打开ScrollPicture</div>
+				<div class="clickbtn" tapmode="active" onclick="testclose()" >移除ScrollPicture</div>
+			<div class='itemtitle'>6、自定义简单的下拉刷新模块</div>
+				<div class="clickbtn" tapmode="active" onclick="toRefrash()" >直接进入下拉刷新</div>
+				<div class="clickbtn" tapmode="active" onclick="stopRefrash()" >退出下拉刷新</div> 
+				<div class="clickbtn" tapmode="active" onclick="setRefrashHeader()" >设置自定义下拉刷新模块</div>   
+			<div class='itemtitle'>7、同步接口</div>
+				<div class="clickbtn" tapmode="active" onclick="syncInterface(0)" >同步获取整数</div>
+				<div class="clickbtn" tapmode="active" onclick="syncInterface(1)" >同步获取小数</div>
+				<div class="clickbtn" tapmode="active" onclick="syncInterface(2)" >同步获取bool值</div>  
+				<div class="clickbtn" tapmode="active" onclick="syncInterface(3)" >同步获取字符串</div> 
+				<div class="clickbtn" tapmode="active" onclick="syncInterface(4)" >同步获取JSON对象</div>
+				<div class="clickbtn" tapmode="active" onclick="syncInterface(5)" >同步获取JSON数组对象</div>
+			<div class='itemtitle'>8、模块B弹出对话框</div>
+				<div class="clickbtn" tapmode="active" onclick="BMshowAlert()" >点击弹出</div>
+			<div class='itemtitle'>9、模块A自定义UI模块</div>
+				<div class="clickbtn" tapmode="active" onclick="AMaddView()" >添加自定义View到当前Window</div>
+			<div class='itemtitle'>10、模块C启动Activity</div>
+				<div class="clickbtn" tapmode="active" onclick="CMstartActivity()" >startActivity</div>
+				<div class="clickbtn" tapmode="active" onclick="CMstartActivityForResult()" >startActivityForResult</div>
+			<br>
+		</div>
+	</div>
+</body>
+</html>

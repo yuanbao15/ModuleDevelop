@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="pad_top_blue_color">#32679d</color>
+    <color name="light_blue">#4A92FC</color>
+    <color name="light_gray">#CCCCCC</color>
+    <color name="contents_text">#ff000000</color>
+    <color name="encode_view">#ffffffff</color>
+    <color name="help_button_view">#ffcccccc</color>
+    <color name="help_view">#ff404040</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="result_image_border">#ffffffff</color>
+    <color name="result_minor_text">#ffc0c0c0</color>
+    <color name="read_only_color">#EBF0EB</color>
+    <color name="result_points">#c000ff00</color>
+    <color name="result_text">#ffffffff</color>
+    <color name="result_view">#b0000000</color>
+    <color name="sbc_header_text">#ff808080</color>
+    <color name="sbc_header_view">#ffffffff</color>
+    <color name="sbc_list_item">#fffff0e0</color>
+    <color name="sbc_layout_view">#ffffffff</color>
+    <color name="sbc_page_number_text">#ff000000</color>
+    <color name="sbc_snippet_text">#ff4b4b4b</color>
+    <color name="share_text">#ff000000</color>
+    <color name="share_view">#ffffffff</color>
+    <color name="status_view">#50000000</color>
+    <color name="status_text">#ffffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="viewfinder_frame">#ff000000</color>
+    <color name="viewfinder_laser">#ffff0000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="dark_gray">#6D6D6D</color>
+    <color name="theme_color">#23AAE2</color>
+    <color name="white">#ffffff</color>
+    <color name="gray">#84959d</color>
+    <color name="light_gray_1">#EEEEE0</color>
+    <color name="light_gray_2">#A0A0A0</color>
+    <color name="gold">#b89766</color>
+    <color name="black">#ff000000</color>
+    <color name="black_light">#626262</color>
+    <color name="blue">#0075a9</color>
+    <color name="red">#ff0000</color>
+    <color name="red_1">#E70012</color>
+    <color name="green_forlist">#49BA52</color>
+    <color name="bg_back">#f3f3f3</color>
+    <color name="pad_bg_back">#f6f6f6</color>
+    <color name="friend_message_text_gray">#727272</color>
+    <color name="item_press">#40B7F3</color>
+    <color name="item_normal">#ffffff</color>
+    <color name="index_num">#fefe41</color>
+
+    <!-- 特殊颜色 -->
+    <color name="shadow_color">#0b2c55</color>
+    <color name="time_color_copy">#00ff00</color>
+    <color name="time_color1">#626262</color>
+    <color name="time_color_pad">#757575</color>
+    <color name="item_subtilte_color">#777777</color>
+    <!-- 详情字体颜色 -->
+    <color name="info_text_black_color">#333333</color>
+    <color name="info_text_blue_color">#103b63</color>
+    <color name="pad_blue_color">#32679d</color>
+
+    <!-- zxing -->
+    <color name="dark_blue">#b3fd1a</color>
+    <color name="light_blue_titlecolor">#23abe2</color>
+</resources>

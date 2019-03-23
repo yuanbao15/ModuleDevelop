@@ -1,0 +1,289 @@
+-- Merging decision tree log ---
+manifest
+ADDED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:2:1-47:12
+INJECTED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:2:1-47:12
+INJECTED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:2:1-47:12
+INJECTED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:2:1-47:12
+MERGED from [:moduleApi] E:\codes\android_studio\APICloudModuleSDK\moduleApi\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
+MERGED from [:modulePdf] E:\codes\android_studio\APICloudModuleSDK\modulePdf\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-25:12
+MERGED from [:moduleUHF] E:\codes\android_studio\APICloudModuleSDK\moduleUHF\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-23:12
+MERGED from [:moduleNFC] E:\codes\android_studio\APICloudModuleSDK\moduleNFC\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-31:12
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\79cea14c5da1dbd25a2d7c3ba27bf2b1\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:multidex:1.0.2] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\multidex-1.0.2.aar\54158dc0403a26b55c73c15cb6bfe973\AndroidManifest.xml:17:1-22:12
+MERGED from [:moduleDemo] E:\codes\android_studio\APICloudModuleSDK\moduleDemo\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-22:12
+MERGED from [:moduleScrollPicture] E:\codes\android_studio\APICloudModuleSDK\moduleScrollPicture\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-17:12
+MERGED from [:moduleSyncInterface] E:\codes\android_studio\APICloudModuleSDK\moduleSyncInterface\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-17:12
+MERGED from [:moduleRefresh] E:\codes\android_studio\APICloudModuleSDK\moduleRefresh\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-17:12
+MERGED from [:moduleAppdelegate] E:\codes\android_studio\APICloudModuleSDK\moduleAppdelegate\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\d5da81db602b1089d61c152b31d690cb\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\a3b1d59615d4decfcd4de1d8d07a651a\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\cf082981b1bfa5c4779252a07e27d010\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\d301283cc70dca98f9f3bacafe5680cc\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\0a8f039c0b3be5c05aac29edaa48bc5b\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\f3badca4fb9a9fb614d32cac9b22354d\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\bf7dec60f5336e119423b5a697d4be5b\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\5171917ad9f1f3607f51ec88781871d3\AndroidManifest.xml:17:1-31:12
+INJECTED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:2:1-47:12
+INJECTED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:2:1-47:12
+INJECTED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:2:1-47:12
+	package
+		ADDED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:4:5-35
+		INJECTED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml
+		INJECTED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:5:29-54
+		INJECTED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml
+		INJECTED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:3:5-51
+	xmlns:android
+		ADDED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:5:5-28
+		INJECTED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml
+		INJECTED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml
+uses-sdk
+ADDED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:7:5-46
+INJECTED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:7:5-46
+INJECTED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:7:5-46
+MERGED from [:moduleApi] E:\codes\android_studio\APICloudModuleSDK\moduleApi\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:moduleApi] E:\codes\android_studio\APICloudModuleSDK\moduleApi\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:modulePdf] E:\codes\android_studio\APICloudModuleSDK\modulePdf\build\intermediates\library_manifest\debug\AndroidManifest.xml:8:5-10:41
+MERGED from [:modulePdf] E:\codes\android_studio\APICloudModuleSDK\modulePdf\build\intermediates\library_manifest\debug\AndroidManifest.xml:8:5-10:41
+MERGED from [:moduleUHF] E:\codes\android_studio\APICloudModuleSDK\moduleUHF\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:moduleUHF] E:\codes\android_studio\APICloudModuleSDK\moduleUHF\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:moduleNFC] E:\codes\android_studio\APICloudModuleSDK\moduleNFC\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:moduleNFC] E:\codes\android_studio\APICloudModuleSDK\moduleNFC\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\79cea14c5da1dbd25a2d7c3ba27bf2b1\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\79cea14c5da1dbd25a2d7c3ba27bf2b1\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:multidex:1.0.2] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\multidex-1.0.2.aar\54158dc0403a26b55c73c15cb6bfe973\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:multidex:1.0.2] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\multidex-1.0.2.aar\54158dc0403a26b55c73c15cb6bfe973\AndroidManifest.xml:20:5-43
+MERGED from [:moduleDemo] E:\codes\android_studio\APICloudModuleSDK\moduleDemo\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:moduleDemo] E:\codes\android_studio\APICloudModuleSDK\moduleDemo\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:moduleScrollPicture] E:\codes\android_studio\APICloudModuleSDK\moduleScrollPicture\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:moduleScrollPicture] E:\codes\android_studio\APICloudModuleSDK\moduleScrollPicture\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:moduleSyncInterface] E:\codes\android_studio\APICloudModuleSDK\moduleSyncInterface\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:moduleSyncInterface] E:\codes\android_studio\APICloudModuleSDK\moduleSyncInterface\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:moduleRefresh] E:\codes\android_studio\APICloudModuleSDK\moduleRefresh\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:moduleRefresh] E:\codes\android_studio\APICloudModuleSDK\moduleRefresh\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:moduleAppdelegate] E:\codes\android_studio\APICloudModuleSDK\moduleAppdelegate\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:moduleAppdelegate] E:\codes\android_studio\APICloudModuleSDK\moduleAppdelegate\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\d5da81db602b1089d61c152b31d690cb\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\d5da81db602b1089d61c152b31d690cb\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\a3b1d59615d4decfcd4de1d8d07a651a\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\a3b1d59615d4decfcd4de1d8d07a651a\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\cf082981b1bfa5c4779252a07e27d010\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\cf082981b1bfa5c4779252a07e27d010\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\d301283cc70dca98f9f3bacafe5680cc\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\d301283cc70dca98f9f3bacafe5680cc\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\0a8f039c0b3be5c05aac29edaa48bc5b\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\0a8f039c0b3be5c05aac29edaa48bc5b\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\f3badca4fb9a9fb614d32cac9b22354d\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\f3badca4fb9a9fb614d32cac9b22354d\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\bf7dec60f5336e119423b5a697d4be5b\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\bf7dec60f5336e119423b5a697d4be5b\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\5171917ad9f1f3607f51ec88781871d3\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\5171917ad9f1f3607f51ec88781871d3\AndroidManifest.xml:21:5-23:58
+INJECTED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:7:5-46
+INJECTED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:7:5-46
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\79cea14c5da1dbd25a2d7c3ba27bf2b1\AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		ADDED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:7:15-44
+		INJECTED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml
+		INJECTED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml
+		ADDED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:7:5-46
+		INJECTED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml
+supports-screens
+ADDED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:9:5-15:40
+	android:largeScreens
+		ADDED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:11:9-36
+	android:smallScreens
+		ADDED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:14:9-36
+	android:normalScreens
+		ADDED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:12:9-37
+	android:xlargeScreens
+		ADDED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:15:9-37
+	android:resizeable
+		ADDED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:13:9-34
+	android:anyDensity
+		ADDED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:10:9-34
+uses-permission#android.permission.INTERNET
+ADDED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:17:5-67
+	android:name
+		ADDED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:17:22-64
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:18:5-81
+	android:name
+		ADDED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:18:22-78
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:19:5-79
+	android:name
+		ADDED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:19:22-76
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:20:5-76
+	android:name
+		ADDED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:20:22-73
+uses-permission#android.permission.VIBRATE
+ADDED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:21:5-66
+	android:name
+		ADDED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:21:22-63
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:22:5-75
+	android:name
+		ADDED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:22:22-72
+application
+ADDED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:24:5-45:19
+MERGED from [:modulePdf] E:\codes\android_studio\APICloudModuleSDK\modulePdf\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:5-23:19
+MERGED from [:modulePdf] E:\codes\android_studio\APICloudModuleSDK\modulePdf\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:5-23:19
+MERGED from [:moduleUHF] E:\codes\android_studio\APICloudModuleSDK\moduleUHF\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:5-21:19
+MERGED from [:moduleUHF] E:\codes\android_studio\APICloudModuleSDK\moduleUHF\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:5-21:19
+MERGED from [:moduleNFC] E:\codes\android_studio\APICloudModuleSDK\moduleNFC\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:5-29:19
+MERGED from [:moduleNFC] E:\codes\android_studio\APICloudModuleSDK\moduleNFC\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:5-29:19
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\79cea14c5da1dbd25a2d7c3ba27bf2b1\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\79cea14c5da1dbd25a2d7c3ba27bf2b1\AndroidManifest.xml:29:5-20
+MERGED from [:moduleDemo] E:\codes\android_studio\APICloudModuleSDK\moduleDemo\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-20:19
+MERGED from [:moduleDemo] E:\codes\android_studio\APICloudModuleSDK\moduleDemo\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-20:19
+MERGED from [:moduleScrollPicture] E:\codes\android_studio\APICloudModuleSDK\moduleScrollPicture\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-15:19
+MERGED from [:moduleScrollPicture] E:\codes\android_studio\APICloudModuleSDK\moduleScrollPicture\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-15:19
+MERGED from [:moduleSyncInterface] E:\codes\android_studio\APICloudModuleSDK\moduleSyncInterface\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-15:19
+MERGED from [:moduleSyncInterface] E:\codes\android_studio\APICloudModuleSDK\moduleSyncInterface\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-15:19
+MERGED from [:moduleRefresh] E:\codes\android_studio\APICloudModuleSDK\moduleRefresh\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-15:19
+MERGED from [:moduleRefresh] E:\codes\android_studio\APICloudModuleSDK\moduleRefresh\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-15:19
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\d5da81db602b1089d61c152b31d690cb\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\d5da81db602b1089d61c152b31d690cb\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\a3b1d59615d4decfcd4de1d8d07a651a\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\a3b1d59615d4decfcd4de1d8d07a651a\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\cf082981b1bfa5c4779252a07e27d010\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\cf082981b1bfa5c4779252a07e27d010\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\d301283cc70dca98f9f3bacafe5680cc\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\d301283cc70dca98f9f3bacafe5680cc\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\0a8f039c0b3be5c05aac29edaa48bc5b\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\0a8f039c0b3be5c05aac29edaa48bc5b\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\f3badca4fb9a9fb614d32cac9b22354d\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\f3badca4fb9a9fb614d32cac9b22354d\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\bf7dec60f5336e119423b5a697d4be5b\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\bf7dec60f5336e119423b5a697d4be5b\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\5171917ad9f1f3607f51ec88781871d3\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\5171917ad9f1f3607f51ec88781871d3\AndroidManifest.xml:29:5-20
+	android:supportsRtl
+		ADDED from [:modulePdf] E:\codes\android_studio\APICloudModuleSDK\modulePdf\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:9-35
+	android:label
+		ADDED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:27:9-41
+	android:hardwareAccelerated
+		ADDED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:29:9-43
+	android:largeHeap
+		ADDED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:28:9-33
+	android:icon
+		ADDED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:26:9-41
+	android:allowBackup
+		ADDED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:25:9-36
+		REJECTED from [:modulePdf] E:\codes\android_studio\APICloudModuleSDK\modulePdf\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:9-35
+		REJECTED from [:moduleUHF] E:\codes\android_studio\APICloudModuleSDK\moduleUHF\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:9-35
+		REJECTED from [:moduleNFC] E:\codes\android_studio\APICloudModuleSDK\moduleNFC\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:9-35
+		REJECTED from [:moduleDemo] E:\codes\android_studio\APICloudModuleSDK\moduleDemo\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-35
+		REJECTED from [:moduleScrollPicture] E:\codes\android_studio\APICloudModuleSDK\moduleScrollPicture\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-35
+		REJECTED from [:moduleSyncInterface] E:\codes\android_studio\APICloudModuleSDK\moduleSyncInterface\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-35
+		REJECTED from [:moduleRefresh] E:\codes\android_studio\APICloudModuleSDK\moduleRefresh\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-35
+	tools:replace
+		ADDED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:30:9-57
+	android:name
+		ADDED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:24:18-66
+meta-data#uz_version
+ADDED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:32:9-70
+	android:value
+		ADDED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:32:46-67
+	android:name
+		ADDED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:32:20-45
+activity#com.uzmap.pkg.EntranceActivity
+ADDED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:34:9-44:20
+	android:screenOrientation
+		ADDED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:38:13-49
+	android:label
+		ADDED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:36:13-45
+	android:configChanges
+		ADDED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:39:13-122
+	android:theme
+		ADDED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:37:13-44
+	android:name
+		ADDED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:35:13-58
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:40:13-43:29
+action#android.intent.action.MAIN
+ADDED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:41:17-69
+	android:name
+		ADDED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:41:25-66
+category#android.intent.category.LAUNCHER
+ADDED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:42:17-77
+	android:name
+		ADDED from E:\codes\android_studio\APICloudModuleSDK\app\src\main\AndroidManifest.xml:42:27-74
+activity#com.epichust.modulepdf.PdfActivity
+ADDED from [:modulePdf] E:\codes\android_studio\APICloudModuleSDK\modulePdf\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:9-22:52
+	android:screenOrientation
+		ADDED from [:modulePdf] E:\codes\android_studio\APICloudModuleSDK\modulePdf\build\intermediates\library_manifest\debug\AndroidManifest.xml:20:13-49
+	android:configChanges
+		ADDED from [:modulePdf] E:\codes\android_studio\APICloudModuleSDK\modulePdf\build\intermediates\library_manifest\debug\AndroidManifest.xml:19:13-55
+	tools:targetApi
+		ADDED from [:modulePdf] E:\codes\android_studio\APICloudModuleSDK\modulePdf\build\intermediates\library_manifest\debug\AndroidManifest.xml:22:13-49
+	android:theme
+		ADDED from [:modulePdf] E:\codes\android_studio\APICloudModuleSDK\modulePdf\build\intermediates\library_manifest\debug\AndroidManifest.xml:21:13-81
+	android:name
+		ADDED from [:modulePdf] E:\codes\android_studio\APICloudModuleSDK\modulePdf\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:13-62
+activity#com.cus.maguhf.ReadWriteActivity
+ADDED from [:moduleUHF] E:\codes\android_studio\APICloudModuleSDK\moduleUHF\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:9-20:84
+	android:screenOrientation
+		ADDED from [:moduleUHF] E:\codes\android_studio\APICloudModuleSDK\moduleUHF\build\intermediates\library_manifest\debug\AndroidManifest.xml:19:13-49
+	android:configChanges
+		ADDED from [:moduleUHF] E:\codes\android_studio\APICloudModuleSDK\moduleUHF\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:13-55
+	android:theme
+		ADDED from [:moduleUHF] E:\codes\android_studio\APICloudModuleSDK\moduleUHF\build\intermediates\library_manifest\debug\AndroidManifest.xml:20:13-81
+	android:name
+		ADDED from [:moduleUHF] E:\codes\android_studio\APICloudModuleSDK\moduleUHF\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:13-60
+uses-permission#android.permission.NFC
+ADDED from [:moduleNFC] E:\codes\android_studio\APICloudModuleSDK\moduleNFC\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-62
+	android:name
+		ADDED from [:moduleNFC] E:\codes\android_studio\APICloudModuleSDK\moduleNFC\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:22-59
+activity#com.epichust.nfc.NFCReadActivity
+ADDED from [:moduleNFC] E:\codes\android_studio\APICloudModuleSDK\moduleNFC\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:9-28:20
+	android:screenOrientation
+		ADDED from [:moduleNFC] E:\codes\android_studio\APICloudModuleSDK\moduleNFC\build\intermediates\library_manifest\debug\AndroidManifest.xml:21:13-49
+	android:launchMode
+		ADDED from [:moduleNFC] E:\codes\android_studio\APICloudModuleSDK\moduleNFC\build\intermediates\library_manifest\debug\AndroidManifest.xml:20:13-43
+	android:theme
+		ADDED from [:moduleNFC] E:\codes\android_studio\APICloudModuleSDK\moduleNFC\build\intermediates\library_manifest\debug\AndroidManifest.xml:22:13-60
+	android:name
+		ADDED from [:moduleNFC] E:\codes\android_studio\APICloudModuleSDK\moduleNFC\build\intermediates\library_manifest\debug\AndroidManifest.xml:19:13-60
+meta-data#android.support.VERSION
+ADDED from [com.android.support:appcompat-v7:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\79cea14c5da1dbd25a2d7c3ba27bf2b1\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\d5da81db602b1089d61c152b31d690cb\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\d5da81db602b1089d61c152b31d690cb\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\a3b1d59615d4decfcd4de1d8d07a651a\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\a3b1d59615d4decfcd4de1d8d07a651a\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\cf082981b1bfa5c4779252a07e27d010\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\cf082981b1bfa5c4779252a07e27d010\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\d301283cc70dca98f9f3bacafe5680cc\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\d301283cc70dca98f9f3bacafe5680cc\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\0a8f039c0b3be5c05aac29edaa48bc5b\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\0a8f039c0b3be5c05aac29edaa48bc5b\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\f3badca4fb9a9fb614d32cac9b22354d\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\f3badca4fb9a9fb614d32cac9b22354d\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\bf7dec60f5336e119423b5a697d4be5b\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\bf7dec60f5336e119423b5a697d4be5b\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\5171917ad9f1f3607f51ec88781871d3\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\5171917ad9f1f3607f51ec88781871d3\AndroidManifest.xml:25:5-27:34
+	android:value
+		ADDED from [com.android.support:appcompat-v7:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\79cea14c5da1dbd25a2d7c3ba27bf2b1\AndroidManifest.xml:27:9-31
+	android:name
+		ADDED from [com.android.support:appcompat-v7:25.3.1] C:\Users\yuanbao\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\79cea14c5da1dbd25a2d7c3ba27bf2b1\AndroidManifest.xml:26:9-47
+activity#com.apicloud.moduleDemo.DemoActivity
+ADDED from [:moduleDemo] E:\codes\android_studio\APICloudModuleSDK\moduleDemo\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:9-19:84
+	android:screenOrientation
+		ADDED from [:moduleDemo] E:\codes\android_studio\APICloudModuleSDK\moduleDemo\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:13-49
+	android:configChanges
+		ADDED from [:moduleDemo] E:\codes\android_studio\APICloudModuleSDK\moduleDemo\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:13-55
+	android:theme
+		ADDED from [:moduleDemo] E:\codes\android_studio\APICloudModuleSDK\moduleDemo\build\intermediates\library_manifest\debug\AndroidManifest.xml:19:13-81
+	android:name
+		ADDED from [:moduleDemo] E:\codes\android_studio\APICloudModuleSDK\moduleDemo\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:13-64
