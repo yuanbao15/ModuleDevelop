@@ -3,8 +3,9 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="distributionType" value="LOCAL" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleHome" value="D:/MES5/gradle-4.10.1" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
@@ -12,8 +13,11 @@
             <option value="$PROJECT_DIR$/moduleApi" />
             <option value="$PROJECT_DIR$/moduleAppdelegate" />
             <option value="$PROJECT_DIR$/moduleDemo" />
+            <option value="$PROJECT_DIR$/moduleIflyVoice" />
             <option value="$PROJECT_DIR$/moduleNFC" />
+            <option value="$PROJECT_DIR$/moduleNotification" />
             <option value="$PROJECT_DIR$/modulePdf" />
+            <option value="$PROJECT_DIR$/moduleProcessAlive" />
             <option value="$PROJECT_DIR$/moduleRefresh" />
             <option value="$PROJECT_DIR$/moduleScrollPicture" />
             <option value="$PROJECT_DIR$/moduleSyncInterface" />

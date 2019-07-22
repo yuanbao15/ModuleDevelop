@@ -23,6 +23,9 @@
 		var modulePdf = null;
 		var moduleUHF = null;
 		var moduleNFC = null;
+		var moduleIflyVoice = null;
+		var moduleProcessAlive = null;
+		var moduleNotification = null;
 
 		apiready = function(){
 	    	uzmoduledemo = api.require('moduleDemo');
@@ -31,6 +34,9 @@
 			modulePdf = api.require('modulePdf');
 			moduleUHF = api.require('moduleUHF');
 			moduleNFC = api.require('moduleNFC');
+			moduleIflyVoice = api.require('moduleIflyVoice');
+			moduleProcessAlive = api.require('moduleProcessAlive');
+			moduleNotification = api.require('moduleNotification');
 	    }
 	    
 		function showAlert(){
@@ -214,12 +220,84 @@
                 }
             });
 		}
+		function startOneshot(){
+			var params = {
+			};
+			moduleIflyVoice.startOneshot(params, function(ret, err){
+                if (ret) {
+                    var data = ret.data;
+                    $("#voice_str").val(JSON.stringify(data));
+                    alert(JSON.stringify(ret));
+
+                    <!--// 延时执行一次，不需要，已开启持续性唤醒识别并返回-->
+                    <!--setTimeout("startOneshot()","500");-->
+                } else {
+                    alert(JSON.stringify(err));
+                }
+            });
+		}
+		function stopOneshot(){
+			var params = {
+			};
+			moduleIflyVoice.stopOneshot(params, function(ret, err){
+                if (ret) {
+                } else {
+                    alert(JSON.stringify(err));
+                }
+            });
+		}
+
+		function startAlive(){
+			var params = {
+			};
+			moduleProcessAlive.startAlive(params, function(ret, err){
+                if (ret) {
+                    var data = ret.data;
+                } else {
+                    alert(JSON.stringify(err));
+                }
+            });
+		}
+		function stopAlive(){
+			var params = {
+			};
+			moduleProcessAlive.stopAlive(params, function(ret, err){
+                if (ret) {
+                    var data = ret.data;
+                } else {
+                    alert(JSON.stringify(err));
+                }
+            });
+		}
+
+		function showNotification(){
+			var params = {
+				title : '设备任务消息',
+				content : '缸盖线xx工位停台，待处理'
+			};
+			moduleNotification.showNotification(params, function(ret, err){
+                if (ret) {
+                    var status = ret.status;
+                } else {
+                    alert(JSON.stringify(err));
+                }
+            });
+		}
 	</script>
 </head>
 <body>
     <div id="wrap">
         <div id="main">
         	<br>
+			<div class='itemtitle'>0、showNotification_yb</div>
+				<div class="clickbtn" tapmode="active" onclick="showNotification()" >yb-推送消息到通知栏</div>
+            <div class='itemtitle'>0、startAlive_yb</div>
+                <div class="clickbtn" tapmode="active" onclick="startAlive()" >yb-开启线程常驻</div>
+                <div class="clickbtn" tapmode="active" onclick="stopAlive()" >停止-未成功</div>
+			<div class='itemtitle'>0、startOneshot_yb</div>
+				<div><input type="text" id="voice_str"/><div>
+				<div class="clickbtn" tapmode="active" onclick="startOneshot()" >yb-测试语音唤醒+识别</div>
+				<div class="clickbtn" tapmode="active" onclick="stopOneshot()" >停止</div>
 			<div class='itemtitle'>0、readNFC_yb</div>
 			    <div><input type="text" id="nfc_str" value="0"/><div>
                 <div><input type="text" id="nfc_result"/><div>

@@ -130,7 +130,7 @@ public class UHFDemo extends UZModule {
         String startStr = moduleContext.optString("startAddr");
         String lengthStr = moduleContext.optString("length");
         int startIndex = startStr==""? 0:Integer.parseInt(startStr); // 默认起始位置0
-        int length = lengthStr==""? 6:Integer.parseInt(lengthStr); // 默认长度为6
+        int length = lengthStr==""? 20:Integer.parseInt(lengthStr); // 默认长度为20
 
         UHFReadWrite uhf = new UHFReadWrite();
         uhf.initUHFModule(this.getContext());
@@ -159,7 +159,7 @@ public class UHFDemo extends UZModule {
         String startStr = moduleContext.optString("startAddr");
         String lengthStr = moduleContext.optString("length");
         int startIndex = startStr==""? 0:Integer.parseInt(startStr); // 默认起始位置0
-        int length = lengthStr==""? 6:Integer.parseInt(lengthStr); // 默认长度为6
+        int length = lengthStr==""? 20:Integer.parseInt(lengthStr); // 默认长度为20
         String str = moduleContext.optString("data");
 
         UHFReadWrite uhf = new UHFReadWrite();

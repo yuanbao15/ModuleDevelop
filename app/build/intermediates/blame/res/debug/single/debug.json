@@ -8,6 +8,10 @@
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\drawable-xxhdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
     },
     {
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_ic_launcher_background.png.flat",
+        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleIflyVoice\\build\\intermediates\\packaged_res\\debug\\drawable-xxxhdpi-v4\\ic_launcher_background.png"
+    },
+    {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_star_half_black_16dp.png.flat",
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\drawable-xhdpi-v4\\abc_ic_star_half_black_16dp.png"
     },
@@ -56,6 +60,10 @@
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
     },
     {
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_ic_launcher_background.png.flat",
+        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleIflyVoice\\build\\intermediates\\packaged_res\\debug\\drawable-xhdpi-v4\\ic_launcher_background.png"
+    },
+    {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\drawable-xhdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
     },
@@ -84,8 +92,16 @@
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\layout\\select_dialog_item_material.xml"
     },
     {
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\layout_main.xml.flat",
+        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleIflyVoice\\build\\intermediates\\packaged_res\\debug\\layout\\main.xml"
+    },
+    {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_mo_scrollpicture_img_switcher_bg.png.flat",
         "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleScrollPicture\\build\\intermediates\\packaged_res\\debug\\drawable-hdpi-v4\\mo_scrollpicture_img_switcher_bg.png"
+    },
+    {
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\xml_url_setting.xml.flat",
+        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleIflyVoice\\build\\intermediates\\packaged_res\\debug\\xml\\url_setting.xml"
     },
     {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\color-v23_abc_color_highlight_material.xml.flat",
@@ -126,6 +142,10 @@
     {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_dialog_title_material.xml.flat",
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\layout\\abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_launcher_background.xml.flat",
+        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleIflyVoice\\build\\intermediates\\packaged_res\\debug\\drawable-anydpi-v21\\ic_launcher_background.xml"
     },
     {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_media_custom.xml.flat",
@@ -188,12 +208,24 @@
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\drawable-hdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png"
     },
     {
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4_ic_launcher_background.png.flat",
+        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleIflyVoice\\build\\intermediates\\packaged_res\\debug\\drawable-ldpi-v4\\ic_launcher_background.png"
+    },
+    {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icon_pdf_save.png.flat",
         "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\modulePdf\\build\\intermediates\\packaged_res\\debug\\drawable\\icon_pdf_save.png"
     },
     {
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\xml_ise_settings.xml.flat",
+        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleIflyVoice\\build\\intermediates\\packaged_res\\debug\\xml\\ise_settings.xml"
+    },
+    {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\drawable-xhdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4_ic_launcher_round.png.flat",
+        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleIflyVoice\\build\\intermediates\\packaged_res\\debug\\mipmap-hdpi-v4\\ic_launcher_round.png"
     },
     {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_mo_scrollpicture_img_switcher_bg3.png.flat",
@@ -210,6 +242,14 @@
     {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notification_bg_normal_pressed.9.png.flat",
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\drawable-hdpi-v4\\notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\layout_title.xml.flat",
+        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleIflyVoice\\build\\intermediates\\packaged_res\\debug\\layout\\title.xml"
+    },
+    {
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4_ic_launcher_round.png.flat",
+        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleIflyVoice\\build\\intermediates\\packaged_res\\debug\\mipmap-mdpi-v4\\ic_launcher_round.png"
     },
     {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_textfield_activated_mtrl_alpha.9.png.flat",
@@ -238,6 +278,10 @@
     {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_text_select_handle_left_mtrl_dark.png.flat",
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\drawable-xxxhdpi-v4\\abc_text_select_handle_left_mtrl_dark.png"
+    },
+    {
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_ic_launcher_background.png.flat",
+        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleIflyVoice\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\ic_launcher_background.png"
     },
     {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_text_select_handle_middle_mtrl_light.png.flat",
@@ -274,6 +318,10 @@
     {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_mo_cus_refresh_default.png.flat",
         "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleRefresh\\build\\intermediates\\packaged_res\\debug\\drawable-hdpi-v4\\mo_cus_refresh_default.png"
+    },
+    {
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\layout_online_facedemo.xml.flat",
+        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleIflyVoice\\build\\intermediates\\packaged_res\\debug\\layout\\online_facedemo.xml"
     },
     {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\layout_pdfbgm.xml.flat",
@@ -320,6 +368,10 @@
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\drawable-ldrtl-xxxhdpi-v17\\abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\xml_iat_setting.xml.flat",
+        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleIflyVoice\\build\\intermediates\\packaged_res\\debug\\xml\\iat_setting.xml"
+    },
+    {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\drawable-mdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
     },
@@ -364,6 +416,10 @@
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\drawable-xhdpi-v4\\abc_list_focused_holo.9.png"
     },
     {
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_no_photo.png.flat",
+        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleIflyVoice\\build\\intermediates\\packaged_res\\debug\\drawable-hdpi-v4\\no_photo.png"
+    },
+    {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
     },
@@ -380,6 +436,10 @@
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\layout\\support_simple_spinner_dropdown_item.xml"
     },
     {
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleIflyVoice\\build\\intermediates\\packaged_res\\debug\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_text_select_handle_left_mtrl_light.png.flat",
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\drawable-xhdpi-v4\\abc_text_select_handle_left_mtrl_light.png"
     },
@@ -394,6 +454,10 @@
     {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_list_pressed_holo_light.9.png.flat",
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\drawable-hdpi-v4\\abc_list_pressed_holo_light.9.png"
+    },
+    {
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_icon.png.flat",
+        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleIflyVoice\\build\\intermediates\\packaged_res\\debug\\drawable-mdpi-v4\\icon.png"
     },
     {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_btn_switch_to_on_mtrl_00012.9.png.flat",
@@ -420,6 +484,10 @@
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
     },
     {
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_group_manager.xml.flat",
+        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleIflyVoice\\build\\intermediates\\packaged_res\\debug\\layout\\activity_group_manager.xml"
+    },
+    {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ic_search_api_material.xml.flat",
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\drawable\\abc_ic_search_api_material.xml"
     },
@@ -438,6 +506,10 @@
     {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_star_half_black_16dp.png.flat",
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\drawable-xxxhdpi-v4\\abc_ic_star_half_black_16dp.png"
+    },
+    {
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable_setting.png.flat",
+        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleIflyVoice\\build\\intermediates\\packaged_res\\debug\\drawable\\setting.png"
     },
     {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_text_select_handle_right_mtrl_dark.png.flat",
@@ -520,6 +592,14 @@
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
     },
     {
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\layout_iatdemo.xml.flat",
+        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleIflyVoice\\build\\intermediates\\packaged_res\\debug\\layout\\iatdemo.xml"
+    },
+    {
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4_ic_launcher_round.png.flat",
+        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleIflyVoice\\build\\intermediates\\packaged_res\\debug\\mipmap-xxxhdpi-v4\\ic_launcher_round.png"
+    },
+    {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable_backmenu.png.flat",
         "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleUHF\\build\\intermediates\\packaged_res\\debug\\drawable\\backmenu.png"
     },
@@ -534,6 +614,10 @@
     {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_list_pressed_holo_dark.9.png.flat",
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\drawable-mdpi-v4\\abc_list_pressed_holo_dark.9.png"
+    },
+    {
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_face_identify.xml.flat",
+        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleIflyVoice\\build\\intermediates\\packaged_res\\debug\\layout\\activity_face_identify.xml"
     },
     {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_action_bar_title_item.xml.flat",
@@ -636,6 +720,10 @@
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\color\\abc_tint_default.xml"
     },
     {
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\xml_tts_setting.xml.flat",
+        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleIflyVoice\\build\\intermediates\\packaged_res\\debug\\xml\\tts_setting.xml"
+    },
+    {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_mo_scrollpicture_img_switcher_bg0.png.flat",
         "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleScrollPicture\\build\\intermediates\\packaged_res\\debug\\drawable-hdpi-v4\\mo_scrollpicture_img_switcher_bg0.png"
     },
@@ -696,6 +784,10 @@
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\layout-v11\\notification_template_big_media_narrow_custom.xml"
     },
     {
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_vocal_identify.xml.flat",
+        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleIflyVoice\\build\\intermediates\\packaged_res\\debug\\layout\\activity_vocal_identify.xml"
+    },
+    {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_list_divider_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\drawable-hdpi-v4\\abc_list_divider_mtrl_alpha.9.png"
     },
@@ -748,6 +840,10 @@
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\drawable-hdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
     },
     {
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleIflyVoice\\build\\intermediates\\packaged_res\\debug\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_text_select_handle_right_mtrl_light.png.flat",
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\drawable-mdpi-v4\\abc_text_select_handle_right_mtrl_light.png"
     },
@@ -792,6 +888,10 @@
         "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleScrollPicture\\build\\intermediates\\packaged_res\\debug\\drawable-hdpi-v4\\mo_scrollpicture_img_switcher_bg2.png"
     },
     {
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable_list_bg_color.xml.flat",
+        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleIflyVoice\\build\\intermediates\\packaged_res\\debug\\drawable\\list_bg_color.xml"
+    },
+    {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\drawable-xhdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
     },
@@ -808,6 +908,10 @@
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\layout\\abc_action_mode_close_item_material.xml"
     },
     {
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\layout_list_items.xml.flat",
+        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleIflyVoice\\build\\intermediates\\packaged_res\\debug\\layout\\list_items.xml"
+    },
+    {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_scrubber_track_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\drawable-xxhdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png"
     },
@@ -822,6 +926,10 @@
     {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_textfield_activated_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\drawable-xxhdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_group.xml.flat",
+        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleIflyVoice\\build\\intermediates\\packaged_res\\debug\\layout\\item_group.xml"
     },
     {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
@@ -848,12 +956,16 @@
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\drawable-mdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
     },
     {
-        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
-        "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\drawable-mdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\layout_isedemo.xml.flat",
+        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleIflyVoice\\build\\intermediates\\packaged_res\\debug\\layout\\isedemo.xml"
     },
     {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_action.xml.flat",
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\layout\\notification_action.xml"
+    },
+    {
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
+        "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\drawable-mdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
     },
     {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_pdf.xml.flat",
@@ -864,8 +976,16 @@
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\drawable\\abc_item_background_holo_dark.xml"
     },
     {
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable_main_setting_btn_np.xml.flat",
+        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleIflyVoice\\build\\intermediates\\packaged_res\\debug\\drawable\\main_setting_btn_np.xml"
+    },
+    {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\drawable-xhdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4_ic_launcher_round.png.flat",
+        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleIflyVoice\\build\\intermediates\\packaged_res\\debug\\mipmap-xhdpi-v4\\ic_launcher_round.png"
     },
     {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
@@ -932,6 +1052,10 @@
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\layout-v21\\notification_template_icon_group.xml"
     },
     {
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\xml_understand_setting.xml.flat",
+        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleIflyVoice\\build\\intermediates\\packaged_res\\debug\\xml\\understand_setting.xml"
+    },
+    {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_notification_bg_normal.9.png.flat",
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\drawable-xhdpi-v4\\notification_bg_normal.9.png"
     },
@@ -946,6 +1070,14 @@
     {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_btn_colored_text_material.xml.flat",
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\color\\abc_btn_colored_text_material.xml"
+    },
+    {
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_ic_launcher_background.png.flat",
+        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleIflyVoice\\build\\intermediates\\packaged_res\\debug\\drawable-mdpi-v4\\ic_launcher_background.png"
+    },
+    {
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\layout_understander.xml.flat",
+        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleIflyVoice\\build\\intermediates\\packaged_res\\debug\\layout\\understander.xml"
     },
     {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\layout_mo_demo_main_activity.xml.flat",
@@ -986,6 +1118,10 @@
     {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_slide_in_bottom.xml.flat",
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\anim\\abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleIflyVoice\\build\\intermediates\\packaged_res\\debug\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
@@ -1060,6 +1196,10 @@
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\drawable-hdpi-v4\\abc_ic_star_half_black_36dp.png"
     },
     {
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_identify_result.xml.flat",
+        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleIflyVoice\\build\\intermediates\\packaged_res\\debug\\layout\\item_identify_result.xml"
+    },
+    {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_spinner_textfield_background_material.xml.flat",
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\drawable\\abc_spinner_textfield_background_material.xml"
     },
@@ -1086,6 +1226,10 @@
     {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\drawable-xhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
+    },
+    {
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\layout_isrdemo.xml.flat",
+        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleIflyVoice\\build\\intermediates\\packaged_res\\debug\\layout\\isrdemo.xml"
     },
     {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
@@ -1148,6 +1292,10 @@
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\drawable-mdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png"
     },
     {
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4_ic_launcher_round.png.flat",
+        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleIflyVoice\\build\\intermediates\\packaged_res\\debug\\mipmap-xxhdpi-v4\\ic_launcher_round.png"
+    },
+    {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-hdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\drawable-ldrtl-hdpi-v17\\abc_spinner_mtrl_am_alpha.9.png"
     },
@@ -1176,12 +1324,16 @@
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\drawable\\abc_seekbar_tick_mark_material.xml"
     },
     {
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_15693.xml.flat",
+        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleNFC\\build\\intermediates\\packaged_res\\debug\\layout\\fragment_15693.xml"
+    },
+    {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable_btn_bg_disable.9.png.flat",
         "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleUHF\\build\\intermediates\\packaged_res\\debug\\drawable\\btn_bg_disable.9.png"
     },
     {
-        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_15693.xml.flat",
-        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleNFC\\build\\intermediates\\packaged_res\\debug\\layout\\fragment_15693.xml"
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable_user.png.flat",
+        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleIflyVoice\\build\\intermediates\\packaged_res\\debug\\drawable\\user.png"
     },
     {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
@@ -1240,6 +1392,10 @@
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\drawable-mdpi-v4\\abc_text_select_handle_left_mtrl_dark.png"
     },
     {
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_icon.png.flat",
+        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleIflyVoice\\build\\intermediates\\packaged_res\\debug\\drawable-hdpi-v4\\icon.png"
+    },
+    {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_list_focused_holo.9.png.flat",
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\drawable-xxhdpi-v4\\abc_list_focused_holo.9.png"
     },
@@ -1284,6 +1440,10 @@
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\color-v23\\abc_btn_colored_text_material.xml"
     },
     {
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\layout_oneshot_activity.xml.flat",
+        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleIflyVoice\\build\\intermediates\\packaged_res\\debug\\layout\\oneshot_activity.xml"
+    },
+    {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-mdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\drawable-ldrtl-mdpi-v17\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
@@ -1304,12 +1464,12 @@
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\layout\\abc_alert_dialog_title_material.xml"
     },
     {
-        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_loading_white_10.png.flat",
-        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleUHF\\build\\intermediates\\packaged_res\\debug\\drawable\\ic_loading_white_10.png"
-    },
-    {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_commit_search_api_mtrl_alpha.png.flat",
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\drawable-mdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png"
+    },
+    {
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_loading_white_10.png.flat",
+        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleUHF\\build\\intermediates\\packaged_res\\debug\\drawable\\ic_loading_white_10.png"
     },
     {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ratingbar_material.xml.flat",
@@ -1338,6 +1498,10 @@
     {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ic_arrow_drop_right_black_24dp.xml.flat",
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml"
+    },
+    {
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\layout_ttsdemo.xml.flat",
+        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleIflyVoice\\build\\intermediates\\packaged_res\\debug\\layout\\ttsdemo.xml"
     },
     {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notification_bg_low_pressed.9.png.flat",
@@ -1424,12 +1588,20 @@
         "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleUHF\\build\\intermediates\\packaged_res\\debug\\drawable\\ic_loading_white_06.png"
     },
     {
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\layout_wake_activity.xml.flat",
+        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleIflyVoice\\build\\intermediates\\packaged_res\\debug\\layout\\wake_activity.xml"
+    },
+    {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_textfield_search_default_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\drawable-mdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png"
     },
     {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_list_pressed_holo_light.9.png.flat",
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\drawable-mdpi-v4\\abc_list_pressed_holo_light.9.png"
+    },
+    {
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4_icon.png.flat",
+        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleIflyVoice\\build\\intermediates\\packaged_res\\debug\\drawable-ldpi-v4\\icon.png"
     },
     {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
@@ -1508,6 +1680,10 @@
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\color-v23\\abc_tint_switch_thumb.xml"
     },
     {
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_ic_launcher_background.png.flat",
+        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleIflyVoice\\build\\intermediates\\packaged_res\\debug\\drawable-hdpi-v4\\ic_launcher_background.png"
+    },
+    {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_popup_background_mtrl_mult.9.png.flat",
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\drawable-mdpi-v4\\abc_popup_background_mtrl_mult.9.png"
     },
@@ -1550,6 +1726,10 @@
     {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_hint_foreground_material_dark.xml.flat",
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\color\\abc_hint_foreground_material_dark.xml"
+    },
+    {
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\xml_util_code_provider_paths.xml.flat",
+        "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\utilcode-1.22.5.aar\\02e961a1ba6c3f997ae00b3b0169d114\\res\\xml\\util_code_provider_paths.xml"
     },
     {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_scrubber_control_off_mtrl_alpha.png.flat",
@@ -1744,6 +1924,10 @@
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\drawable-xhdpi-v4\\abc_spinner_mtrl_am_alpha.9.png"
     },
     {
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_result_identify.xml.flat",
+        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleIflyVoice\\build\\intermediates\\packaged_res\\debug\\layout\\activity_result_identify.xml"
+    },
+    {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_loading_white_05.png.flat",
         "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleUHF\\build\\intermediates\\packaged_res\\debug\\drawable\\ic_loading_white_05.png"
     },
@@ -1754,6 +1938,10 @@
     {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\drawable-hdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\layout_group_header_layout.xml.flat",
+        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleIflyVoice\\build\\intermediates\\packaged_res\\debug\\layout\\group_header_layout.xml"
     },
     {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11_notification_media_cancel_action.xml.flat",
@@ -1772,8 +1960,16 @@
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\drawable-xxxhdpi-v4\\abc_ic_star_half_black_36dp.png"
     },
     {
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\layout_ivw_activity.xml.flat",
+        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleIflyVoice\\build\\intermediates\\packaged_res\\debug\\layout\\ivw_activity.xml"
+    },
+    {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_btn_switch_to_on_mtrl_00012.9.png.flat",
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\drawable-hdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
+    },
+    {
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\layout_isvdemo.xml.flat",
+        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleIflyVoice\\build\\intermediates\\packaged_res\\debug\\layout\\isvdemo.xml"
     },
     {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_search_url_text.xml.flat",
@@ -1786,6 +1982,10 @@
     {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_screen_simple.xml.flat",
         "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\layout\\abc_screen_simple.xml"
+    },
+    {
+        "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\drawable_setting_p.png.flat",
+        "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleIflyVoice\\build\\intermediates\\packaged_res\\debug\\drawable\\setting_p.png"
     },
     {
         "merged": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_screen_simple_overlay_action_mode.xml.flat",

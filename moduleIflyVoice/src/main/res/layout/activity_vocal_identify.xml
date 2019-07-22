@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <!--  标题栏 -->
+    <RelativeLayout
+        android:id="@+id/vocal_idf_rllyt_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/vocal_idf_txt_title"
+            android:layout_width="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_height="35dp"
+            android:gravity="center"
+            android:textSize="26sp"
+            android:text="@string/title_vocal_idf"/>
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="20dp"
+        >
+		
+	    <TextView
+	        android:id="@+id/vocal_idf_edt_result"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:gravity="top|left"
+	        android:minLines="4"
+	        android:background="@null"
+	        android:textColor="#FFFFFF"
+	        android:layout_centerHorizontal="true"
+	        android:textSize="20sp" />
+		
+	</RelativeLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="27dp"
+        android:layout_marginRight="27dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/vocal_idf_txt_tag_groupid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="组ID："
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/vocal_idf_txt_groupid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/white"
+            android:textSize="18sp" >
+        </TextView>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_vocal_idf_press_to_talk"
+        android:layout_width="107dp"
+        android:layout_height="95dp"
+        android:layout_marginBottom="30dp"
+		android:text="按住说话"/>
+
+</LinearLayout>

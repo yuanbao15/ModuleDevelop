@@ -1,1 +1,1 @@
-include ':app', ':moduleDemo', ':moduleScrollPicture', ':moduleSyncInterface', ':moduleRefresh', ':moduleAppdelegate', ':moduleApi', ':modulePdf', ':moduleUHF', ':moduleNFC'
+include ':app', ':moduleDemo', ':moduleScrollPicture', ':moduleSyncInterface', ':moduleRefresh', ':moduleAppdelegate', ':moduleApi', ':modulePdf', ':moduleUHF', ':moduleNFC', ':moduleIflyVoice', ':moduleProcessAlive', ':moduleNotification'

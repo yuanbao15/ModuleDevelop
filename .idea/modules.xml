@@ -7,8 +7,11 @@
       <module fileurl="file://$PROJECT_DIR$/moduleApi/moduleApi.iml" filepath="$PROJECT_DIR$/moduleApi/moduleApi.iml" />
       <module fileurl="file://$PROJECT_DIR$/moduleAppdelegate/moduleAppdelegate.iml" filepath="$PROJECT_DIR$/moduleAppdelegate/moduleAppdelegate.iml" />
       <module fileurl="file://$PROJECT_DIR$/moduleDemo/moduleDemo.iml" filepath="$PROJECT_DIR$/moduleDemo/moduleDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/moduleIflyVoice/moduleIflyVoice.iml" filepath="$PROJECT_DIR$/moduleIflyVoice/moduleIflyVoice.iml" />
       <module fileurl="file://$PROJECT_DIR$/moduleNFC/moduleNFC.iml" filepath="$PROJECT_DIR$/moduleNFC/moduleNFC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/moduleNotification/moduleNotification.iml" filepath="$PROJECT_DIR$/moduleNotification/moduleNotification.iml" />
       <module fileurl="file://$PROJECT_DIR$/modulePdf/modulePdf.iml" filepath="$PROJECT_DIR$/modulePdf/modulePdf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/moduleProcessAlive/moduleProcessAlive.iml" filepath="$PROJECT_DIR$/moduleProcessAlive/moduleProcessAlive.iml" />
       <module fileurl="file://$PROJECT_DIR$/moduleRefresh/moduleRefresh.iml" filepath="$PROJECT_DIR$/moduleRefresh/moduleRefresh.iml" />
       <module fileurl="file://$PROJECT_DIR$/moduleScrollPicture/moduleScrollPicture.iml" filepath="$PROJECT_DIR$/moduleScrollPicture/moduleScrollPicture.iml" />
       <module fileurl="file://$PROJECT_DIR$/moduleSyncInterface/moduleSyncInterface.iml" filepath="$PROJECT_DIR$/moduleSyncInterface/moduleSyncInterface.iml" />

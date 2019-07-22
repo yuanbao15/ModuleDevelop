@@ -1,0 +1,213 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/group_manager_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 标题栏 -->
+
+    <RelativeLayout
+        android:id="@+id/rllyt_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/txt_login_title"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="组管理"
+            android:textSize="24sp" />
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:id="@+id/user_info_layout"
+        android:layout_below="@id/rllyt_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:gravity="center" >
+
+        <ImageView
+            android:layout_width="17dp"
+            android:layout_height="18dp"
+            android:src="@drawable/user"	/>
+        
+        <TextView
+            android:id="@+id/txt_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center"
+            android:maxLength="11"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/group_create_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_info_layout"
+        android:layout_marginTop="25dp"
+        android:paddingBottom="10dp" >
+
+        <View
+            android:id="@+id/line_create"
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_margin="10dp"
+            android:background="#e5e5e6" />
+        
+        <LinearLayout
+            android:id="@+id/llyt_groupname_input_panel"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line_create"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:orientation="vertical"
+            android:visibility="visible" >
+            
+            <EditText
+                android:id="@+id/edt_group_name"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="#00000000"
+                android:ems="20"
+                android:gravity="center_vertical"
+                android:hint="请输入组名用于创建组..."
+                android:inputType="text"
+                android:paddingLeft="5dp"
+                android:textSize="18sp" >
+            </EditText>
+
+        </LinearLayout>
+
+		<Button
+			android:id="@+id/btn_group_create"
+			android:layout_width="250dp"
+			android:layout_height="48dp"
+			android:layout_below="@id/line_create"
+			android:layout_marginRight="10dp"
+			android:gravity="center"
+			android:layout_toRightOf="@id/llyt_groupname_input_panel"
+			android:text="创建" />
+
+
+    </RelativeLayout>
+
+	<RelativeLayout
+		android:id="@+id/group_add_layout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/group_create_layout"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop="51dp"
+		android:paddingBottom="20dp">
+
+		<View
+			android:id="@+id/line_add"
+			android:layout_width="match_parent"
+			android:layout_height="1dip"
+			android:layout_alignParentTop="true"
+			android:layout_margin="10dp"
+			android:background="#e5e5e6" />
+
+		<LinearLayout
+			android:id="@+id/llyt_groupid_input_panel"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/line_add"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"
+			android:orientation="vertical"
+			android:visibility="visible">
+
+			<EditText
+				android:id="@+id/edt_group_id"
+				android:layout_width="match_parent"
+				android:layout_height="35dp"
+				android:background="#00000000"
+				android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCEDFGHIJKLMNOPQRSTUVWXYZ_"
+				android:ems="20"
+				android:gravity="center_vertical"
+				android:hint="请输入组ID..."
+				android:inputType="text"
+				android:paddingLeft="5dp"
+				android:singleLine="true"
+				android:textSize="18sp"></EditText>
+
+		</LinearLayout>
+
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/llyt_groupid_input_panel"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"
+			android:orientation="horizontal"
+			android:paddingTop="25dp"
+			android:weightSum="3">
+
+			<Button
+				android:id="@+id/btn_group_join"
+				android:layout_width="0dp"
+				android:layout_height="48dp"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:text="加入组" />
+
+
+			<Button
+				android:id="@+id/btn_person_delete"
+				android:layout_width="0dp"
+				android:layout_height="48dp"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:text="删除成员" />
+
+			<Button
+				android:id="@+id/btn_group_delete"
+				android:layout_width="0dp"
+				android:layout_height="48dp"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:text="删除组" />
+
+		</LinearLayout>
+
+	</RelativeLayout>
+
+
+	<RelativeLayout
+		android:id="@+id/group_mygroup_layout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentLeft="true"
+		android:layout_alignParentStart="true"
+		android:layout_below="@+id/group_add_layout">
+
+		<TextView
+			android:id="@+id/txt_group_mygroup"
+			android:layout_width="wrap_content"
+			android:layout_height="20dp"
+			android:layout_marginLeft="20dp"
+			android:layout_marginTop="10dp"
+			android:text="已创建的组"
+			android:textColor="@color/white"
+			android:textSize="16sp" />
+
+		<View
+			android:id="@+id/line_my_group"
+			android:layout_width="match_parent"
+			android:layout_height="1dip"
+			android:layout_below="@id/txt_group_mygroup"
+			android:layout_margin="10dp"
+			android:background="#e5e5e6" />
+	</RelativeLayout>
+</RelativeLayout>

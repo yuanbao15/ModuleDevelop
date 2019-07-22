@@ -35,6 +35,18 @@
 		{
 			"name":"moduleNFC",
 			"class":"com.epichust.nfc.NFC15693Demo"
+		},
+		{
+			"name":"moduleIflyVoice",
+			"class":"com.epichust.voice.VoiceDemo"
+		},
+		{
+			"name":"moduleProcessAlive",
+			"class":"com.epichust.process.ProcessDemo"
+		},
+		{
+			"name":"moduleNotification",
+			"class":"com.epichust.notification.NotificationDemo"
 		}
 	]
 }

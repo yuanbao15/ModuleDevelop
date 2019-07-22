@@ -135,12 +135,15 @@
     <orderEntry type="library" name="Gradle: com.android.support:support-fragment:25.3.1@aar" level="project" />
     <orderEntry type="module" module-name="moduleSyncInterface" />
     <orderEntry type="module" module-name="moduleRefresh" />
+    <orderEntry type="module" module-name="moduleNotification" />
     <orderEntry type="module" module-name="moduleUHF" />
     <orderEntry type="module" module-name="modulePdf" />
     <orderEntry type="module" module-name="moduleDemo" />
-    <orderEntry type="module" module-name="moduleScrollPicture" />
+    <orderEntry type="module" module-name="moduleProcessAlive" />
     <orderEntry type="module" module-name="moduleNFC" />
     <orderEntry type="module" module-name="moduleAppdelegate" />
+    <orderEntry type="module" module-name="moduleScrollPicture" />
+    <orderEntry type="module" module-name="moduleIflyVoice" />
     <orderEntry type="module" module-name="moduleApi" />
   </component>
 </module>
