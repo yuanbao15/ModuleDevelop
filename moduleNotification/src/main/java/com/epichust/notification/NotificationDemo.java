@@ -30,8 +30,8 @@ public class NotificationDemo extends UZModule {
         // --回调结果
         JSONObject ret = new JSONObject();
         try {
-            // UZModule.getContext()：获取当前模块运行所在的Activity
-            // 第二个参为本activity的class，用于跳转打个这个activity
+            // UZModule.getContext()：获取当前模块运行所在的Activity的上下文
+            // 第二个参为本activity的class，用于跳转打开这个activity
             ybNotificationManager.showNotification(mModuleContext.getContext(), getContext().getClass(), title, content);
 
             ret.put("status", true);

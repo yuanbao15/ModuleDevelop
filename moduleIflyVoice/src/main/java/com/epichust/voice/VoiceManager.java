@@ -94,7 +94,8 @@ public class VoiceManager {
         this.mContext = context;
         if(SpeechApp.mApp == null)
         {
-            SpeechUtility.createUtility(context, SpeechConstant.APPID+ "=5d11f8d5");
+//            SpeechUtility.createUtility(context, SpeechConstant.APPID+ "=5d11f8d5");
+            SpeechUtility.createUtility(context, SpeechConstant.APPID+ "=5d11f8d5"+"," + "net_type=custom,proxy_ip=10.72.14.41,proxy_port=80");
         }
         // 初始化唤醒对象
         mIvw = VoiceWakeuper.createWakeuper(context, null);
@@ -268,12 +269,12 @@ public class VoiceManager {
         mIat.setParameter(SpeechConstant.ENGINE_TYPE, mEngineType);
         // 设置返回结果格式
         mIat.setParameter(SpeechConstant.RESULT_TYPE, "json");
-
+        // 短信和日常用语：iat (默认)  视频：video  地图：poi  音乐：music
+        mIat.setParameter(SpeechConstant.DOMAIN, "iat");
         // 设置语言为中文普通话
-        String lag = "mandarin";
         mIat.setParameter(SpeechConstant.LANGUAGE, "zh_cn");
         // 设置语言区域
-        mIat.setParameter(SpeechConstant.ACCENT, lag);
+        mIat.setParameter(SpeechConstant.ACCENT, "mandarin");
 
         //此处用于设置dialog中不显示错误码信息
         //mIat.setParameter("view_tips_plain","false");
@@ -289,6 +290,7 @@ public class VoiceManager {
         mIat.setParameter(SpeechConstant.AUDIO_FORMAT,"wav");
         mIat.setParameter(SpeechConstant.ASR_AUDIO_PATH, Environment.getExternalStorageDirectory()+"/msc/iat.wav");
     }
+
     public String printResult(RecognizerResult results) {
         String text = JsonParser.parseIatResult(results.getResultString());
 
@@ -382,6 +384,5 @@ public class VoiceManager {
                 RESOURCE_TYPE.assets, "asr/common.jet"));
         return tempBuffer.toString();
     }
-
 
 }

@@ -247,6 +247,35 @@
             });
 		}
 
+		function startRecognize(){
+			console.log("-------------:开始识别");
+			var params = {
+			};
+			document.getElementById('id_voice_operate').value = "松手停止识别";
+			moduleIflyVoice.startRecognize(params, function(ret, err){
+				if (ret) {
+					var data = ret.data;
+					$("#voice_str").val(JSON.stringify(data));
+				} else {
+					alert(JSON.stringify(err));
+				}
+			});
+		}
+		function stopRecognize(){
+			console.log("-------------:停止识别");
+			var params = {
+			};
+			document.getElementById('id_voice_operate').value = "按住开始识别";
+			moduleIflyVoice.stopRecognize(params, function(ret, err){
+				if (ret) {
+					var data = ret.data;
+					$("#voice_str").val(JSON.stringify(data));
+				} else {
+					alert(JSON.stringify(err));
+				}
+			});
+		}
+
 		function startAlive(){
 			var params = {
 			};
@@ -297,7 +326,9 @@
 			<div class='itemtitle'>0、startOneshot_yb</div>
 				<div><input type="text" id="voice_str"/><div>
 				<div class="clickbtn" tapmode="active" onclick="startOneshot()" >yb-测试语音唤醒+识别</div>
-				<div class="clickbtn" tapmode="active" onclick="stopOneshot()" >停止</div>
+				<div class="clickbtn" tapmode="active" onclick="startRecognize();" id="id_voice_operate" >开始</div>
+                <div class="clickbtn" tapmode="active" onclick="stopRecognize();" >停止</div>
+				<div class="clickbtn" tapmode="active" onclick="stopOneshot()" >停止唤醒</div>
 			<div class='itemtitle'>0、readNFC_yb</div>
 			    <div><input type="text" id="nfc_str" value="0"/><div>
                 <div><input type="text" id="nfc_result"/><div>

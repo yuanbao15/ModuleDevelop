@@ -1,8 +1,13 @@
 package com.epichust.voice;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.PowerManager;
+import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.WindowManager;
 import android.widget.Toast;
@@ -13,6 +18,7 @@ import com.iflytek.cloud.RecognizerListener;
 import com.iflytek.cloud.RecognizerResult;
 import com.iflytek.cloud.SpeechError;
 import com.iflytek.cloud.SpeechEvent;
+import com.iflytek.cloud.SpeechRecognizer;
 import com.iflytek.cloud.WakeuperListener;
 import com.iflytek.cloud.WakeuperResult;
 import com.uzmap.pkg.uzcore.UZWebView;
@@ -32,7 +38,7 @@ public class VoiceDemo extends UZModule {
     public String mGrammarId = "";
     public ExGrammarListener mGrammarListener; // 语法构建的监听
     public ExWakeuperListener mWakeuperListener; // 语音唤醒的监听器
-    public ExRecognizerListener mRecognizerListener; // 也是听写监听器-早期ASR命令词识别的，弃用
+    public ExRecognizerListener mRecognizerListener; // 也是听写监听器-早期ASR命令词识别的，弃用，后给手动用
     public ExDictateRecognizerListener mDictateRecognizerListener; // 语音听写的监听器
     // 唤醒结果内容
     private String resultString;
@@ -42,6 +48,11 @@ public class VoiceDemo extends UZModule {
     private boolean isEnabledVibrate = true;
     // 返回数据给模块调用处
     JSONObject ret = new JSONObject();
+
+    // 手动识别停止标识
+    private boolean manualStopFlag = false;
+    // 手动识别结果内容
+    private String manualRecoString = "";
 
     public VoiceDemo(UZWebView webView) {
         super(webView);
@@ -76,7 +87,6 @@ public class VoiceDemo extends UZModule {
         }
         @Override
         public void onBeginOfSpeech() {
-
         }
 
         @Override
@@ -152,16 +162,16 @@ public class VoiceDemo extends UZModule {
             // 此回调表示：sdk内部录音机已经准备好了，用户可以开始语音输入
             Log.w("IAT","听写-开始讲话");
             showTips("已唤醒，请讲话...");
-        }
-        @Override
-        public void onError(SpeechError error) {
-            Log.w(TAG,error.getPlainDescription(true));
+            // 听写开始时屏蔽唤醒监听
+            manager.mIvw.stopListening();
         }
         @Override
         public void onEndOfSpeech() {
             // 此回调表示：检测到了语音的尾端点，已经进入识别过程，不再接受语音输入
             Log.w("IAT","听写-结束讲话");
             showTips("讲话结束，正在识别...");
+            // 听写结束后恢复唤醒监听
+            manager.startOneshot(mGrammarId, mWakeuperListener);
         }
         @Override
         public void onResult(RecognizerResult results, boolean isLast) {
@@ -197,7 +207,10 @@ public class VoiceDemo extends UZModule {
             // showTip("当前正在说话，音量大小：" + volume);
             // Log.w("IAT", "当前正在说话，音量大小："+volume);
         }
-
+        @Override
+        public void onError(SpeechError error) {
+            Log.e(TAG,error.getPlainDescription(true));
+        }
         @Override
         public void onEvent(int eventType, int arg1, int arg2, Bundle obj) {
               if (SpeechEvent.EVENT_SESSION_ID == eventType) {
@@ -207,29 +220,81 @@ public class VoiceDemo extends UZModule {
         }
     };
 
-    // 语音识别监听器-弃用
+    // 语音识别监听器-弃用，后给手动触发用
     class ExRecognizerListener implements RecognizerListener {
         private VoiceManager manager;
         public ExRecognizerListener(VoiceManager manager){
             this.manager = manager;
         }
         @Override
-        public void onVolumeChanged(int i, byte[] bytes) {
+        public void onVolumeChanged(int volume, byte[] bytes) {
+//             showTips("当前正在说话，音量大小：" + volume);
+//             Log.w("IAT", "当前正在说话，音量大小："+volume);
         }
         @Override
         public void onBeginOfSpeech() {
+            // 听写开始时屏蔽唤醒监听
+            manager.mIvw.stopListening();
         }
         @Override
         public void onEndOfSpeech() {
+            // 听写结束后恢复唤醒监听
+            manager.startOneshot(mGrammarId, mWakeuperListener);
         }
         @Override
-        public void onResult(RecognizerResult recognizerResult, boolean b) {
+        public void onResult(RecognizerResult results, boolean isLast) {
+            Log.w("IAT", results.getResultString());
+            String resultString = manager.printResult(results);
+            Log.w("IAT", resultString);
+
+            if (isLast) {
+                manualRecoString += resultString;
+                Log.w("IAT", manualRecoString);
+
+                manager.mIatResults.clear(); // 清空这个结果集
+
+                // 返回接口结果
+                try {
+                    ret.put("status", true);
+                    ret.put("data", manualRecoString);
+                    // 模块给个提示有没读到信息
+                    showTips(manualRecoString);
+                } catch (Exception e) {
+                    try {
+                        ret.put("status", false);
+                        ret.put("errmsg", "模块调用失败："+e.getMessage());
+                    }catch (Exception e2){
+                    }
+                    e.printStackTrace();
+                }finally {
+                    mModuleContext.success(ret, false);
+                }
+
+                if (!manualStopFlag)
+                {
+                    // 继续录音识别
+                    manager.initIatParam();
+                    manager.mIat.startListening(mRecognizerListener);
+                }
+
+            }
         }
         @Override
         public void onError(SpeechError speechError) {
+            Log.e("IAT", "识别错误："+speechError.getErrorCode()+"，描述："+speechError.getErrorDescription());
+            showTips("识别错误："+speechError.getErrorCode()+"，描述："+speechError.getErrorDescription());
+            if (!manualStopFlag)
+            {
+                // 继续录音识别
+                manager.initIatParam();
+                manager.mIat.startListening(mRecognizerListener);
+            }
         }
         @Override
         public void onEvent(int eventType, int isLast, int arg2, Bundle obj) {
+            // 继续录音识别
+//            manager.initIatParam();
+//            manager.mIat.startListening(mRecognizerListener);
         }
     };
 
@@ -301,5 +366,49 @@ public class VoiceDemo extends UZModule {
     private void showTips(String str){
         Toast toast = Toast.makeText(mModuleContext.getContext(), str, Toast.LENGTH_SHORT);
         toast.show();
+    }
+
+
+    /**
+     * @method    手动触发语音识别-start
+     * @param    
+     *
+     * @author  yuanbao
+     * @date    2019/8/22 
+     */
+    public void jsmethod_startRecognize(UZModuleContext moduleContext){
+        mModuleContext = moduleContext;
+        VoiceManager manager = VoiceManager.getInstance();
+
+        SpeechRecognizer iat = manager.mIat;
+        // 初始化控制结束信号和返回值
+        manualStopFlag = false;
+        manualRecoString = "";
+        ret = new JSONObject();
+        // 开启听写功能
+        manager.initIatParam();
+        int errorNum = manager.mIat.startListening(mRecognizerListener);
+        if (errorNum != ErrorCode.SUCCESS) {
+            showTips("听写失败,错误码：" + errorNum);
+        } else {
+            showTips("请开始讲话...");
+        }
+    }
+    /**
+     * @method    手动触发语音识别-stop
+     * @param
+     *
+     * @author  yuanbao
+     * @date    2019/8/22
+     */
+    public void jsmethod_stopRecognize(UZModuleContext moduleContext){
+        mModuleContext = moduleContext;
+        VoiceManager manager = VoiceManager.getInstance();
+        showTips("已停止讲话");
+        manualStopFlag = true;
+
+        // 停止识别
+        manager.mIat.stopListening();
+
     }
 }
