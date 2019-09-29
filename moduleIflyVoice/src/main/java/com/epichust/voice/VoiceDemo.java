@@ -1,13 +1,8 @@
 package com.epichust.voice;
 
-import android.app.Activity;
 import android.content.Context;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.PowerManager;
-import android.support.annotation.Nullable;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.WindowManager;
 import android.widget.Toast;
@@ -72,7 +67,7 @@ public class VoiceDemo extends UZModule {
                 Log.w(TAG,"语法构建成功：" + grammarId);
                 // 语法构建完成后开始监听唤醒+识别
                 manager.startOneshot(mGrammarId, mWakeuperListener);
-                showTips("语音唤醒初始化成功，唤醒词：一汽锡柴");
+                showTips("语音唤醒初始化成功，唤醒词：元宝哥哥");
             } else {
                 Log.e(TAG,"语法构建失败,错误码：" + error.getErrorCode());
                 showTips("语音唤醒初始化失败，错误码：" + error.getErrorCode());
@@ -208,8 +203,9 @@ public class VoiceDemo extends UZModule {
             // Log.w("IAT", "当前正在说话，音量大小："+volume);
         }
         @Override
-        public void onError(SpeechError error) {
-            Log.e(TAG,error.getPlainDescription(true));
+        public void onError(SpeechError speechError) {
+            Log.e("IAT", "识别错误："+speechError.getErrorCode()+"，描述："+speechError.getErrorDescription());
+            showTips("识别错误："+speechError.getErrorCode()+"，描述："+speechError.getErrorDescription());
         }
         @Override
         public void onEvent(int eventType, int arg1, int arg2, Bundle obj) {
@@ -409,6 +405,5 @@ public class VoiceDemo extends UZModule {
 
         // 停止识别
         manager.mIat.stopListening();
-
     }
 }

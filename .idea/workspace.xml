@@ -6,7 +6,6 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="IAT" />
     <option name="TOOL_WINDOW_LOG_LEVEL" value="warn" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
   </component>
@@ -22,48 +21,29 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_core_3_0_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_core_3_0_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_idling_resource_3_0_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_idling_resource_3_0_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_rules_1_0_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_rules_1_0_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_runner_0_5_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_runner_0_5_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_runner_1_0_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_runner_1_0_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeDexDebug/out/classes2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeDexDebug/out/classes2.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/merge-state" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJniLibs/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJniLibs/merge-state" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/file-input-save-data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/file-input-save-data.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/NRTnV8qM4XrvZhCDTlJDd1gsWRA=" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/NRTnV8qM4XrvZhCDTlJDd1gsWRA=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_assets/debug/mergeDebugAssets/out/widget/index_frm.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_assets/debug/mergeDebugAssets/out/widget/index_frm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_assets/debug/mergeDebugAssets/out/ivw/5d11f8d5.jet" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_assets/debug/mergeDebugAssets/out/ivw/5d11f8d5.jet" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJavaRes/debug/0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJavaRes/debug/0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/widget/index_frm.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/widget/index_frm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moduleApi/moduleApi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/moduleApi/moduleApi.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/moduleAppdelegate/build/intermediates/compile_only_not_namespaced_r_class_jar/debug/generateDebugRFile/R.jar" beforeDir="false" afterPath="$PROJECT_DIR$/moduleAppdelegate/build/intermediates/compile_only_not_namespaced_r_class_jar/debug/generateDebugRFile/R.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/moduleAppdelegate/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/moduleAppdelegate/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moduleAppdelegate/moduleAppdelegate.iml" beforeDir="false" afterPath="$PROJECT_DIR$/moduleAppdelegate/moduleAppdelegate.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/moduleDemo/build/intermediates/compile_only_not_namespaced_r_class_jar/debug/generateDebugRFile/R.jar" beforeDir="false" afterPath="$PROJECT_DIR$/moduleDemo/build/intermediates/compile_only_not_namespaced_r_class_jar/debug/generateDebugRFile/R.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/moduleDemo/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/moduleDemo/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moduleDemo/moduleDemo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/moduleDemo/moduleDemo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moduleIflyVoice/moduleIflyVoice.iml" beforeDir="false" afterPath="$PROJECT_DIR$/moduleIflyVoice/moduleIflyVoice.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moduleIflyVoice/src/main/assets/ivw/5d11f8d5.jet" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/moduleIflyVoice/src/main/java/com/epichust/voice/VoiceDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/moduleIflyVoice/src/main/java/com/epichust/voice/VoiceDemo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/moduleIflyVoice/src/main/java/com/epichust/voice/VoiceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/moduleIflyVoice/src/main/java/com/epichust/voice/VoiceManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moduleNFC/moduleNFC.iml" beforeDir="false" afterPath="$PROJECT_DIR$/moduleNFC/moduleNFC.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moduleNotification/moduleNotification.iml" beforeDir="false" afterPath="$PROJECT_DIR$/moduleNotification/moduleNotification.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moduleNotification/src/main/java/com/epichust/notification/NotificationDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/moduleNotification/src/main/java/com/epichust/notification/NotificationDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulePdf/modulePdf.iml" beforeDir="false" afterPath="$PROJECT_DIR$/modulePdf/modulePdf.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/moduleRefresh/build/intermediates/compile_only_not_namespaced_r_class_jar/debug/generateDebugRFile/R.jar" beforeDir="false" afterPath="$PROJECT_DIR$/moduleRefresh/build/intermediates/compile_only_not_namespaced_r_class_jar/debug/generateDebugRFile/R.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/moduleRefresh/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/moduleRefresh/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moduleRefresh/moduleRefresh.iml" beforeDir="false" afterPath="$PROJECT_DIR$/moduleRefresh/moduleRefresh.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/moduleScrollPicture/build/intermediates/compile_only_not_namespaced_r_class_jar/debug/generateDebugRFile/R.jar" beforeDir="false" afterPath="$PROJECT_DIR$/moduleScrollPicture/build/intermediates/compile_only_not_namespaced_r_class_jar/debug/generateDebugRFile/R.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/moduleScrollPicture/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/moduleScrollPicture/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moduleScrollPicture/moduleScrollPicture.iml" beforeDir="false" afterPath="$PROJECT_DIR$/moduleScrollPicture/moduleScrollPicture.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/moduleSyncInterface/build/intermediates/compile_only_not_namespaced_r_class_jar/debug/generateDebugRFile/R.jar" beforeDir="false" afterPath="$PROJECT_DIR$/moduleSyncInterface/build/intermediates/compile_only_not_namespaced_r_class_jar/debug/generateDebugRFile/R.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/moduleSyncInterface/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/moduleSyncInterface/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moduleSyncInterface/moduleSyncInterface.iml" beforeDir="false" afterPath="$PROJECT_DIR$/moduleSyncInterface/moduleSyncInterface.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moduleUHF/moduleUHF.iml" beforeDir="false" afterPath="$PROJECT_DIR$/moduleUHF/moduleUHF.iml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -101,7 +81,7 @@
     <session id="-1193267166">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="72" />
+          <entry key="project.closed" value="74" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="2" />
           <entry key="project.open.time.13" value="1" />
@@ -109,11 +89,11 @@
           <entry key="project.open.time.15" value="6" />
           <entry key="project.open.time.16" value="2" />
           <entry key="project.open.time.17" value="6" />
-          <entry key="project.open.time.18" value="4" />
+          <entry key="project.open.time.18" value="5" />
           <entry key="project.open.time.19" value="3" />
           <entry key="project.open.time.2" value="4" />
           <entry key="project.open.time.20" value="2" />
-          <entry key="project.open.time.21" value="2" />
+          <entry key="project.open.time.21" value="3" />
           <entry key="project.open.time.22" value="3" />
           <entry key="project.open.time.23" value="2" />
           <entry key="project.open.time.24" value="2" />
@@ -131,7 +111,7 @@
           <entry key="project.open.time.41" value="1" />
           <entry key="project.open.time.47" value="1" />
           <entry key="project.open.time.5" value="4" />
-          <entry key="project.opened" value="81" />
+          <entry key="project.opened" value="83" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -139,12 +119,12 @@
           <entry key="abnf" value="3" />
           <entry key="bnf" value="5" />
           <entry key="class" value="84" />
-          <entry key="gradle" value="92" />
+          <entry key="gradle" value="93" />
           <entry key="gradlew" value="3" />
           <entry key="html" value="27" />
           <entry key="iml" value="11" />
           <entry key="java" value="290" />
-          <entry key="jet" value="10" />
+          <entry key="jet" value="11" />
           <entry key="js" value="1" />
           <entry key="json" value="19" />
           <entry key="png" value="2" />
@@ -157,14 +137,14 @@
         <counts>
           <entry key="BNF" value="5" />
           <entry key="CLASS" value="84" />
-          <entry key="Groovy" value="92" />
+          <entry key="Groovy" value="93" />
           <entry key="HTML" value="27" />
           <entry key="IDEA_MODULE" value="11" />
           <entry key="Image" value="2" />
           <entry key="JAVA" value="290" />
           <entry key="JSON" value="19" />
           <entry key="JavaScript" value="1" />
-          <entry key="Jet" value="4" />
+          <entry key="Jet" value="5" />
           <entry key="PLAIN_TEXT" value="21" />
           <entry key="Properties" value="17" />
           <entry key="XML" value="119" />
@@ -176,7 +156,7 @@
           <entry key="bnf" value="10" />
           <entry key="gradle" value="337" />
           <entry key="html" value="1151" />
-          <entry key="java" value="12612" />
+          <entry key="java" value="12616" />
           <entry key="json" value="102" />
           <entry key="properties" value="20" />
           <entry key="txt" value="36" />
@@ -188,7 +168,7 @@
           <entry key="BNF" value="10" />
           <entry key="Groovy" value="337" />
           <entry key="HTML" value="1151" />
-          <entry key="JAVA" value="12612" />
+          <entry key="JAVA" value="12616" />
           <entry key="JSON" value="102" />
           <entry key="PLAIN_TEXT" value="52" />
           <entry key="Properties" value="20" />
@@ -202,11 +182,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/moduleIflyVoice/src/main/java/com/epichust/voice/VoiceDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6000">
-              <caret line="338" selection-start-line="338" selection-end-line="338" />
+            <state relative-caret-position="187">
+              <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -214,11 +194,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/moduleApi/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="347">
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/moduleIflyVoice/src/main/java/com/epichust/voice/VoiceManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="98" column="9" lean-forward="true" selection-start-line="98" selection-start-column="9" selection-end-line="98" selection-end-column="9" />
+            <state relative-caret-position="1480">
+              <caret line="105" column="18" selection-start-line="105" selection-start-column="18" selection-end-line="105" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -257,7 +246,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>mModuleContext</find>
       <find>ExWakeuperListener</find>
       <find>ExDictateRecognizerListener</find>
       <find>mDictateRecognizerListener</find>
@@ -287,6 +275,7 @@
       <find>IAT</find>
       <find>printResult</find>
       <find>Toast</find>
+      <find>唤醒词</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -14149,8 +14138,8 @@
         <option value="$PROJECT_DIR$/app/src/main/assets/widget/index_frm.html" />
         <option value="$PROJECT_DIR$/moduleIflyVoice/src/main/java/com/iflytek/voicedemo/IvwActivity.java" />
         <option value="$PROJECT_DIR$/moduleIflyVoice/src/main/java/com/iflytek/voicedemo/OneShotDemo.java" />
-        <option value="$PROJECT_DIR$/moduleIflyVoice/src/main/java/com/epichust/voice/VoiceDemo.java" />
         <option value="$PROJECT_DIR$/moduleIflyVoice/src/main/java/com/epichust/voice/VoiceManager.java" />
+        <option value="$PROJECT_DIR$/moduleIflyVoice/src/main/java/com/epichust/voice/VoiceDemo.java" />
       </list>
     </option>
   </component>
@@ -14220,7 +14209,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -14232,6 +14220,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -14243,12 +14233,6 @@
               <item name="APICloudModuleSDK" type="b2602c69:ProjectViewProjectNode" />
               <item name="APICloudModuleSDK" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="APICloudModuleSDK" type="b2602c69:ProjectViewProjectNode" />
-              <item name="APICloudModuleSDK" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="APICloudModuleSDK" type="b2602c69:ProjectViewProjectNode" />
@@ -14295,43 +14279,12 @@
               <item name="moduleIflyVoice" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="APICloudModuleSDK" type="b2602c69:ProjectViewProjectNode" />
-              <item name="APICloudModuleSDK" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="moduleIflyVoice" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="APICloudModuleSDK" type="b2602c69:ProjectViewProjectNode" />
-              <item name="APICloudModuleSDK" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="moduleIflyVoice" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="iflytek" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="APICloudModuleSDK" type="b2602c69:ProjectViewProjectNode" />
-              <item name="APICloudModuleSDK" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="moduleIflyVoice" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="iflytek" type="462c0819:PsiDirectoryNode" />
-              <item name="voicedemo" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -14354,15 +14307,15 @@
     <property name="sync.plugin.last.upgrade.timestamp" value="1523851479414" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\codes\android_studio\APICloudModuleSDK\moduleIflyVoice\libs\armeabi-v7a" />
+      <recent name="E:\codes\android_studio\APICloudModuleSDK\moduleIflyVoice\libs" />
+      <recent name="E:\codes\android_studio\APICloudModuleSDK\moduleIflyVoice\src\main\jniLibs\armeabi-v7a" />
+      <recent name="E:\codes\android_studio\APICloudModuleSDK\app\libs\armeabi-v7a" />
+      <recent name="E:\codes\android_studio\APICloudModuleSDK\app\libs" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.epichust.modulepdf" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\codes\android_studio\APICloudModuleSDK\moduleNotification\libs" />
-      <recent name="E:\codes\android_studio\APICloudModuleSDK\moduleNotification\src\main\res" />
-      <recent name="E:\codes\android_studio\APICloudModuleSDK\moduleProcessAlive\src\main\java\cn\yuanbao\processalive" />
-      <recent name="E:\codes\android_studio\APICloudModuleSDK\moduleIflyVoice\src\main\assets\ivw" />
-      <recent name="E:\codes\android_studio\APICloudModuleSDK\moduleIflyVoice\libs" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="cn.yuanbao.modulenotification" />
@@ -14370,12 +14323,12 @@
       <recent name="com.epichust.nfc" />
       <recent name="com.cus.maguhf" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\codes\android_studio\APICloudModuleSDK\moduleIflyVoice\libs\armeabi-v7a" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\codes\android_studio\APICloudModuleSDK\moduleIflyVoice\src\main\assets\ivw" />
+      <recent name="E:\codes\android_studio\APICloudModuleSDK\moduleNotification\libs" />
+      <recent name="E:\codes\android_studio\APICloudModuleSDK\moduleNotification\src\main\res" />
+      <recent name="E:\codes\android_studio\APICloudModuleSDK\moduleProcessAlive\src\main\java\cn\yuanbao\processalive" />
       <recent name="E:\codes\android_studio\APICloudModuleSDK\moduleIflyVoice\libs" />
-      <recent name="E:\codes\android_studio\APICloudModuleSDK\moduleIflyVoice\src\main\jniLibs\armeabi-v7a" />
-      <recent name="E:\codes\android_studio\APICloudModuleSDK\app\libs\armeabi-v7a" />
-      <recent name="E:\codes\android_studio\APICloudModuleSDK\app\libs" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -14668,10 +14621,10 @@
       <window_info anchor="bottom" id="Android Profiler" order="8" weight="0.32786885" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5030257" side_tool="true" weight="0.38196722" />
       <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Logcat" order="11" sideWeight="0.4969743" weight="0.23278688" />
+      <window_info anchor="bottom" id="Logcat" order="11" sideWeight="0.4969743" visible="true" weight="0.352459" />
       <window_info anchor="bottom" id="Terminal" order="12" weight="0.47540984" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.3771331" />
-      <window_info anchor="bottom" id="Build" order="14" sideWeight="0.49394855" visible="true" weight="0.25081968" />
+      <window_info anchor="bottom" id="Build" order="14" sideWeight="0.49394855" weight="0.23278688" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -14743,13 +14696,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
@@ -14770,12 +14716,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/moduleUHF/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
           <caret line="7" column="35" lean-forward="true" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
         </state>
       </provider>
+      <provider editor-type-id="android-manifest" />
     </entry>
     <entry file="file://$PROJECT_DIR$/moduleProcessAlive/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
@@ -14821,12 +14767,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/moduleProcessAlive/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
         </state>
       </provider>
+      <provider editor-type-id="android-manifest" />
     </entry>
     <entry file="file://$PROJECT_DIR$/moduleUHF/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
@@ -14862,12 +14808,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/moduleNotification/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
         </state>
       </provider>
+      <provider editor-type-id="android-manifest" />
     </entry>
     <entry file="file://D:/MES5/Android SDK/sources/android-25/android/content/Intent.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -14981,13 +14927,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/moduleApi/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="27" column="11" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -15038,12 +14977,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/moduleIflyVoice/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-520">
           <caret line="28" column="56" lean-forward="true" selection-start-line="28" selection-start-column="56" selection-end-line="28" selection-end-column="56" />
         </state>
       </provider>
+      <provider editor-type-id="android-manifest" />
     </entry>
     <entry file="file://$PROJECT_DIR$/moduleIflyVoice/src/main/java/com/iflytek/voicedemo/OneShotDemo.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -15066,13 +15005,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/moduleIflyVoice/src/main/java/com/epichust/voice/VoiceDemo.java">
+    <entry file="file://$PROJECT_DIR$/moduleIflyVoice/src/main/java/com/epichust/voice/VoiceManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6000">
-          <caret line="338" selection-start-line="338" selection-end-line="338" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="1480">
+          <caret line="105" column="18" selection-start-line="105" selection-start-column="18" selection-end-line="105" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -15095,10 +15031,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/moduleIflyVoice/src/main/java/com/epichust/voice/VoiceManager.java">
+    <entry file="file://$PROJECT_DIR$/moduleIflyVoice/src/main/assets/ivw/5d11f8d5.jet">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/moduleApi/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="98" column="9" lean-forward="true" selection-start-line="98" selection-start-column="9" selection-end-line="98" selection-end-column="9" />
+        <state relative-caret-position="347">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/moduleIflyVoice/src/main/java/com/epichust/voice/VoiceDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

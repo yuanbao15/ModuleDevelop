@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon Sep 02 11:46:38 CST 2019
+#Fri Sep 27 13:57:37 CST 2019
 17.baseType=DIRECTORY
 4.path=iflytek/voice_bg.9.png
 25.base=E\:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\merged_assets\\debug\\mergeDebugAssets\\out

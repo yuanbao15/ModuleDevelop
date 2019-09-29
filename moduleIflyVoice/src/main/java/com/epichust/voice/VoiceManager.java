@@ -94,8 +94,8 @@ public class VoiceManager {
         this.mContext = context;
         if(SpeechApp.mApp == null)
         {
-//            SpeechUtility.createUtility(context, SpeechConstant.APPID+ "=5d11f8d5");
-            SpeechUtility.createUtility(context, SpeechConstant.APPID+ "=5d11f8d5"+"," + "net_type=custom,proxy_ip=10.72.14.41,proxy_port=80");
+            SpeechUtility.createUtility(context, SpeechConstant.APPID+ "=5d11f8d5");
+//            SpeechUtility.createUtility(context, SpeechConstant.APPID+ "=5d11f8d5"+"," + "net_type=custom,proxy_ip=10.72.14.41,proxy_port=80");
         }
         // 初始化唤醒对象
         mIvw = VoiceWakeuper.createWakeuper(context, null);
