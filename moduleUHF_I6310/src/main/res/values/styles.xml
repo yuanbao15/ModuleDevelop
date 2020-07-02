@@ -1,0 +1,69 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="@android:style/Theme.Holo">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    
+    <style name="ActionBarBaseTheme" parent="android:style/Theme.Holo.Light"> </style>
+    
+    <style name="ActionBarBaseTheme1" parent="android:style/Theme.Holo.Light">
+        <item name="android:background">@color/white1</item>
+        <item name="android:textColor">@drawable/check_text_color</item>
+    </style>
+    
+    
+     <!-- 将自定义的style取名为CustomTheme，父类为Theme.Holo.Light，也就是说默认背景是白底黑字（如果是Theme.Holo，则默认是黑底白字） -->  
+     <style name="CustomTheme" parent="android:style/Theme.Holo.Light">  
+         <!-- 这是item的背景修改，不按时透明，按时显示绿色  -->  
+         <!-- <item name="android:selectableItemBackground">@color/white1</item>  -->  
+         <!-- <item name="android:actionDropDownStyle">@style/MyDropDownNav</item>     
+         <item name="android:dropDownListViewStyle">@style/MyDropDownListView</item>       
+         <item name="android:actionBarTabStyle">@style/MyActionBarTabStyle</item> -->  
+         <item name="android:actionBarTabTextStyle">@style/MyActionBarTabTextStyle</item>  
+         <item name="android:actionBarStyle">@style/MyActionBarStyle</item>
+         <item name="android:homeAsUpIndicator">@drawable/actionbar_back</item> 
+     </style>  
+     
+     <style name="MyActionBarStyle" parent="@android:style/Widget.Holo.ActionBar">
+        <!-- <item name="android:background">@color/white</item>
+        <item name="android:titleTextStyle">@style/MainActivityActionBarTitleTextStyle</item> -->
+      
+    </style>
+   
+     <!-- Tab选项标签背景的样式 -->  
+     <style name="MyActionBarTabStyle" parent="android:style/Widget.Holo.Light.ActionBar.TabView">  
+          <!-- <item name="android:background">@color/white</item> -->  
+     </style>  
+   
+     <!-- Tab选项标签字体的样式 -->  
+     <style name="MyActionBarTabTextStyle" parent="android:style/Widget.Holo.Light.ActionBar.TabText">          
+         <item name="android:textColor">@drawable/check_text_color</item>
+         <item name="android:textSize">16sp</item>  
+    </style>  
+   
+    <!-- 下拉导航外部按钮的样式 -->  
+     <style name="MyDropDownNav" parent="android:style/Widget.Holo.Light.Spinner">  
+         <!-- <item name="android:background">@color/white1</item>  
+         <item name="android:popupBackground">@color/white</item>  
+         <item name="android:dropDownSelector">@color/white1</item>   -->
+     </style>  
+       
+     <!-- 下拉导航内部按钮的样式 -->  
+      <style name="MyDropDownListView" parent="android:style/Widget.Holo.ListView.DropDown">  
+         <!-- <item name="android:listSelector">@color/blue2</item>  -->
+    </style> 
+
+</resources>

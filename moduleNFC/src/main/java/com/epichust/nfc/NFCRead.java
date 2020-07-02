@@ -22,7 +22,7 @@ import java.util.Map;
 
 /**
  * 这个类最终没有用到，因为NFC必须要通过activity接收intent才能拿到tag信息
- *      无奈 = =.
+ *      无奈 = =.后使用NFCReadActivity类
  * Created by yuanbao on 2019/3/21
  */
 public class NFCRead implements ParseListener {

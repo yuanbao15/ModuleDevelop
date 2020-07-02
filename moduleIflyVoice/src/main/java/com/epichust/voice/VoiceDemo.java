@@ -1,6 +1,10 @@
 package com.epichust.voice;
 
+import android.app.KeyguardManager;
+import android.app.admin.DevicePolicyManager;
+import android.content.ComponentName;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.PowerManager;
 import android.util.Log;
@@ -28,7 +32,7 @@ import org.json.JSONObject;
  * Created by yuanbao on 2019/4/18
  */
 public class VoiceDemo extends UZModule {
-    private String TAG = "DEMO";
+    private final static String TAG = "DEMO";
     public static UZModuleContext mModuleContext;
     public String mGrammarId = "";
     public ExGrammarListener mGrammarListener; // 语法构建的监听
@@ -41,6 +45,8 @@ public class VoiceDemo extends UZModule {
     private String recoString;
     // 是否震动
     private boolean isEnabledVibrate = true;
+
+
     // 返回数据给模块调用处
     JSONObject ret = new JSONObject();
 
@@ -179,6 +185,7 @@ public class VoiceDemo extends UZModule {
                 // 模块给个提示有没读到信息
                 showTips(recoString);
                 manager.mIatResults.clear(); // 清空这个结果集
+                doLockScreen(recoString);
 
                 // 返回接口结果
                 try {
@@ -248,6 +255,7 @@ public class VoiceDemo extends UZModule {
                 Log.w("IAT", manualRecoString);
 
                 manager.mIatResults.clear(); // 清空这个结果集
+                doLockScreen(manualRecoString);
 
                 // 返回接口结果
                 try {
@@ -294,22 +302,78 @@ public class VoiceDemo extends UZModule {
         }
     };
 
+    // 锁屏操作
+    private void doLockScreen(String voiceText){
+        Log.w("IAT", "YB语音:" + voiceText);
+        if (voiceText.contains("锁屏")) {
+            if (mDPM.isAdminActive(mDeviceAdminSample)) {// 判断设备管理器是否已经激活
+                mDPM.lockNow();// 立即锁屏
+                mDPM.resetPassword("123456", 0);
+            } else {
+                // 跳转设备管理服务进行激活
+                Intent intent = new Intent(DevicePolicyManager.ACTION_ADD_DEVICE_ADMIN);
+                intent.putExtra(DevicePolicyManager.EXTRA_DEVICE_ADMIN,
+                        mDeviceAdminSample);
+                intent.putExtra(DevicePolicyManager.EXTRA_ADD_EXPLANATION,
+                        "YB用语音控制设备，请完成授权：");
+                startActivity(intent);
+            }
+        }
+    }
+
     // 点亮屏幕+解锁
+    PowerManager mPowerManager; // 电源管理器对象
+    KeyguardManager mKeyguardManager; // 键盘锁管理器对象
+    KeyguardManager.KeyguardLock mKeyguardLock;
+    DevicePolicyManager mDPM; // 获取设备策略服务
+    private ComponentName mDeviceAdminSample; // 设备管理组件
+    private void initKeyguardAndPower(){
+        mPowerManager = (PowerManager) getContext().getSystemService(Context.POWER_SERVICE);
+        mKeyguardManager = (KeyguardManager)getContext().getSystemService(Context.KEYGUARD_SERVICE);
+        mKeyguardLock = mKeyguardManager.newKeyguardLock("unLock"); // 只能禁用滑动锁，不能操作指纹、密码
+        mDPM = (DevicePolicyManager) getContext().getSystemService(Context.DEVICE_POLICY_SERVICE);
+        mDeviceAdminSample = new ComponentName(this.getContext(), AdminReceiver.class);
+//        mKeyguardLock.reenableKeyguard(); // 锁键盘
+
+        Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(3000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                Log.w("IAT", "YB唤醒");
+                PowerManager.WakeLock mWakeLock = mPowerManager.newWakeLock(
+                        PowerManager.ACQUIRE_CAUSES_WAKEUP |
+                                PowerManager.FULL_WAKE_LOCK, this.getClass().getName()); // 后边的tag原来是"bright"
+                mWakeLock.acquire(10 * 1000); // 点亮屏幕
+                mWakeLock.release(); // 释放
+            }
+        };
+        Thread thread = new Thread(runnable);
+//        thread.start();
+
+    }
     private void acquireWakeLock() {
-//        // 解锁未实现
-//        // 键盘锁管理器对象
-//        KeyguardManager mKeyguardManager= (KeyguardManager)getContext().getSystemService(Context.KEYGUARD_SERVICE);
-//        KeyguardManager.KeyguardLock mKeyguardLock = mKeyguardManager.newKeyguardLock("unLock");
-//        mKeyguardLock.disableKeyguard();
+        mKeyguardLock.disableKeyguard(); // 解锁键盘
 
-        // 亮屏
-        // 电源管理器对象
-        PowerManager mPowerManager = (PowerManager) getContext().getSystemService(Context.POWER_SERVICE);
-        PowerManager.WakeLock mWakeLock = mPowerManager.newWakeLock(PowerManager.ACQUIRE_CAUSES_WAKEUP | PowerManager.SCREEN_DIM_WAKE_LOCK, this.getClass().getName());
-        mWakeLock.acquire(10*1000);
-        mWakeLock.release();
+        // 先亮屏，再解锁
+        boolean isScreenOn = mPowerManager.isScreenOn();
+        if (!isScreenOn) {
+            // 获取PowerManager.WakeLock对象,后面的参数|表示同时传入两个值,最后的是LogCat里用的Tag
+            PowerManager.WakeLock mWakeLock = mPowerManager.newWakeLock(
+                    PowerManager.ACQUIRE_CAUSES_WAKEUP |
+                            PowerManager.FULL_WAKE_LOCK, this.getClass().getName()); // 后边的tag原来是"bright"
+            mWakeLock.acquire(10*1000); // 点亮屏幕
+            mWakeLock.release(); // 释放
+        }
 
-		setKeyguardEnable(false);
+//		setKeyguardEnable(false);
+
+        // 解锁未实现
+//        mKeyguardLock.reenableKeyguard(); // 锁键盘
+//        mKeyguardLock.disableKeyguard(); // 解锁键盘
     }
 
     private void setKeyguardEnable(boolean enable) {
@@ -342,6 +406,9 @@ public class VoiceDemo extends UZModule {
         manager.buildGrammar(mGrammarListener);
 
         // 构建语法开启监听之后的回调中去返回数据
+
+        // 锁屏管理器初始化
+        initKeyguardAndPower();
     }
 
     /**

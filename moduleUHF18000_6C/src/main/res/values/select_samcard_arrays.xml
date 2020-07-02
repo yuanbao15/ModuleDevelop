@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<resources>  
+    <string-array name="select_samcard_arrays">  
+        <item>SAM1</item>  
+        <item>SAM2</item>  
+    </string-array>  
+</resources>  

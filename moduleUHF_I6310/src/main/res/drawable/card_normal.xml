@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 设置边框的大小和颜色 -->
+    <stroke
+        android:width="1dip"
+        android:color="@android:color/darker_gray" />
+
+    <!-- 设置图形内的颜色,此处为透明色 -->
+    <solid android:color="@android:color/transparent" />
+
+    <!-- 定义圆角弧度 圆的话就是半径 -->
+    <corners
+        android:bottomLeftRadius="10dp"
+        android:bottomRightRadius="10dp"
+        android:topLeftRadius="10dp"
+        android:topRightRadius="10dp" />
+
+</shape>

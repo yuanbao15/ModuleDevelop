@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="left"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rgFileType"
+        android:gravity="left"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/rbOpen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/uhf_title_open" />
+        <RadioButton
+            android:id="@+id/rbLock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/uhf_title_lock" />
+
+        <RadioButton
+            android:id="@+id/rbOpenforever"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/uhf_title_openforever" />
+        <RadioButton
+            android:id="@+id/rbLockforever"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/uhf_title_lockforever" />
+    </RadioGroup>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
+
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rgFileTyp1e"
+            android:gravity="left"
+            android:orientation="vertical">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/uhf_title_kill"
+            android:id="@+id/cbKill" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/uhf_title_access"
+            android:checked="true"
+            android:id="@+id/cbAccess" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EPC:"
+            android:id="@+id/cbEPC" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/uhf_title_tid"
+            android:id="@+id/cbTid" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/uhf_title_user"
+            android:id="@+id/cbUser" />
+        </RadioGroup>
+    </LinearLayout>
+
+</LinearLayout>

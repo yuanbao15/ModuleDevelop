@@ -51,7 +51,8 @@
         android:icon="@drawable/uz_icon"
         android:label="@string/app_name"
         android:largeHeap="true"
-        android:supportsRtl="true" >
+        android:supportsRtl="true"
+        android:theme="@style/CustomTheme" >
         <meta-data
             android:name="uz_version"
             android:value="1.2.0" />
@@ -183,18 +184,48 @@
             android:name="IFLYTEK_CHANNEL"
             android:value="Android_Demo" />
 
+        <receiver
+            android:name="com.epichust.voice.AdminReceiver"
+            android:description="@string/sample_device_admin_description"
+            android:label="@string/sample_device_admin"
+            android:permission="android.permission.BIND_DEVICE_ADMIN" >
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/device_admin_sample" />
+
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+        </receiver>
+
         <activity android:name="cn.yuanbao.processalive.MainActivity" >
         </activity>
 
-        <service android:name="cn.yuanbao.processalive.WorkService" />
+        <service
+            android:name="cn.yuanbao.processalive.WorkService"
+            android:enabled="true"
+            android:exported="true" />
         <service
             android:name="cn.yuanbao.processalive.DaemonService"
-            android:process=".daemonService" />
+            android:enabled="true"
+            android:exported="true"
+            android:process=":DaemonService" /> <!-- 确保和本地进程不在同一个进程上 -->
         <service
             android:name="cn.yuanbao.processalive.JobWakeUpService"
             android:enabled="true"
+            android:exported="true"
             android:permission="android.permission.BIND_JOB_SERVICE" />
 
+        <activity
+            android:name="com.handheld.uhfdemo1.UHFActivity"
+            android:configChanges="orientation|locale"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar" />
+        <activity
+            android:name="com.example.uhf.activity.UHFMainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
         <activity
             android:name="com.apicloud.moduleDemo.DemoActivity"
             android:configChanges="orientation|locale"

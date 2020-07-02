@@ -47,6 +47,14 @@
 		{
 			"name":"moduleNotification",
 			"class":"com.epichust.notification.NotificationDemo"
+		},
+		{
+			"name":"moduleUHF18000_6C",
+			"class":"com.yuanbao.rfid.UHFDemo"
+		},
+		{
+			"name":"moduleUHF_I6310",
+			"class":"com.yuanbao.moduleuhf_i6310.UHFDemo"
 		}
 	]
 }

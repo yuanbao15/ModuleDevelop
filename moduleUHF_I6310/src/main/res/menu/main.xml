@@ -1,0 +1,42 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.chainway.caredemo.MainActivity" >
+
+    <!--
+    <item
+        android:id="@+id/action_scan"
+        android:actionViewClass="android.widget.Tab"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="@string/uhf_msg_tab_scan"/>
+    <item
+        android:id="@+id/action_read"
+        android:orderInCategory="100"
+        android:actionViewClass="android.widget.Tab"
+        android:showAsAction="always"
+        android:title="@string/uhf_msg_tab_read"/>
+    <item
+        android:id="@+id/action_write"
+        android:orderInCategory="100"
+        android:actionViewClass="android.widget.Tab"
+        android:showAsAction="always"
+        android:title="@string/uhf_msg_tab_write"/>
+    -->
+    <item
+        android:id="@+id/action_kill"
+        android:showAsAction="never"
+        android:title="@string/uhf_msg_tab_kill"/>
+    <item
+        android:id="@+id/action_lock"
+        android:showAsAction="never"
+        android:title="@string/uhf_msg_tab_lock"/>
+    <item
+        android:id="@+id/action_set"
+        android:showAsAction="never"
+        android:title="@string/uhf_msg_tab_set"/>
+    <item
+        android:id="@+id/UHF_ver"
+        android:showAsAction="never"
+        android:title="@string/action_about"/>
+
+</menu>

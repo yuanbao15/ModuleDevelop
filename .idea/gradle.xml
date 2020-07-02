@@ -22,6 +22,8 @@
             <option value="$PROJECT_DIR$/moduleScrollPicture" />
             <option value="$PROJECT_DIR$/moduleSyncInterface" />
             <option value="$PROJECT_DIR$/moduleUHF" />
+            <option value="$PROJECT_DIR$/moduleUHF18000_6C" />
+            <option value="$PROJECT_DIR$/moduleUHF_I6310" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

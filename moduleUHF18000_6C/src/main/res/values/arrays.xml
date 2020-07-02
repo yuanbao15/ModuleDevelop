@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="serialportArray">
+        <item>com0</item>
+        <item>com1</item>
+        <item>com2</item>
+        <item>com3</item>
+        <item>com4</item>
+        <item>com5</item>
+        <item>com6</item>
+        <item>com7</item>
+        <item>com8</item>
+        <item>com9</item>
+        <item>com10</item>
+        <item>com11</item>
+        <item>com12</item>
+        <item>com13</item>
+        <item>com14</item>
+        <item>com15</item>
+         <item>com16</item>
+        <item>com17</item>
+        <item>com18</item>
+        <item>com19</item>
+        <item>com20</item>
+        <item>com21</item>
+        <item>com22</item>
+        <item>com23</item>
+        <item>com24</item>
+        <item>com25</item>
+         <item>com26</item>
+        <item>com27</item>
+        <item>com28</item>
+        <item>com29</item>
+    </string-array>
+    <string-array name="buadrateArray">
+        <item>1200</item>
+        <item>2400</item>
+        <item>4800</item>
+        <item>9600</item>
+        <item>14400</item>
+        <item>19200</item>
+        <item>38400</item>
+        <item>56000</item>
+        <item>57600</item>
+        <item>115200</item>
+        <item>128000</item>
+        <item>256000</item>
+    </string-array>
+        <string-array name="powerArray">
+        <item>3.3V</item>
+        <item>5V</item>
+        <item>scan power</item>
+        <item>psam power</item>
+        <item>rfid power</item>
+
+    </string-array>
+<string-array name="arr_lockType">
+    <item >Open</item>
+    <item >Open forever</item>
+    <item >Lock</item>
+    <item >Lock forever</item>
+    </string-array>  
+   <string-array name="arr_sensitivity">
+    <item >High</item>
+    <item >Mid</item>
+    <item >Low</item>
+    <item >Very Low</item>
+    </string-array>  
+    <string-array name="arr_area">
+    <item >China2</item>
+    <item >USA</item>
+    <item >Europe</item>
+    <item >China1</item>
+    <item >Korea</item>
+    </string-array>  
+     <string-array name="pages">
+    <item >00</item>
+    <item >01</item>
+    <item >02</item>
+    <item >03</item>
+    <item >04</item>
+    <item >05</item>
+    <item >06</item>
+    <item >07</item>
+    <item >08</item>
+    <item >09</item>
+    <item >10</item>
+    <item >11</item>
+    <item >12</item>
+    <item >13</item>
+    <item >14</item>
+    <item >15</item>
+    <item >16</item>
+    <item >17</item>
+    <item >18</item>
+    <item >19</item>
+    <item >20</item>
+    <item >21</item>
+    <item >22</item>
+    <item >23</item>
+    <item >24</item>
+    <item >25</item>
+    <item >26</item>
+    <item >27</item>
+    <item >28</item>
+    <item >29</item>
+    <item >30</item>
+    <item >31</item>
+    <item >32</item>
+    <item >33</item>
+    <item >34</item>
+    <item >35</item>
+    <item >36</item>
+    <item >37</item>
+    <item >38</item>
+    <item >39</item>
+    <item >40</item>
+    <item >41</item>
+    <item >42</item>
+    <item >43</item>
+    <item >44</item>
+    <item >45</item>
+    <item >46</item>
+    <item >47</item>
+    <item >48</item>
+    <item >49</item>
+    <item >50</item>
+    <item >51</item>
+    <item >52</item>
+    <item >53</item>
+    <item >54</item>
+    <item >55</item>
+    <item >56</item>
+    <item >57</item>
+    <item >58</item>
+    <item >59</item>
+    <item >60</item>
+    <item >62</item>
+    <item >63</item>    
+    </string-array>  
+</resources>

@@ -6,13 +6,19 @@
         android:supportsRtl="true">
         <activity android:name=".MainActivity">
         </activity>
-        <service android:name=".WorkService" />
+        <service
+            android:name=".WorkService"
+            android:enabled="true"
+            android:exported="true"/>
         <service
             android:name=".DaemonService"
-            android:process=".daemonService" />
+            android:enabled="true"
+            android:exported="true"
+            android:process=":DaemonService" /><!--确保和本地进程不在同一个进程上-->
         <service
             android:name=".JobWakeUpService"
             android:enabled="true"
+            android:exported="true"
             android:permission="android.permission.BIND_JOB_SERVICE" />
 
     </application>

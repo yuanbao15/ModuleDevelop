@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="rfid_mgs_error_config">Device configuration error</string>
+    <string name="rfid_mgs_error_init">Device initialization failed</string>
+    <string name="rfid_mgs_error_lessthan12">The key length should be 12</string>
+    <string name="rfid_mgs_error_nohex">Please enter the hexadecimal number content</string>
+    <string name="rfid_mgs_error_nopwd">Password cannot be empty</string>
+    <string name="rfid_mgs_error_nolockcode">Lock code cannot be empty</string>
+    <string name="rfid_mgs_kill_fail">Kill failure</string>
+    <string name="rfid_mgs_kill_succ">Kill success</string>
+    <string name="rfid_mgs_lock_succ">Lock success</string>
+    <string name="rfid_mgs_lock_fail">Lock failure</string>
+    <string name="rfid_mgs_killpwdtip">Can\'t use the default password</string>
+    <string name="rfid_mgs_lockpwdtip">Can\'t use the default password</string>
+    <string name="rfid_mgs_locktip">Tips：After permanent lock, unable to unlock;After permanent unlock, not locked</string>
+    <string name="rfid_mgs_error_veri_fail">The key validation fails</string>
+    <string name="rfid_mgs_error_not_found">Find card failure</string>
+    <string name="rfid_msg_uid">\nUID：</string>
+    <string name="rfid_msg_type">\nTag type：</string>
+    <string name="rfid_msg_data">\nData：</string>
+    <string name="rfid_msg_read_fail">\nRead failure</string>
+    <string name="rfid_msg_read_succ">\nRead success</string>
+    <string name="rfid_msg_write_fail">\nWrite failure</string>
+    <string name="rfid_msg_write_succ">\nWrite success</string>
+    <string name="rfid_mgs_error_0not_write">Sector 0 of 0 data block is read-only</string>
+    <string name="rfid_mgs_error_not_write_null">Content to be written can not be empty</string>
+    <string name="rfid_mgs_error_not_supper_write">This program does not support the data block write operation, the data is password control block are not familiar with the tag structure please do not write to.</string>
+    <string name="rfid_msg_1byte_fail">Data should be a byte</string>
+    <string name="rfid_msg_confirm_title">Are You Sure？</string>
+    <string name="rfid_msg_confirm_true">Confirm</string>
+    <string name="rfid_msg_confirm_flase">Cancel</string>
+    <string name="rfid_msg_confirm_afi">After the execution, the AFI of the tag will not be modified!\nlock AFI?</string>
+    <string name="rfid_msg_confirm_dsfid">After the execution, the DSFID of the tag will not be modified!\nlock DSFID?</string>
+    <string name="rfid_msg_lock_fail">\nLock AFI failed</string>
+    <string name="rfid_msg_lock_succ">\nLock AFI success</string>
+    <string name="uhf_msg_read_tag_fail">Read the Tag failed</string>
+    <string name="uhf_msg_addr_not_null">Address can\'t be empty</string>
+    <string name="uhf_msg_addr_must_decimal">Address must be a decimal data</string>
+    <string name="uhf_msg_addr_must_len8">The length of the access password must be 8</string>
+    <string name="uhf_msg_write_must_not_null">Write data can not be empty</string>
+    <string name="uhf_msg_write_must_len4">Write the length of the data string must be 4</string>
+    <string name="uhf_msg_tag_must_not_null">EPC cannot be empty</string>
+    <string name="uhf_msg_write_succ">Write data successfully</string>
+    <string name="uhf_msg_write_fail">Write data failure</string>
+    <string name="uhf_msg_len_not_null">Length cannot be empty</string>
+    <string name="uhf_msg_len_must_decimal">Length must be a decimal data</string>
+    <string name="uhf_msg_write_must_len4x">Write data of the length of the string must be in multiples of four</string>
+    <string name="uhf_msg_read_data_fail">Read failure</string>
+    <string name="uhf_msg_inventory_fail">Inventory failure</string>
+    <string name="uhf_msg_inventory_stop_fail">Stop failure</string>
+    <string name="uhf_msg_inventory_open_fail">Open failure</string>
+    <string name="uhf_msg_set_frequency_fail">Set the frequency failure</string>
+    <string name="uhf_msg_set_frequency_succ">Set the frequency success</string>
+    <string name="uhf_msg_read_frequency_fail">Read the frequency failure</string>
+    
+    <string name="uhf_msg_set_pwm_succ">Set the PWM success</string>
+    <string name="uhf_msg_set_pwm_fail">Set the PWM failure</string>
+    
+    
+    <string name="uhf_msg_read_pwm_fail">Read the PWM failure</string>
+    <string name="uhf_msg_read_frequency_succ">Read the frequency success</string>
+    <string name="uhf_msg_set_power_fail">Set the power failure</string>
+    <string name="uhf_msg_set_power_succ">Set the power success</string>
+    <string name="uhf_msg_read_power_fail">Read the power failure</string>
+    <string name="uhf_msg_read_power_succ">Read the power success</string>
+
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+      <string-array name="arr_lockType">
+    <item >开放</item>
+    <item >永久开放</item>
+    <item >锁定</item>
+    <item >永久锁定</item>
+    </string-array>  
+    
+ 	<string-array name="arr_sensitivity">
+    <item >高</item>
+    <item >中</item>
+    <item >低</item>
+    <item >极低</item>
+    </string-array>  
+        <string-array name="arr_area">
+    <item >中国2</item>
+    <item >美国</item>
+    <item >欧洲</item>
+    <item >中国1</item>
+    <item >韩国</item>
+    </string-array>  
+</resources>

@@ -129,21 +129,25 @@
     <orderEntry type="library" scope="TEST" name="Gradle: com.android.support:multidex-instrumentation:1.0.2@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:animated-vector-drawable:25.3.1@aar" level="project" />
     <orderEntry type="library" name="Gradle: __local_aars__:E.\codes\android_studio\APICloudModuleSDK\app\libs\droidText.0.5.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:E.\codes\android_studio\APICloudModuleSDK\moduleUHF18000_6C\libs\SerialPort.jar:unspecified@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:support-core-ui:25.3.1@aar" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:E.\codes\android_studio\APICloudModuleSDK\moduleUHF18000_6C\libs\uhfcom13_v15.jar:unspecified@jar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.android.support:multidex:1.0.1@aar" level="project" />
     <orderEntry type="library" name="Gradle: __local_aars__:E.\codes\android_studio\APICloudModuleSDK\app\libs\OLCSDK.jar:unspecified@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:support-fragment:25.3.1@aar" level="project" />
-    <orderEntry type="module" module-name="moduleSyncInterface" />
-    <orderEntry type="module" module-name="moduleRefresh" />
-    <orderEntry type="module" module-name="moduleNotification" />
     <orderEntry type="module" module-name="moduleUHF" />
     <orderEntry type="module" module-name="modulePdf" />
     <orderEntry type="module" module-name="moduleDemo" />
     <orderEntry type="module" module-name="moduleProcessAlive" />
     <orderEntry type="module" module-name="moduleNFC" />
-    <orderEntry type="module" module-name="moduleAppdelegate" />
     <orderEntry type="module" module-name="moduleScrollPicture" />
     <orderEntry type="module" module-name="moduleIflyVoice" />
+    <orderEntry type="module" module-name="moduleSyncInterface" />
+    <orderEntry type="module" module-name="moduleRefresh" />
+    <orderEntry type="module" module-name="moduleNotification" />
+    <orderEntry type="module" module-name="moduleUHF_I6310" />
+    <orderEntry type="module" module-name="moduleUHF18000_6C" />
+    <orderEntry type="module" module-name="moduleAppdelegate" />
     <orderEntry type="module" module-name="moduleApi" />
   </component>
 </module>

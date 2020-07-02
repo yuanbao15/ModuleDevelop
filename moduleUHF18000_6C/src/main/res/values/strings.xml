@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">UHFDEMO</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="set">Set</string>
+    <string name="id">ID</string>
+	<string name="barcode">BarCode</string>
+	<string name="count">Count</string>
+	<string name="barcodeCount">Barcode Count: </string>
+	<string name="clear">Clear</string>
+	<string name="scan">Scan</string>
+	<string name="exit">EXIT</string>
+	<string name="exitSystem">Please press back key again, exit!</string>
+	<string name="current_">Current:</string>
+	<string name="initial">Initial</string>
+	<string name="scan_initial">Initial:com0，scan_power</string>
+	<string name="_1d_2d">1D/2D</string>
+	<string name="_1d_2d_hf_uhf_fingerprint_nfc_psam">1D/2D/HF/UHF/FingerPrint/NFC/PSAM</string>
+	<string name="port">Port：<!--  --></string>
+	<string name="power">Power：</string>
+	<!--HF  -->
+	<string name="iso14443a">14443A</string>
+<string name="iso15693">15693</string>
+<string name="serialport">port：</string>
+<string name="buadrate">baudrate：</string>
+<string name="open">open</string>
+<string name="close">close</string>
+	<string name="uid">UID：</string>
+	<string name="sector">sector：</string>
+	<string name="block">block：</string>
+	<string name="password_a">password A</string>
+<string name="password_b">password B</string>
+	<string name="password">Password：</string>
+	<string name="readData">read data(HEX)</string>
+	<string name="writeData">write data(HEX)</string>
+	<string name="findcard">Find card</string>
+	<string name="auth">Auth</string>
+	<string name="startArr">start block：</string>
+	<string name="blocks">blocks：</string>
+	<string name="selectCard">select card</string>
+	<string name="findCardCount">find cards：</string>
+	<string name="selectCardUID">select UID：</string>
+	
+	<string name="singleBlockLen">single block length（byte）：</string>
+	<string name="getCardInfo">Read card info</string>
+	<string name="selectBlock">select block：</string>
+	<string name="current_setting">current serialport：</string>
+	<string name="tips_init_serialport_fail">please open serialport in Setting</string>
+		<string name="tips_find_card">please find card </string>
+		<string name="tips_input_right_data">please enter 8 bytes HEX data</string>
+		<!--NFC  -->
+    <string name="read_data">ReadData</string>
+    <string name="read_data_button">Read</string>
+    <string name="write_data">WriteData</string>
+    <string name="write_data_button">Write</string>
+    <string name="stop_operate_14443a">StopService</string>
+    <string name="initval_wallet_14443a">InitVal</string>
+    <string name="add">Add:</string>
+    <string name="redu">Reduce:</string>
+    <string name="read_block">BlockAmount:</string>
+    <string name="block_start_address">FirstBlock:</string>
+    <string name="password_type">PW_MODE:</string>
+    <string name="a">A</string>
+    <string name="b">B</string>
+    <string name="wallet_mode">e-wallet:</string>
+    <string name="initval">InitBalance:</string>
+    <string name="edittext_sector_hint">00~0F</string>
+    <string name="add_or_redu_ed">Balance:</string>
+    <string name="edittext_wallet_redu">00000001</string>
+    <string name="init_password">FFFFFFFFFFFF</string>
+    <string name="edittext_wallet_add">00000002</string>
+    <string name="show_balance">Balan</string>
+    <string name="f_bytes">FourBytes</string>
+    <string name="_00000000">00000000</string>
+    <string name="security_byte">SecurityBit</string>
+    <string name="start_block">FirstBlock:</string>
+    <string name="block_amount">BlockNum:</string>
+    <string name="card_state_set">CardStatus</string>
+    <string name="card_write_mode_set">CardWriteMode</string>
+    <string name="card_lock_set">CardLock</string>
+    <string name="read_card_information">CardInformation</string>
+    <string name="number">Order</string>
+    <string name="card_type">CardType</string>
+    <string name="times">Times</string>
+    <string name="find_card">FindCard</string>
+    <string name="stop_find_card">StopFindCard</string>
+    <string name="nfc_ul_card">NFC/UL Card</string>
+    <string name="id_card">ID Card</string>
+	<string name="_card">Card：</string>
+	<string name="_write_success">写数据成功</string>
+	<string name="wallet_initval_success">\nWallet InitVal Success！</string>
+	<string name="_notice">Notice！！！</string>
+	<string name="_operation_notice">This operation is irreversible and cannot be changed after lock.</string>
+	<string name="_whether_to_cotinue">Whether to continue?</string>
+	<string name="_yes">Yes</string>
+	<string name="_no">No</string>
+	<string name="_block_number">BlockNumber：</string>
+	<string name="_afi_">WriteAFI</string>
+	<string name="_dsfid">WriteDSFID</string>
+	<string name="_select_card">Select Card：</string>
+	<string name="_write_out_data">ReadData:</string>
+	<string name="_lock">Lock</string>
+	<string name="_return">-->Return：</string>
+	<string name="_opera_success">\tOperateSuccess\n</string>
+	<string name="_opera_fail">\tOperateFail\n</string>
+	<string name="_please_input">Please input the hexadecimal data of 4 bytes</string>
+	<string name="_read_page">ReadPage，The \t</string>
+	<string name="_page">\tPage</string>
+	<string name="read_page">ReadPage</string>
+	<string name="write_page">WritePage</string>
+	<string name="_read_page_data">ReadPage</string>
+	<string name="_write_page_data">WritePage</string>
+	<!-- UHF -->
+	<string name="connect">connect MCU</string>
+	<string name="inventory">Start Inventory</string>
+		<string name="stop_inventory">Stop Inventory</string>
+	<string name="membank">Membank</string>
+	<string name="accesspassword">Access Password</string>
+	<string name="addr">Address(word)</string>
+	<string name="len">Length(word)</string>
+	<string name="read">Read Tag</string>
+	<string name="write">Write Tag</string>
+	<string name="writedata">Write Data(HEX)</string>
+	<string name="locktype">Lock Type</string>
+	<string name="locktag">Lock Tag</string>
+	<string name="kill">Kill Tag</string>
+	<string name="killpassword">Kill Password</string>
+	<string name="readdata">Read Data</string>
+	<string name="back">Back</string>
+	<string name="parameterSetting">Parameter Setting</string>
+	<string name="sensitivity">Sensitivity</string>
+	<string name="rfPower">RF power</string>
+	<string name="workArea">Work Area</string>
+    <string name="freqSetting">Freq setting</string>
+    <string name="china2Freq">China2：920125kHz~924875kHz</string>
+    <string name="usaFreq">USA：902250kHz~927750kHz</string>
+    <string name="euFreq">Europe：865100kHz~867900kHz</string>
+    <string name="china1Freq">China1：840125kHz~844875kHz</string>
+    <string name="koreaFreq">Korea：917700kHz~923300kHz</string>
+    <string name="setSuccess">Set success</string>
+    <string name="freqNotNull">Frequency not null</string>
+    <string name="epc">EPC</string>
+    <!-- FingerPrint -->
+    <string name="desc">display</string>
+    <string name="manufacturer">Manufacturer： </string>
+	<string name="productModel">Model：</string>
+	<string name="SWVersion">Version：</string>
+	<string name="DeviceAddress">Device Addr：</string>
+	<string name="FingerNum">Finger Num：</string>
+	<string name="SecurLevel">Secur Level：</string>		
+	<string name="CmosExposeTimer">CMO：</string>	
+	<string name="DetectSensitive">Sensitiv：</string>	
+	<string name="ComBaudRate">BaudRate：</string>	
+    <string name="clear_mark">clear mark</string>
+    <string name="reset_setting">Reset setting</string>
+    <string name="reset_device">Reset device</string>
+    <string name="compare_text">Compare</string>
+    <string name="spinnerPrompt">Prompt</string>
+    <string name="image_preview">Image preview</string>
+    <string name="single_compare">Single compare</string>
+    <string name="single_search">Single search</string>
+    <string name="search_fp">Search</string>
+    <string name="db_clear">Empty storage</string>
+    <string name="db_delete">delete</string>
+    <string name="database_manage_text">database manage</string>
+    <string name="finger_input_text">Finger input</string>
+    <string name="image_upload">Image upload</string>
+    <string name="input_finger">Input finger</string>
+    <string name="register_finger">Register</string>
+    <string name="image_manage_text">Image manage</string>
+    <string name="origin_image">Origin image</string>
+    <string name="get_iamge">Get image</string>
+    <string name="yulan_tuxiang">view image</string>
+    <string name="baocun_tuxiang">Save image</string>
+    <string name="muban_caozuo_text">Templet option</string>
+    <string name="shengcheng_muban">Gen templet</string>
+    <string name="bidui_muban">compare templet</string>
+    <string name="shangchuan_muban">Upload templet</string>
+    <string name="xiazai_muban">Download templet</string>
+    <string name="anquan_shezhi_text">Set secur level</string>
+    <string name="anquan_shezhi">Set</string>
+    <string name="zhiwen_anquan_jibie_text">Secur level </string>
+    <string name="cmos_shezhi_text">CMOS</string>
+    <string name="cmos_shezhi">Set</string>
+    <string name="baoguang_shijian_text">time(hex)</string>
+    <string name="baoguang_shijian_default">00f8</string>
+    <string name="zhiwen_lingmindu_text">sensetive</string>
+    <string name="zhiwen_lingmindu_default">85</string>
+    <string name="jishiben_caozuo_text">Notepad option</string>
+    <string name="du_jishiben">Read notepad</string>
+    <string name="xie_jishiben">Write notepad</string>
+    <string name="botelv_shezhi_text">Baudrate setting</string>
+    <string name="botelv_shezhi">set</string>
+    <string name="botelv_shezhi_default">115200</string>
+    <string name="qita_caozuo_text">Other</string>
+    <string name="shebei_xinxi_text">device info</string>
+    <string name="zhengshiyong_usb">Now using USB </string>
+    <string name="zhengshiyong_serial">Now using serialport </string>
+    <string name="usb_shuchu_text">image input success</string>
+    <string name="dakai_shebei">Open device</string>
+    <string name="guanbi_shebei">Close device</string>
+    <string name="cancel_operation">Cancel operation</string>
+    <string name="tuichu_chengxu">Exit</string>
+    <string name="tezheng_bidui_android">Compare featrue</string>
+    <string name="baobiao_shengcheng_android">Gen table</string>
+    <string name="usb_communication_type">USB</string>
+    <string name="com_communication_type">SerialPort</string>
+    <string name="image_type">image</string>
+    <string name="alg_type">algorithm</string>
+    
+    
+    <!-- 2015-01-17 -->
+    <string name="start"> start </string>
+    <string name="put_finger_on_sensor">Please put the finger on the sensor first!</string>
+    <string name="get_finger_print_success">get finger print success!</string>
+    <string name="option_cancel"> option cancel</string>
+    <string name="device_exception">device exception</string>
+    <string name="now_upload_image">Now upload image...</string>
+    <string name="call_fail">call fail</string>
+    <string name="input_image_success">Input image success, now upload...</string>
+    <string name="upload_image_error">upload image error!</string>
+    <string name="upload_image_success"> upload image success</string>
+    <string name="gen_feature">gen feature</string>
+    <string name="gen_feature_fail_input_again">gen feature fail,please input again</string>
+    <string name="please_move_finger">please move finger</string>
+    <string name="merger_fail">merger fail</string>
+    <string name="finger_print_repeat_input_cacel">finger print repeat, input cancel</string>
+    <string name="user">user </string>
+    <string name="add_success">add success</string>
+    <string name="input_image_success_comparing">input image success, comparing...</string>
+    <string name="gen_feature_fail">gen feature fail</string>
+    <string name="compare_fail">compare fail</string>
+    <string name="compare_success">compare success</string>
+    <string name="serching">searching...</string>
+    <string name="not_find_finger">not find finger print</string>
+    <string name="find_finger_print"> find finger print</string>
+    <string name="feature_compared">feature compared</string>
+    <string name="table_finish">table finish</string>
+    <!-- PSAM -->
+    <string name="select_card">SelectCard</string>
+    <string name="random08">0084000008</string>
+    <string name="select_MF">00a40000023f00</string>
+    <string name="select_MF_6117">00c0000017</string>
+    <string name="delete_MF">800e000008ffffffffffffffff</string>
+    <string name="create_MF">80E0000018ffffffffffffffff0f01315041592e5359532e4444463031</string>
+    <string name="stop_create_MF">80E00001023F00</string>
+    <string name="create_EF01">80e00200070001000f0f00ff</string>
+    <string name="create_EF02">80e00200070002000f0f00ff</string>
+    <string name="write_74_EF01">00d681007400112233445566778899aabbccddeeff00112233445566778899aabbccddeeff00112233445566778899aabbccddeeff00112233445566778899aabbccddeeff00112233445566778899aabbccddeeff00112233445566778899aabbccddeeff00112233445566778899aabbccddeeff00112233</string>
+    <string name="read_76_EF01">00B0810076</string>
+    <string name="m1_card">M1 card</string>
+    <string name="psam_card">PSAM card</string>
+    <string name="contentless_CPU_card">Contactless CPU</string>
+    <string name="iso_15693_card">ISO15693 card</string>
+    <string name="card_id">UID</string>
+    <string name="get_UID">Get UID</string>
+    <string name="authentication">Authentication</string>
+    
+    <string name="select_psam_card">Select card</string>
+    <string name="cos_cmd">Cos CMD</string>
+    <string name="send_data">Send data</string>
+    <string name="receive_data">Receiver</string>
+    <string name="poweon_reset">PoweOn_Reset</string>
+    <string name="send_cmd">Send cmd</string>
+    <string name="poweroff">Poweroff</string>
+    
+    <string name="active_card">Open card</string>
+    <string name="close_card">Close card</string>
+    <string name="start_area">Start area</string>
+    
+    <!-- ZA FingerPrint -->
+    <string name="baudrate">buadrate：</string>
+    
+    <string name="open_device">Open</string>
+	<string name="close_device">Close</string>
+    <string name="get_image">Get FP Image</string>
+	<string name="record_templet">Enroll</string>
+    <string name="search_finger_print">Search</string>
+	<string name="compare_finger_print">Compare</string>
+	<string name="help">Help</string>
+	<string name="del_all">Empty Templet</string>
+	<string name="db_compare">Compare with Database</string>
+	<string name="finger_image">FP Image</string>
+	<string name="option_info">Option info</string>
+	
+	<string name="get_chara">Get chara</string>
+	<string name="name">Name</string>
+	<string name="insert_db">Insert to DB</string>
+	<string name="search_db">Search from DB</string>
+	
+	<string name="error_info">Error Code：\n
+0 Command is performed or OK\n
+1 Packets receive error\n
+2 Device address error\n
+3 Password Error\n
+4 No finger on the sensor\n
+5 Get FP image fail\n
+6 Gen templet fail\n
+7 Does not match the fingerprint\n
+8 No search to the fingerprint\n
+9 Characteristics of merger failures\n
+10 Out of range\n
+11 Read from the fingerprint template error\n
+12 Upload feature failure\n
+13 Upload images failure\n
+14 Delete the template failed\n
+15 Empty the fingerprint failure\n
+16 Residual fingerprints or by means of sensor window for a long time did not move\n
+17 Specify a location without a valid template\n
+18 Fingerprint repeat\n
+19 The address does not exist in the fingerprint template\n
+20 Obtaining template index length overflow\n
+21 Failed to set the baud rate\n
+22 Erase the program failure\n
+23 System reset failed\n
+24 FLASH operation error\n
+25 Notepad address overflow\n
+26 Set the parameter error\n
+27 Command does not exist</string>
+	
+	<string name="settings">Settings</string>
+	
+	<string name="more">More</string>
+	
+	<string name="read_and_write">Read and write</string>
+	
+	<string name="uhf_demo">UHF-DEMO</string>
+	
+	<string name="more_settings">More settings >></string>
+	
+	<string name="cancel">Cancel</string>
+	
+	<string name="sure">Sure</string>
+	<string name="hint_you_going_to_do_modification_may_cause_module_does_not_work_">Hint: you are going to do modification may cause module does not work!!!!</string>
+	<string name="read_data_">Read data:</string>
+	<string name="read_fail_error">Read data fail,Error code:</string>
+	<string name="read_fail_return_null">Read fail,return null</string>
+	<string name="password_is_4_bytes">Password is 4 bytes</string>
+	<string name="write_successful_">Write successful!</string>
+	<string name="write_failue_">Write fail！</string>
+	<string name="lock_successful_">Lock successful!</string>
+	<string name="lock_fail_">Lock fail!</string>
+	<string name="_recv_hex_">[Recv(HEX)]:</string>
+	<string name="_recv_">[Recv]:</string>
+	<string name="please_open_serialport_first_">Please open serialport first!</string>
+	<string name="command_is_null_">Command is null!!</string>
+	<string name="serialport_init_fail_">SerialPort init fail!!</string>
+	<string name="the_unit_is_word_1word_2bytes">The unit is word,1word = 2bytes</string>
+	<string name="reset_success_">Reset success!</string>
+	<string name="reset_fail_">Reset fail!</string>
+	<string name="_00_27">Address(hex) and block number:00~27</string>
+	<string name="_1d">1D</string>
+	<string name="_2d">2D</string>
+	<string name="hf_n14443a">HF14443A</string>
+	<string name="hf_n15693">HF15693</string>
+	<string name="uhf">UHF</string>
+	<string name="fingerprint">FingerPrint</string>
+	<string name="now_get_fingerprint_chara_">Now get fingerprint chara ...</string>
+	<string name="now_open_device_">Now open device ...Please wait a few seconds！</string>
+	<string name="open_device_fail_">Open device fail!</string>
+	<string name="open_device_success_">Open device success!</string>
+	<string name="close_device_">Close device！</string>
+	<string name="now_match_fingerprint_chara_1_and_fingerprint_chara_2_">Now match Fingerprint chara 1  and Fingerprint chara 2...</string>
+	<string name="please_get_fingerprint_characteristic_first_">Please get fingerprint characteristic first!</string>
+	<string name="get_fingerprint_chara_success_">Get fingerprint chara success!</string>
+	<string name="get_fingerprint_chara_fail_">Get fingerprint chara fail!</string>
+	<string name="get_image_now_">Get image now...</string>
+	<string name="get_image_fail_">Get image fail!</string>
+	<string name="get_image_success_">Get image success!</string>
+	<string name="search_this_fingerprint_chara_now_">Search this fingerprint chara now...</string>
+	<string name="search_success_addressid_">Search success ,addressID:</string>
+	<string name="search_fail_">Search  Fail！</string>
+	<string name="free_addressid_">Free addressID:</string>
+	<string name="sure_to_delete_all_fingerprint_chara_">Sure to delete all fingerprint chara ？</string>
+	<string name="clear_all_chara_success_">Clear all chara success!</string>
+	<string name="clear_all_chara_fail_">Clear all chara fail!</string>
+	<string name="input_success_addressid_">Input success!AddressID:</string>
+	<string name="input_fail_">Input fail!</string>
+	<string name="cause_fingerprint_1_2_unmatched">Cause:Fingerprint 1/2 unmatched</string>
+	<string name="cause_input_fail_or_already_existing_">Cause:Input fail or already existing!</string>
+	<string name="match_socre_">Match socre:</string>
+	<string name="return_success_">Return success!</string>
+	<string name="return_fail_">Return fail!</string>
+	<string name="shut_down_success_">Shut down success!</string>
+	<string name="shut_down_fail_">Shut down fail!</string>
+	<string name="read_success_">Read success!</string>
+	<string name="read_fail_">Read fail！</string>
+	<string name="write_success_">Write success!</string>
+	<string name="write_fail_">Write fail！</string>
+	<string name="before_reading_the_data_for_certification">you must auth card before reading the data</string>
+	<string name="auth_success_">Auth success!</string>
+	<string name="auth_fail_">Auth fail!</string>
+	<string name="please_input_hexadecimal_number">Please input hexadecimal number</string>
+	<string name="reset">Reset</string>
+	<string name="about">About</string>
+	<string name="serialport_debugging_tool">SerialPort</string>
+	<string name="keytest">KeyTest</string>
+	<string name="psam_1iso15693">Psam-1ISO15693</string>
+	<string name="psam_m1card">Psam-M1Card</string>
+	<string name="psam_demo">PSAM DEMO</string>
+	<string name="hf_iso14443a">HF-ISO14443A</string>
+	<string name="hf_iso15693">HF-ISO15693</string>
+	<string name="_1d_2d_demo">1D/2D-DEMO</string>
+	<string name="note_the_following_operation_may_lead_to_module_does_not_work_">Note: The following operation may lead to module does not work!</string>
+	<string name="lf_134_">LF(134.2K)</string>
+	<string name="lf_125_">LF(125K)</string>
+	<string name="search_epc">Search EPC</string>
+	<string name="lock_and_kill">Lock and kill</string>
+	<string name="match_charas">Match charas</string>
+	<string name="fingerprint_1">Fingerprint 1</string>
+	<string name="fingerprint_2">Fingerprint 2</string>
+	<string name="send">Send</string>
+	<string name="select_configs_">Select Configs:</string>
+	<string name="cancle">Cancle</string>
+	<string name="configs">Configs</string>
+	<string name="are_you_sure_to_reset_">Are you sure to reset?</string>
+	<!--  -->
+	<string name="uhflonger">UHF(Longer)</string>
+	<string name="_init_module_fail">Init module fail</string>
+	<string name="_power_now">Now power:</string>
+	<string name="serialport_init_fail">Serialport init fail!</string>
+	<string name="_inventory_first">Please inventory first!</string>
+	<string name="_please_input_name">Please input your name:</string>
+	<string name="_name_is_null">Name is null！</string>
+	<string name="_name_">,name:</string>
+	<string name="_change_epc">Rewrite EPC</string>
+	<string name="_no_password_can_be_writed">No password can be writed</string>
+	<string name="_password_write">Can write when there are password</string>
+	<string name="_Always_read_write">Always can read and write</string>
+	<string name="_never_read_and_write">Never can read and write</string>
+	<string name="_return_inventory">Return</string>
+	<string name="_the_data_exsit">The data is exsiting</string>
+	<string name="_input_data_first">Please input data first!</string>
+	<string name="_delete_all_data_success">Delete all data success</string>
+	<string name="_data_change_success">Rewrite data success</string>
+	<string name="_data_change_fail">Rewrite data fail</string>
+	<string name="_please_select_epc">Please select EPC</string>
+	<string name="_password_length_error">Password length error</string>
+	<string name="_operation_success">Operation success</string>
+	<string name="_operation_fail">Operation fail</string>
+	<string name="_rewrite_epc">Rewrite EPC</string>
+	<string name="_read_and_write">Read and Write</string>
+	<string name="_rewrite_password">Rewrite password</string>
+	<string name="_Reserve_read_write_protection">Reserve read write protection</string>
+	<string name="_other_read_write_protection">Other read write protection</string>
+	<string name="_read_epc_special_word">Read EPC Special Word</string>
+	<string name="_return_true">return：true</string>
+	<string name="_return_false">return：false</string>
+	<string name="_no_tag">No tag</string>
+	<string name="_epc_error">New EPC error</string>
+	<string name="_rewrite_epc_success">Rewrite epc success</string>
+	<string name="_write_fail">write fail </string>
+	<string name="_write_visit_password_success">Write visit password success</string>
+	<string name="__write_visit_password_fail">Write visit password fail</string>
+	<string name="_write_destoy_password_success">Write destoy password success</string>
+	<string name="_write_destoy_password_fail">Write destoy password fail</string>
+	<string name="_set_fail">Set fail</string>
+	<string name="_set_successs">Set success</string>
+	<string name="_data_length_error">Data length error </string>
+	<string name="_please_input_begin_address">Please input start address</string>
+	<string name="_length_cannot_be_null">Length cannot be null</string>
+	<string name="_read_success">Read data success</string>
+	<string name="_read_fail">Read data fail</string>
+	<string name="_read_data_fail_return_null">Read data fail ,return null</string>
+	<string name="_more_operation">MoreOperations</string>
+	<string name="hexadecimal_data_0_9_a_f_a_f">Hexadecimal data, 0-9,a-f,A-F</string>
+	<string name="_operation_type">OperationType</string>
+	<string name="_set_protect">SetProtect</string>
+	<string name="_destoy_password">Destoy password</string>
+	<string name="_visit_password">VisitPassword</string>
+	<string name="_select_epc_">SelectEPC:</string>
+	<string name="_password_">VisitPassword：</string>
+	<string name="_new_epc_">NewEPC:</string>
+	<string name="_Hexadecimal_data_unit_word">Hexadecimal_data，unit:word</string>
+	<string name="_Rewrite_epc">RewriteEPC</string>
+	<string name="_new_visit_password">NewVisitPassword:</string>
+	<string name="_set">Set</string>
+	<string name="_new_destoy_password">NewDestoyPassword：</string>
+	<string name="_power_dbm_">Power(dBm):</string>
+	<string name="_down">Down</string>
+	<string name="_up">Up</string>
+	<string name="stop">Stop</string>
+	<string name="fingerprint_big">Fingerprint(Big)</string>
+	<string name="data_area">DataArea:</string>
+	<string name="start_addr">StartAddress:</string>
+	<string name="_length_word_">Length(WORD):</string>
+	<string name="_write_data_hex_">WriteData(HEX):</string>
+	<string name="_tips">Tips:</string>
+	<string name="lock_mem">Lock mem:</string>
+	<string name="sure_kill">This operation will destroy the tag, continue?</string>
+</resources>

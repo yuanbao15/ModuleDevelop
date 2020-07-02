@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rectangle_bg"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvPtr" />
+
+        <EditText
+            android:id="@+id/etPtr"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="numberSigned"
+            android:text="32" />
+        <TextView
+            android:layout_marginRight="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(bit)"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="长度" />
+
+        <EditText
+            android:id="@+id/etLen"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="numberSigned"
+            android:text="0" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(bit)"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvData_Read" />
+
+        <EditText
+            android:id="@+id/etData"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint=""
+            android:inputType="textNoSuggestions"
+            android:singleLine="true" />
+    </LinearLayout>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbEPC"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/rb_bg"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="EPC"
+            android:textColor="@drawable/check_text_color" />
+
+        <RadioButton
+            android:id="@+id/rbTID"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/rb_bg"
+            android:button="@null"
+            android:checked="false"
+            android:gravity="center"
+            android:text="TID"
+            android:textColor="@drawable/check_text_color" />
+        <RadioButton
+            android:id="@+id/rbUser"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/rb_bg"
+            android:button="@null"
+            android:checked="false"
+            android:gravity="center"
+            android:text="USER"
+            android:textColor="@drawable/check_text_color" />
+        <RadioButton
+            android:visibility="gone"
+            android:id="@+id/rbRESERVED"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/rb_bg"
+            android:button="@null"
+            android:checked="false"
+            android:gravity="center"
+            android:text="RESERVED"
+            android:textColor="@drawable/check_text_color" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="right"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/uhf_msg_r2000_tip" />
+
+        <Button
+            android:id="@+id/btnDisable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/button_bg"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/button_disable"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btnOk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_bg"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/button_enable"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:visibility="gone"/>
+
+        <CheckBox
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cb_filter"
+            android:text="@string/button_enable"
+            android:textSize="19sp"
+            android:textColor="@drawable/check_text_color"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设置"
+            android:id="@+id/btSet"/>
+    </LinearLayout>
+</LinearLayout>

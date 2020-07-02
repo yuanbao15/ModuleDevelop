@@ -4,7 +4,7 @@
             "outputFile": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\79cea14c5da1dbd25a2d7c3ba27bf2b1\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\94e4b0cc1ebf8ab5f1a4327fced93c66\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,19,32,33,34,35,36",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4",

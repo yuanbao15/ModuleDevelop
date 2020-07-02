@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<resources>  
+    <string-array name="cos_arrays">  
+        <item>取随机数08</item>  
+        <!--  
+        <item>选择MF</item>  
+        <item>选择MF返回6117</item>  
+        <item>删除MF</item>  
+        <item>建立MF</item>  
+        <item>结束建立MF</item>
+        <item>建立EF01</item>  
+        <item>建立EF02</item>  
+        <item>向EF01写74个字节</item> 
+        <item>从EF01读76个字节</item> 
+        -->
+    </string-array>  
+</resources>  

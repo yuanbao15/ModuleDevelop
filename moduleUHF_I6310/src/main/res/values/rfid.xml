@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="arrayTagType">
+        <item>S50</item>
+        <item>S70</item>
+    </string-array>
+
+    <string-array name="arrayKeyType">
+        <item>A</item>
+        <item>B</item>
+    </string-array>
+
+
+</resources>

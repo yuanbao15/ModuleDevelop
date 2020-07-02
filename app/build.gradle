@@ -54,4 +54,6 @@ dependencies {
     compile project(':moduleIflyVoice')
     compile project(':moduleProcessAlive')
     compile project(':moduleNotification')
+    compile project(':moduleUHF18000_6C')
+    compile project(':moduleUHF_I6310')
 }

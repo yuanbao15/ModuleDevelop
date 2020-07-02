@@ -26,6 +26,8 @@
 		var moduleIflyVoice = null;
 		var moduleProcessAlive = null;
 		var moduleNotification = null;
+		var moduleUHF18000_6C = null;
+		var moduleUHF_I6310 = null;
 
 		apiready = function(){
 	    	uzmoduledemo = api.require('moduleDemo');
@@ -37,6 +39,8 @@
 			moduleIflyVoice = api.require('moduleIflyVoice');
 			moduleProcessAlive = api.require('moduleProcessAlive');
 			moduleNotification = api.require('moduleNotification');
+			moduleUHF18000_6C = api.require('moduleUHF18000_6C');
+			moduleUHF_I6310 = api.require('moduleUHF_I6310');
 	    }
 	    
 		function showAlert(){
@@ -255,6 +259,8 @@
 			moduleIflyVoice.startRecognize(params, function(ret, err){
 				if (ret) {
 					var data = ret.data;
+					var data2 = ret.data2;
+					alert(data2);
 					$("#voice_str").val(JSON.stringify(data));
 				} else {
 					alert(JSON.stringify(err));
@@ -312,12 +318,68 @@
                 }
             });
 		}
+
+		// 针对2020.5.14开发的新PDA的uhf模块
+		function testUHFNew(){
+			var params = {name:'yb'};
+			moduleUHF18000_6C.startActivity(params);
+		}
+		function readUHFNew(){
+			var params = {name:'yb'};
+			moduleUHF18000_6C.readUHF(params);
+		}
+        function writeUHFNew(){
+        	var str = $("#uhf_str_new").val();
+			var params = {
+				str:str
+			};
+			moduleUHF18000_6C.writeUHF(params);
+		}
+
+		// 针对2020.5.20开发的I6310连接手柄的uhf模块
+		function testUHF_I6310(){
+			var params = {name:'yb'};
+			moduleUHF_I6310.startActivity(params);
+		}
+		function readUHF_I6310(){
+			var params = {
+				startIndex: 0, // 读取的起始位置，默认为0
+				length: 6, // 读取长度，默认为6
+				memType: 3 // 表示存储区，为0-3，分别对应RESEVER/EPC/TID/USER。默认为3-user
+			};
+			moduleUHF_I6310.readUHF(params);
+		}
+        function writeUHF_I6310(){
+        	var str = $("#uhf_str_i6310").val();
+			var params = {
+				str:str
+			};
+			moduleUHF_I6310.writeUHF(params);
+		}
 	</script>
 </head>
 <body>
     <div id="wrap">
         <div id="main">
         	<br>
+			<div class='itemtitle'>1、writeUHF_I6310</div>
+			<div><input type="text" id="uhf_str_i6310"/><div>
+			<div class="clickbtn" tapmode="active" onclick="writeUHF_I6310()" >测试UHF超高频写的方法</div>
+			<div class='itemtitle'>2、readUHF_I6310</div>
+			<div class="clickbtn" tapmode="active" onclick="readUHF_I6310()" >测试UHF超高频读的方法</div>
+			<div class='itemtitle'>3、testUHFActivity_I6310</div>
+			<div class="clickbtn" tapmode="active" onclick="testUHF_I6310()" >测试UHF超高频读写的activity</div>
+			<br>
+
+			<div class='itemtitle'>1、writeUHF_新PDA</div>
+				<div><input type="text" id="uhf_str_new"/><div>
+				<div class="clickbtn" tapmode="active" onclick="writeUHFNew()" >测试UHF超高频写的方法</div>
+			<div class='itemtitle'>2、readUHF_新PDA</div>
+				<div class="clickbtn" tapmode="active" onclick="readUHFNew()" >测试UHF超高频读的方法</div>
+			<div class='itemtitle'>3、testUHFActivity_新PDA</div>
+				<div class="clickbtn" tapmode="active" onclick="testUHFNew()" >测试UHF超高频读写的activity</div>
+			<br>
+
 			<div class='itemtitle'>0、showNotification_yb</div>
 				<div class="clickbtn" tapmode="active" onclick="showNotification()" >yb-推送消息到通知栏</div>
             <div class='itemtitle'>0、startAlive_yb</div>
@@ -334,13 +396,17 @@
                 <div><input type="text" id="nfc_result"/><div>
 				<div class="clickbtn" tapmode="active" onclick="readNFC()" >yb-测试高频NFC读单块的方法</div>
 				<div class="clickbtn" tapmode="active" onclick="readNFC4Blocks()" >yb-测试高频NFC读4块的方法</div>
-            <div class='itemtitle'>0、writeUHF_yb</div>
+			<br>
+
+			<div class='itemtitle'>0、writeUHF_yb</div>
 				<div><input type="text" id="uhf_str"/><div>
                 <div class="clickbtn" tapmode="active" onclick="writeUHF()" >yb-测试UHF超高频写的方法</div>
 			<div class='itemtitle'>0、readUHF_yb</div>
 				<div class="clickbtn" tapmode="active" onclick="readUHF()" >yb-测试UHF超高频读的方法</div>
 			<div class='itemtitle'>0、testUHFActivity_yb</div>
 				<div class="clickbtn" tapmode="active" onclick="testUHF()" >yb-测试UHF超高频读写的activity</div>
+			<br>
+
 			<div class='itemtitle'>0、testMyPdfMark_yb</div>
 				<div class="clickbtn" tapmode="active" onclick="testPdfMark()" >yb-测试读取标记pdf的activity</div>
 			<div class='itemtitle'>0、testApi_yb</div>

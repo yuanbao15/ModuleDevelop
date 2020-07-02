@@ -15,6 +15,7 @@ import java.util.List;
 
 /**
  * @fileName JobWakeUpService
+ *      保证在息屏后，CPU进入休眠状态时进行唤醒
  * @description 定时轮询，看服务是否挂掉，若挂掉则重启服务
  * Created by yuanbao on 2019/7/17 
  */
@@ -34,7 +35,7 @@ public class JobWakeUpService extends JobService{
 
     @Override
     public boolean onStartJob(JobParameters params) {
-        //开启定时任务，定时轮寻 看MessageService有没有被杀死
+        //开启定时任务，定时轮寻 看WorkService有没有被杀死
         //如果杀死了启动 轮寻onStartJob
         boolean isAlive = isServiceAlive(WorkService.class.getName()); // 判断服务有没有在运行
         if (!isAlive){
@@ -68,5 +69,10 @@ public class JobWakeUpService extends JobService{
             }
         }
         return isWork;
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
     }
 }

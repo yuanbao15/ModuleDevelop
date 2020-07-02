@@ -1,4 +1,2 @@
-# Referenced at E:\codes\android_studio\APICloudModuleSDK\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:190
--keep class cn.yuanbao.processalive.DaemonService { <init>(); }
 # Referenced at E:\codes\android_studio\APICloudModuleSDK\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:46
 -keep class com.uzmap.pkg.uzapp.UZApplication { <init>(); }

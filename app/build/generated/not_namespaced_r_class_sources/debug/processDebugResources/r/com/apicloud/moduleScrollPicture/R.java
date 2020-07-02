@@ -12,15 +12,15 @@ public final class R {
     public static final class drawable {
         private drawable() {}
 
-        public static final int mo_scrollpicture_img_switcher_bg = 0x7f070082;
-        public static final int mo_scrollpicture_img_switcher_bg0 = 0x7f070083;
-        public static final int mo_scrollpicture_img_switcher_bg1 = 0x7f070084;
-        public static final int mo_scrollpicture_img_switcher_bg2 = 0x7f070085;
-        public static final int mo_scrollpicture_img_switcher_bg3 = 0x7f070086;
+        public static final int mo_scrollpicture_img_switcher_bg = 0x7f070094;
+        public static final int mo_scrollpicture_img_switcher_bg0 = 0x7f070095;
+        public static final int mo_scrollpicture_img_switcher_bg1 = 0x7f070096;
+        public static final int mo_scrollpicture_img_switcher_bg2 = 0x7f070097;
+        public static final int mo_scrollpicture_img_switcher_bg3 = 0x7f070098;
     }
     public static final class string {
         private string() {}
 
-        public static final int app_name = 0x7f0d0055;
+        public static final int app_name = 0x7f0e00fd;
     }
 }

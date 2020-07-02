@@ -16,6 +16,8 @@
       <module fileurl="file://$PROJECT_DIR$/moduleScrollPicture/moduleScrollPicture.iml" filepath="$PROJECT_DIR$/moduleScrollPicture/moduleScrollPicture.iml" />
       <module fileurl="file://$PROJECT_DIR$/moduleSyncInterface/moduleSyncInterface.iml" filepath="$PROJECT_DIR$/moduleSyncInterface/moduleSyncInterface.iml" />
       <module fileurl="file://$PROJECT_DIR$/moduleUHF/moduleUHF.iml" filepath="$PROJECT_DIR$/moduleUHF/moduleUHF.iml" />
+      <module fileurl="file://$PROJECT_DIR$/moduleUHF18000_6C/moduleUHF18000_6C.iml" filepath="$PROJECT_DIR$/moduleUHF18000_6C/moduleUHF18000_6C.iml" />
+      <module fileurl="file://$PROJECT_DIR$/moduleUHF_I6310/moduleUHF_I6310.iml" filepath="$PROJECT_DIR$/moduleUHF_I6310/moduleUHF_I6310.iml" />
     </modules>
   </component>
 </project>
