@@ -66,7 +66,7 @@ public class WorkService extends Service {
                 .setContentTitle("我是XXX，我怕谁!")
                 .setAutoCancel(false)
                 .setContentText("哈哈")
-                .setWhen( System.currentTimeMillis());
+                .setWhen( System.currentTimeMilis());
         //把service设置为前台运行，避免手机系统自动杀掉改服务。
         startForeground(startId, builder.build());
         bindService(new Intent(this, DaemonService.class), mServiceConnection, Context.BIND_IMPORTANT);*/

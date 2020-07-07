@@ -27,7 +27,7 @@ public class ProcessDemo extends UZModule {
         manager.startAlive(this.getContext());
     }
     /**
-     * @method    关闭线程常驻
+     * @method    关闭线程常驻，未成功
      * @param    
      * 
      * @author  yuanbao

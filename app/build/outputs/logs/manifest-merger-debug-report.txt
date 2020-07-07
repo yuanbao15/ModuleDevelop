@@ -9,7 +9,7 @@ MERGED from [:modulePdf] E:\codes\android_studio\APICloudModuleSDK\modulePdf\bui
 MERGED from [:moduleUHF] E:\codes\android_studio\APICloudModuleSDK\moduleUHF\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-23:12
 MERGED from [:moduleNFC] E:\codes\android_studio\APICloudModuleSDK\moduleNFC\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-38:12
 MERGED from [:moduleIflyVoice] E:\codes\android_studio\APICloudModuleSDK\moduleIflyVoice\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-146:12
-MERGED from [:moduleProcessAlive] E:\codes\android_studio\APICloudModuleSDK\moduleProcessAlive\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-34:12
+MERGED from [:moduleProcessAlive] E:\codes\android_studio\APICloudModuleSDK\moduleProcessAlive\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-36:12
 MERGED from [:moduleNotification] E:\codes\android_studio\APICloudModuleSDK\moduleNotification\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-13:12
 MERGED from [:moduleUHF18000_6C] E:\codes\android_studio\APICloudModuleSDK\moduleUHF18000_6C\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-23:12
 MERGED from [:moduleUHF_I6310] E:\codes\android_studio\APICloudModuleSDK\moduleUHF_I6310\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-25:12
@@ -112,8 +112,8 @@ MERGED from [:moduleNFC] E:\codes\android_studio\APICloudModuleSDK\moduleNFC\bui
 MERGED from [:moduleNFC] E:\codes\android_studio\APICloudModuleSDK\moduleNFC\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:5-36:19
 MERGED from [:moduleIflyVoice] E:\codes\android_studio\APICloudModuleSDK\moduleIflyVoice\build\intermediates\library_manifest\debug\AndroidManifest.xml:35:5-144:19
 MERGED from [:moduleIflyVoice] E:\codes\android_studio\APICloudModuleSDK\moduleIflyVoice\build\intermediates\library_manifest\debug\AndroidManifest.xml:35:5-144:19
-MERGED from [:moduleProcessAlive] E:\codes\android_studio\APICloudModuleSDK\moduleProcessAlive\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-32:19
-MERGED from [:moduleProcessAlive] E:\codes\android_studio\APICloudModuleSDK\moduleProcessAlive\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-32:19
+MERGED from [:moduleProcessAlive] E:\codes\android_studio\APICloudModuleSDK\moduleProcessAlive\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:5-34:19
+MERGED from [:moduleProcessAlive] E:\codes\android_studio\APICloudModuleSDK\moduleProcessAlive\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:5-34:19
 MERGED from [:moduleUHF18000_6C] E:\codes\android_studio\APICloudModuleSDK\moduleUHF18000_6C\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:5-21:19
 MERGED from [:moduleUHF18000_6C] E:\codes\android_studio\APICloudModuleSDK\moduleUHF18000_6C\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:5-21:19
 MERGED from [:moduleUHF_I6310] E:\codes\android_studio\APICloudModuleSDK\moduleUHF_I6310\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:5-23:19
@@ -163,7 +163,7 @@ MERGED from [com.blankj:utilcode:1.22.5] C:\Users\yuanbao\.gradle\caches\transfo
 		REJECTED from [:moduleUHF] E:\codes\android_studio\APICloudModuleSDK\moduleUHF\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:9-35
 		REJECTED from [:moduleNFC] E:\codes\android_studio\APICloudModuleSDK\moduleNFC\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:9-35
 		REJECTED from [:moduleIflyVoice] E:\codes\android_studio\APICloudModuleSDK\moduleIflyVoice\build\intermediates\library_manifest\debug\AndroidManifest.xml:36:9-35
-		REJECTED from [:moduleProcessAlive] E:\codes\android_studio\APICloudModuleSDK\moduleProcessAlive\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-35
+		REJECTED from [:moduleProcessAlive] E:\codes\android_studio\APICloudModuleSDK\moduleProcessAlive\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:9-35
 		REJECTED from [:moduleUHF18000_6C] E:\codes\android_studio\APICloudModuleSDK\moduleUHF18000_6C\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:9-35
 		REJECTED from [:moduleUHF_I6310] E:\codes\android_studio\APICloudModuleSDK\moduleUHF_I6310\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:9-35
 		REJECTED from [:moduleDemo] E:\codes\android_studio\APICloudModuleSDK\moduleDemo\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-35
@@ -516,38 +516,42 @@ action#android.app.action.DEVICE_ADMIN_ENABLED
 ADDED from [:moduleIflyVoice] E:\codes\android_studio\APICloudModuleSDK\moduleIflyVoice\build\intermediates\library_manifest\debug\AndroidManifest.xml:141:17-82
 	android:name
 		ADDED from [:moduleIflyVoice] E:\codes\android_studio\APICloudModuleSDK\moduleIflyVoice\build\intermediates\library_manifest\debug\AndroidManifest.xml:141:25-79
+uses-permission#android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS
+ADDED from [:moduleProcessAlive] E:\codes\android_studio\APICloudModuleSDK\moduleProcessAlive\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-95
+	android:name
+		ADDED from [:moduleProcessAlive] E:\codes\android_studio\APICloudModuleSDK\moduleProcessAlive\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:22-92
 activity#cn.yuanbao.processalive.MainActivity
-ADDED from [:moduleProcessAlive] E:\codes\android_studio\APICloudModuleSDK\moduleProcessAlive\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:9-16:20
+ADDED from [:moduleProcessAlive] E:\codes\android_studio\APICloudModuleSDK\moduleProcessAlive\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:9-18:20
 	android:name
-		ADDED from [:moduleProcessAlive] E:\codes\android_studio\APICloudModuleSDK\moduleProcessAlive\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:19-70
+		ADDED from [:moduleProcessAlive] E:\codes\android_studio\APICloudModuleSDK\moduleProcessAlive\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:19-70
 service#cn.yuanbao.processalive.WorkService
-ADDED from [:moduleProcessAlive] E:\codes\android_studio\APICloudModuleSDK\moduleProcessAlive\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:9-21:39
+ADDED from [:moduleProcessAlive] E:\codes\android_studio\APICloudModuleSDK\moduleProcessAlive\build\intermediates\library_manifest\debug\AndroidManifest.xml:20:9-23:39
 	android:enabled
-		ADDED from [:moduleProcessAlive] E:\codes\android_studio\APICloudModuleSDK\moduleProcessAlive\build\intermediates\library_manifest\debug\AndroidManifest.xml:20:13-35
+		ADDED from [:moduleProcessAlive] E:\codes\android_studio\APICloudModuleSDK\moduleProcessAlive\build\intermediates\library_manifest\debug\AndroidManifest.xml:22:13-35
 	android:exported
-		ADDED from [:moduleProcessAlive] E:\codes\android_studio\APICloudModuleSDK\moduleProcessAlive\build\intermediates\library_manifest\debug\AndroidManifest.xml:21:13-36
+		ADDED from [:moduleProcessAlive] E:\codes\android_studio\APICloudModuleSDK\moduleProcessAlive\build\intermediates\library_manifest\debug\AndroidManifest.xml:23:13-36
 	android:name
-		ADDED from [:moduleProcessAlive] E:\codes\android_studio\APICloudModuleSDK\moduleProcessAlive\build\intermediates\library_manifest\debug\AndroidManifest.xml:19:13-63
+		ADDED from [:moduleProcessAlive] E:\codes\android_studio\APICloudModuleSDK\moduleProcessAlive\build\intermediates\library_manifest\debug\AndroidManifest.xml:21:13-63
 service#cn.yuanbao.processalive.DaemonService
-ADDED from [:moduleProcessAlive] E:\codes\android_studio\APICloudModuleSDK\moduleProcessAlive\build\intermediates\library_manifest\debug\AndroidManifest.xml:22:9-26:48
+ADDED from [:moduleProcessAlive] E:\codes\android_studio\APICloudModuleSDK\moduleProcessAlive\build\intermediates\library_manifest\debug\AndroidManifest.xml:24:9-28:48
 	android:process
-		ADDED from [:moduleProcessAlive] E:\codes\android_studio\APICloudModuleSDK\moduleProcessAlive\build\intermediates\library_manifest\debug\AndroidManifest.xml:26:13-45
+		ADDED from [:moduleProcessAlive] E:\codes\android_studio\APICloudModuleSDK\moduleProcessAlive\build\intermediates\library_manifest\debug\AndroidManifest.xml:28:13-45
 	android:enabled
-		ADDED from [:moduleProcessAlive] E:\codes\android_studio\APICloudModuleSDK\moduleProcessAlive\build\intermediates\library_manifest\debug\AndroidManifest.xml:24:13-35
+		ADDED from [:moduleProcessAlive] E:\codes\android_studio\APICloudModuleSDK\moduleProcessAlive\build\intermediates\library_manifest\debug\AndroidManifest.xml:26:13-35
 	android:exported
-		ADDED from [:moduleProcessAlive] E:\codes\android_studio\APICloudModuleSDK\moduleProcessAlive\build\intermediates\library_manifest\debug\AndroidManifest.xml:25:13-36
+		ADDED from [:moduleProcessAlive] E:\codes\android_studio\APICloudModuleSDK\moduleProcessAlive\build\intermediates\library_manifest\debug\AndroidManifest.xml:27:13-36
 	android:name
-		ADDED from [:moduleProcessAlive] E:\codes\android_studio\APICloudModuleSDK\moduleProcessAlive\build\intermediates\library_manifest\debug\AndroidManifest.xml:23:13-65
+		ADDED from [:moduleProcessAlive] E:\codes\android_studio\APICloudModuleSDK\moduleProcessAlive\build\intermediates\library_manifest\debug\AndroidManifest.xml:25:13-65
 service#cn.yuanbao.processalive.JobWakeUpService
-ADDED from [:moduleProcessAlive] E:\codes\android_studio\APICloudModuleSDK\moduleProcessAlive\build\intermediates\library_manifest\debug\AndroidManifest.xml:27:9-31:72
+ADDED from [:moduleProcessAlive] E:\codes\android_studio\APICloudModuleSDK\moduleProcessAlive\build\intermediates\library_manifest\debug\AndroidManifest.xml:29:9-33:72
 	android:enabled
-		ADDED from [:moduleProcessAlive] E:\codes\android_studio\APICloudModuleSDK\moduleProcessAlive\build\intermediates\library_manifest\debug\AndroidManifest.xml:29:13-35
+		ADDED from [:moduleProcessAlive] E:\codes\android_studio\APICloudModuleSDK\moduleProcessAlive\build\intermediates\library_manifest\debug\AndroidManifest.xml:31:13-35
 	android:exported
-		ADDED from [:moduleProcessAlive] E:\codes\android_studio\APICloudModuleSDK\moduleProcessAlive\build\intermediates\library_manifest\debug\AndroidManifest.xml:30:13-36
+		ADDED from [:moduleProcessAlive] E:\codes\android_studio\APICloudModuleSDK\moduleProcessAlive\build\intermediates\library_manifest\debug\AndroidManifest.xml:32:13-36
 	android:permission
-		ADDED from [:moduleProcessAlive] E:\codes\android_studio\APICloudModuleSDK\moduleProcessAlive\build\intermediates\library_manifest\debug\AndroidManifest.xml:31:13-69
+		ADDED from [:moduleProcessAlive] E:\codes\android_studio\APICloudModuleSDK\moduleProcessAlive\build\intermediates\library_manifest\debug\AndroidManifest.xml:33:13-69
 	android:name
-		ADDED from [:moduleProcessAlive] E:\codes\android_studio\APICloudModuleSDK\moduleProcessAlive\build\intermediates\library_manifest\debug\AndroidManifest.xml:28:13-68
+		ADDED from [:moduleProcessAlive] E:\codes\android_studio\APICloudModuleSDK\moduleProcessAlive\build\intermediates\library_manifest\debug\AndroidManifest.xml:30:13-68
 activity#com.handheld.uhfdemo1.UHFActivity
 ADDED from [:moduleUHF18000_6C] E:\codes\android_studio\APICloudModuleSDK\moduleUHF18000_6C\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:9-20:84
 	android:screenOrientation
