@@ -3,7 +3,7 @@ git地址：
 
 - https://github.com/yuanbao15/ModuleDevelop.git
 
-svn地址： 
+svn地址：
 
 
 ## 语音模块使用演示：
