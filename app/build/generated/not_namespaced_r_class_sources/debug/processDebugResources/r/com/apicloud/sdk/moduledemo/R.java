@@ -18,7 +18,7 @@ public final class R {
     public static final class layout {
         private layout() {}
 
-        public static final int mo_demo_main_activity = 0x7f0a0038;
+        public static final int mo_demo_main_activity = 0x7f0a0039;
     }
     public static final class string {
         private string() {}

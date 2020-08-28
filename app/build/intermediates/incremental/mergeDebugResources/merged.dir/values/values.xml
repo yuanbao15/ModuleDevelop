@@ -1260,6 +1260,7 @@
     <color name="time_color_pad">#757575</color>
     <color name="title_bg">#3790cf</color>
     <color name="title_color">#0f8ec5</color>
+    <color name="translucent_background">#00000000</color>
     <color name="transparent">#00000000</color>
     <color name="viewfinder_frame">#ff000000</color>
     <color name="viewfinder_laser">#ffff0000</color>
@@ -1346,6 +1347,7 @@
     <dimen name="btn_size">22sp</dimen>
     <item format="float" name="disabled_alpha_material_dark" type="dimen">0.30</item>
     <item format="float" name="disabled_alpha_material_light" type="dimen">0.26</item>
+    <dimen name="fab_margin">16dp</dimen>
     <dimen name="half_padding">4dip</dimen>
     <item format="float" name="highlight_alpha_material_colored" type="dimen">0.26</item>
     <item format="float" name="highlight_alpha_material_dark" type="dimen">0.20</item>
@@ -2837,6 +2839,7 @@
     <string name="title_activity_needle">RFID_Needle</string>
     <string name="title_activity_network_status">Network</string>
     <string name="title_activity_nfc" translatable="false">NFC</string>
+    <string name="title_activity_notification_window">NotificationWindowActivity</string>
     <string name="title_activity_ping">PingActivity</string>
     <string name="title_activity_ping_pop" translatable="false">PingPopActivity</string>
     <string name="title_activity_printer">Printer</string>
@@ -4187,6 +4190,13 @@
          <item name="android:popupBackground">@color/white</item>  
          <item name="android:dropDownSelector">@color/white1</item>   -->
      </style>
+    <style name="MyStyle" parent="@android:style/Theme.NoTitleBar.Fullscreen">
+        <item name="android:windowBackground">@color/translucent_background</item> <!-- 背景色透明度 -->
+        <item name="android:windowNoTitle">true</item><!-- 无标题 -->
+        <item name="android:windowIsTranslucent">true</item><!-- 半透明,设置为false无透明效果 -->
+        <item name="android:backgroundDimEnabled">true</item><!-- 模糊 -->
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item> <!-- 窗口样式Dialog -->
+    </style>
     <style name="Platform.AppCompat" parent="android:Theme">
         <item name="android:windowNoTitle">true</item>
 

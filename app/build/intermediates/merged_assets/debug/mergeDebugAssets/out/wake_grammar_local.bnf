@@ -1,8 +1,0 @@
-#BNF+IAT 1.0 UTF-8;
-!grammar wake;
-!slot <callCmd>;
-!slot <callName>;
-!start <callStart>;
-<callStart>:[<callCmd>]<callName>;
-<callCmd>:黄家口德维恩;
-<callName>:扫码|music|返回|张三|李四|张海洋;

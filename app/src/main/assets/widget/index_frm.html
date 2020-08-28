@@ -305,10 +305,10 @@
             });
 		}
 
-		function showNotification(){
+		function showNotification(num){
 			var params = {
 				title : '设备任务消息',
-				content : '缸盖线xx工位停台，待处理'
+				content : '缸盖线xx工位停台，待处理' + num
 			};
 			moduleNotification.showNotification(params, function(ret, err){
                 if (ret) {
@@ -317,6 +317,13 @@
                     alert(JSON.stringify(err));
                 }
             });
+		}
+
+		// 延迟执行
+		function showNotification2(){
+			setTimeout("showNotification(1)", 10000);
+			setTimeout("showNotification(2)", 30000);
+			setTimeout("showNotification(3)", 50000);
 		}
 
 		// 针对2020.5.14开发的新PDA的uhf模块
@@ -381,7 +388,7 @@
 			<br>
 
 			<div class='itemtitle'>0、showNotification_yb</div>
-				<div class="clickbtn" tapmode="active" onclick="showNotification()" >yb-推送消息到通知栏</div>
+				<div class="clickbtn" tapmode="active" onclick="showNotification2()" >yb-推送消息到通知栏</div>
             <div class='itemtitle'>0、startAlive_yb</div>
                 <div class="clickbtn" tapmode="active" onclick="startAlive()" >yb-开启线程常驻</div>
                 <div class="clickbtn" tapmode="active" onclick="stopAlive()" >停止-未成功</div>

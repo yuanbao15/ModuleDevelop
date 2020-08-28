@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/APICloudModuleSDK.iml" filepath="$PROJECT_DIR$/APICloudModuleSDK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ModuleDevelop_Private.iml" filepath="$PROJECT_DIR$/ModuleDevelop_Private.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/moduleApi/moduleApi.iml" filepath="$PROJECT_DIR$/moduleApi/moduleApi.iml" />
       <module fileurl="file://$PROJECT_DIR$/moduleAppdelegate/moduleAppdelegate.iml" filepath="$PROJECT_DIR$/moduleAppdelegate/moduleAppdelegate.iml" />

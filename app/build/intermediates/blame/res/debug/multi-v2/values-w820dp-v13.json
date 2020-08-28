@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w820dp-v13\\values-w820dp-v13.xml",
+            "outputFile": "E:\\Epichust\\Codes\\Android\\ModuleDevelop\\ModuleDevelop_Private\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w820dp-v13\\values-w820dp-v13.xml",
             "map": [
                 {
-                    "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\modulePdf\\build\\intermediates\\packaged_res\\debug\\values-w820dp-v13\\values-w820dp-v13.xml",
+                    "source": "E:\\Epichust\\Codes\\Android\\ModuleDevelop\\ModuleDevelop_Private\\modulePdf\\build\\intermediates\\packaged_res\\debug\\values-w820dp-v13\\values-w820dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

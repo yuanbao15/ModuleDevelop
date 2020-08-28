@@ -1,0 +1,4 @@
+int id btn 0x7f010000
+int id text 0x7f010001
+int layout mo_demo_main_activity 0x7f020000
+int string app_name 0x7f030000

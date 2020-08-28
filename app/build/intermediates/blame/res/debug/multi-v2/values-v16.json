@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
+            "outputFile": "E:\\Epichust\\Codes\\Android\\ModuleDevelop\\ModuleDevelop_Private\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\94e4b0cc1ebf8ab5f1a4327fced93c66\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.2.0.aar\\eb93406e21316debf232e5296df14bea\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

@@ -41,10 +41,6 @@
     <uses-permission android:name="android.permission.DISABLE_KEYGUARD" /> <!-- 加入系统白名单 -->
     <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
 
-    <meta-data
-        android:name="android.support.VERSION"
-        android:value="25.3.1" />
-
     <application
         android:name="com.uzmap.pkg.uzapp.UZApplication"
         android:allowBackup="false"
@@ -218,6 +214,12 @@
             android:exported="true"
             android:permission="android.permission.BIND_JOB_SERVICE" />
 
+        <activity
+            android:name="com.epichust.notification.NotificationWindowActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance"
+            android:theme="@style/MyStyle" >
+        </activity>
         <activity
             android:name="com.handheld.uhfdemo1.UHFActivity"
             android:configChanges="orientation|locale"

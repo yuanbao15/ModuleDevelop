@@ -1,7 +1,0 @@
-#Tue Jul 07 16:45:39 CST 2020
-base.0=E\:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
-path.1=classes2.dex
-renamed.1=classes2.dex
-path.0=classes.dex
-renamed.0=classes.dex
-base.1=E\:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out

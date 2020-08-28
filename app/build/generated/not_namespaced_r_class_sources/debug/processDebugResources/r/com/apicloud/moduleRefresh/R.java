@@ -12,7 +12,7 @@ public final class R {
     public static final class drawable {
         private drawable() {}
 
-        public static final int mo_cus_refresh_default = 0x7f070093;
+        public static final int mo_cus_refresh_default = 0x7f070094;
     }
     public static final class string {
         private string() {}

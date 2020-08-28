@@ -1,45 +1,45 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\codes\android_studio\APICloudModuleSDK\moduleScrollPicture\src\main\AndroidManifest.xml:1:1-10:12
-INJECTED from E:\codes\android_studio\APICloudModuleSDK\moduleScrollPicture\src\main\AndroidManifest.xml:1:1-10:12
-INJECTED from E:\codes\android_studio\APICloudModuleSDK\moduleScrollPicture\src\main\AndroidManifest.xml:1:1-10:12
-INJECTED from E:\codes\android_studio\APICloudModuleSDK\moduleScrollPicture\src\main\AndroidManifest.xml:1:1-10:12
-INJECTED from E:\codes\android_studio\APICloudModuleSDK\moduleScrollPicture\src\main\AndroidManifest.xml:1:1-10:12
-INJECTED from E:\codes\android_studio\APICloudModuleSDK\moduleScrollPicture\src\main\AndroidManifest.xml:1:1-10:12
-INJECTED from E:\codes\android_studio\APICloudModuleSDK\moduleScrollPicture\src\main\AndroidManifest.xml:1:1-10:12
+ADDED from E:\Epichust\Codes\Android\ModuleDevelop\ModuleDevelop_Private\moduleScrollPicture\src\main\AndroidManifest.xml:1:1-10:12
+INJECTED from E:\Epichust\Codes\Android\ModuleDevelop\ModuleDevelop_Private\moduleScrollPicture\src\main\AndroidManifest.xml:1:1-10:12
+INJECTED from E:\Epichust\Codes\Android\ModuleDevelop\ModuleDevelop_Private\moduleScrollPicture\src\main\AndroidManifest.xml:1:1-10:12
+INJECTED from E:\Epichust\Codes\Android\ModuleDevelop\ModuleDevelop_Private\moduleScrollPicture\src\main\AndroidManifest.xml:1:1-10:12
+INJECTED from E:\Epichust\Codes\Android\ModuleDevelop\ModuleDevelop_Private\moduleScrollPicture\src\main\AndroidManifest.xml:1:1-10:12
+INJECTED from E:\Epichust\Codes\Android\ModuleDevelop\ModuleDevelop_Private\moduleScrollPicture\src\main\AndroidManifest.xml:1:1-10:12
+INJECTED from E:\Epichust\Codes\Android\ModuleDevelop\ModuleDevelop_Private\moduleScrollPicture\src\main\AndroidManifest.xml:1:1-10:12
 	package
-		ADDED from E:\codes\android_studio\APICloudModuleSDK\moduleScrollPicture\src\main\AndroidManifest.xml:3:5-47
-		INJECTED from E:\codes\android_studio\APICloudModuleSDK\moduleScrollPicture\src\main\AndroidManifest.xml
-		INJECTED from E:\codes\android_studio\APICloudModuleSDK\moduleScrollPicture\src\main\AndroidManifest.xml
+		ADDED from E:\Epichust\Codes\Android\ModuleDevelop\ModuleDevelop_Private\moduleScrollPicture\src\main\AndroidManifest.xml:3:5-47
+		INJECTED from E:\Epichust\Codes\Android\ModuleDevelop\ModuleDevelop_Private\moduleScrollPicture\src\main\AndroidManifest.xml
+		INJECTED from E:\Epichust\Codes\Android\ModuleDevelop\ModuleDevelop_Private\moduleScrollPicture\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from E:\codes\android_studio\APICloudModuleSDK\moduleScrollPicture\src\main\AndroidManifest.xml
-		ADDED from E:\codes\android_studio\APICloudModuleSDK\moduleScrollPicture\src\main\AndroidManifest.xml:1:1-10:12
-		INJECTED from E:\codes\android_studio\APICloudModuleSDK\moduleScrollPicture\src\main\AndroidManifest.xml
+		INJECTED from E:\Epichust\Codes\Android\ModuleDevelop\ModuleDevelop_Private\moduleScrollPicture\src\main\AndroidManifest.xml
+		ADDED from E:\Epichust\Codes\Android\ModuleDevelop\ModuleDevelop_Private\moduleScrollPicture\src\main\AndroidManifest.xml:1:1-10:12
+		INJECTED from E:\Epichust\Codes\Android\ModuleDevelop\ModuleDevelop_Private\moduleScrollPicture\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from E:\codes\android_studio\APICloudModuleSDK\moduleScrollPicture\src\main\AndroidManifest.xml
-		ADDED from E:\codes\android_studio\APICloudModuleSDK\moduleScrollPicture\src\main\AndroidManifest.xml:1:1-10:12
-		INJECTED from E:\codes\android_studio\APICloudModuleSDK\moduleScrollPicture\src\main\AndroidManifest.xml
+		INJECTED from E:\Epichust\Codes\Android\ModuleDevelop\ModuleDevelop_Private\moduleScrollPicture\src\main\AndroidManifest.xml
+		ADDED from E:\Epichust\Codes\Android\ModuleDevelop\ModuleDevelop_Private\moduleScrollPicture\src\main\AndroidManifest.xml:1:1-10:12
+		INJECTED from E:\Epichust\Codes\Android\ModuleDevelop\ModuleDevelop_Private\moduleScrollPicture\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from E:\codes\android_studio\APICloudModuleSDK\moduleScrollPicture\src\main\AndroidManifest.xml:1:11-69
+		ADDED from E:\Epichust\Codes\Android\ModuleDevelop\ModuleDevelop_Private\moduleScrollPicture\src\main\AndroidManifest.xml:1:11-69
 application
-ADDED from E:\codes\android_studio\APICloudModuleSDK\moduleScrollPicture\src\main\AndroidManifest.xml:5:5-8:19
+ADDED from E:\Epichust\Codes\Android\ModuleDevelop\ModuleDevelop_Private\moduleScrollPicture\src\main\AndroidManifest.xml:5:5-8:19
 	android:supportsRtl
-		ADDED from E:\codes\android_studio\APICloudModuleSDK\moduleScrollPicture\src\main\AndroidManifest.xml:6:9-35
+		ADDED from E:\Epichust\Codes\Android\ModuleDevelop\ModuleDevelop_Private\moduleScrollPicture\src\main\AndroidManifest.xml:6:9-35
 	android:label
-		ADDED from E:\codes\android_studio\APICloudModuleSDK\moduleScrollPicture\src\main\AndroidManifest.xml:5:45-77
+		ADDED from E:\Epichust\Codes\Android\ModuleDevelop\ModuleDevelop_Private\moduleScrollPicture\src\main\AndroidManifest.xml:5:45-77
 	android:allowBackup
-		ADDED from E:\codes\android_studio\APICloudModuleSDK\moduleScrollPicture\src\main\AndroidManifest.xml:5:18-44
+		ADDED from E:\Epichust\Codes\Android\ModuleDevelop\ModuleDevelop_Private\moduleScrollPicture\src\main\AndroidManifest.xml:5:18-44
 uses-sdk
-INJECTED from E:\codes\android_studio\APICloudModuleSDK\moduleScrollPicture\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from E:\codes\android_studio\APICloudModuleSDK\moduleScrollPicture\src\main\AndroidManifest.xml
-INJECTED from E:\codes\android_studio\APICloudModuleSDK\moduleScrollPicture\src\main\AndroidManifest.xml
-INJECTED from E:\codes\android_studio\APICloudModuleSDK\moduleScrollPicture\src\main\AndroidManifest.xml
-INJECTED from E:\codes\android_studio\APICloudModuleSDK\moduleScrollPicture\src\main\AndroidManifest.xml
+INJECTED from E:\Epichust\Codes\Android\ModuleDevelop\ModuleDevelop_Private\moduleScrollPicture\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from E:\Epichust\Codes\Android\ModuleDevelop\ModuleDevelop_Private\moduleScrollPicture\src\main\AndroidManifest.xml
+INJECTED from E:\Epichust\Codes\Android\ModuleDevelop\ModuleDevelop_Private\moduleScrollPicture\src\main\AndroidManifest.xml
+INJECTED from E:\Epichust\Codes\Android\ModuleDevelop\ModuleDevelop_Private\moduleScrollPicture\src\main\AndroidManifest.xml
+INJECTED from E:\Epichust\Codes\Android\ModuleDevelop\ModuleDevelop_Private\moduleScrollPicture\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from E:\codes\android_studio\APICloudModuleSDK\moduleScrollPicture\src\main\AndroidManifest.xml
-		ADDED from E:\codes\android_studio\APICloudModuleSDK\moduleScrollPicture\src\main\AndroidManifest.xml
-		INJECTED from E:\codes\android_studio\APICloudModuleSDK\moduleScrollPicture\src\main\AndroidManifest.xml
+		INJECTED from E:\Epichust\Codes\Android\ModuleDevelop\ModuleDevelop_Private\moduleScrollPicture\src\main\AndroidManifest.xml
+		ADDED from E:\Epichust\Codes\Android\ModuleDevelop\ModuleDevelop_Private\moduleScrollPicture\src\main\AndroidManifest.xml
+		INJECTED from E:\Epichust\Codes\Android\ModuleDevelop\ModuleDevelop_Private\moduleScrollPicture\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from E:\codes\android_studio\APICloudModuleSDK\moduleScrollPicture\src\main\AndroidManifest.xml
-		ADDED from E:\codes\android_studio\APICloudModuleSDK\moduleScrollPicture\src\main\AndroidManifest.xml
-		INJECTED from E:\codes\android_studio\APICloudModuleSDK\moduleScrollPicture\src\main\AndroidManifest.xml
+		INJECTED from E:\Epichust\Codes\Android\ModuleDevelop\ModuleDevelop_Private\moduleScrollPicture\src\main\AndroidManifest.xml
+		ADDED from E:\Epichust\Codes\Android\ModuleDevelop\ModuleDevelop_Private\moduleScrollPicture\src\main\AndroidManifest.xml
+		INJECTED from E:\Epichust\Codes\Android\ModuleDevelop\ModuleDevelop_Private\moduleScrollPicture\src\main\AndroidManifest.xml

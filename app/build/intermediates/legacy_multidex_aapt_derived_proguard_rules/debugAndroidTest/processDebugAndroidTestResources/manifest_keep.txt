@@ -1,0 +1,2 @@
+# Referenced at E:\Epichust\Codes\Android\ModuleDevelop\ModuleDevelop_Private\app\build\intermediates\merged_manifests\debugAndroidTest\AndroidManifest.xml:9
+-keep class com.android.test.runner.MultiDexTestRunner { <init>(); }

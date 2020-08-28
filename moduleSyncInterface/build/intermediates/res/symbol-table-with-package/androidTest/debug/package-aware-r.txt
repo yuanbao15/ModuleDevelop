@@ -1,0 +1,2 @@
+com.apicloud.syncInterface.test
+string app_name

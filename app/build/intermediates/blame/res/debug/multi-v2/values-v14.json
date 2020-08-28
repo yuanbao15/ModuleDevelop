@@ -1,10 +1,21 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\codes\\android_studio\\APICloudModuleSDK\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v14\\values-v14.xml",
+            "outputFile": "E:\\Epichust\\Codes\\Android\\ModuleDevelop\\ModuleDevelop_Private\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v14\\values-v14.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\94e4b0cc1ebf8ab5f1a4327fced93c66\\res\\values-v14\\values-v14.xml",
+                    "source": "E:\\Epichust\\Codes\\Android\\ModuleDevelop\\ModuleDevelop_Private\\moduleUHF18000_6C\\build\\intermediates\\packaged_res\\debug\\values-v14\\values-v14.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "4",
+                        "endColumns": "12",
+                        "endOffsets": "201"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\yuanbao\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.2.0.aar\\eb93406e21316debf232e5296df14bea\\res\\values-v14\\values-v14.xml",
                     "from": {
                         "startLines": "2,7,8,9,15,21,22,23,24,25,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
@@ -20,17 +31,6 @@
                         "endLines": "9,10,11,17,23,24,25,26,27,30,31,32",
                         "endColumns": "12,70,82,12,12,119,131,119,62,12,62,131",
                         "endOffsets": "477,548,631,1041,1463,1583,1715,1835,1898,2052,2115,2247"
-                    }
-                },
-                {
-                    "source": "E:\\codes\\android_studio\\APICloudModuleSDK\\moduleUHF18000_6C\\build\\intermediates\\packaged_res\\debug\\values-v14\\values-v14.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endLines": "4",
-                        "endColumns": "12",
-                        "endOffsets": "201"
                     }
                 }
             ]

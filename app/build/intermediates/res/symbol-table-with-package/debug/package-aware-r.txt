@@ -517,6 +517,7 @@ color time_color_copy
 color time_color_pad
 color title_bg
 color title_color
+color translucent_background
 color transparent
 color viewfinder_frame
 color viewfinder_laser
@@ -603,6 +604,7 @@ dimen activity_vertical_margin
 dimen btn_size
 dimen disabled_alpha_material_dark
 dimen disabled_alpha_material_light
+dimen fab_margin
 dimen half_padding
 dimen highlight_alpha_material_colored
 dimen highlight_alpha_material_dark
@@ -755,6 +757,7 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable actionbar_back
 drawable back
+drawable background_blue
 drawable backmenu
 drawable bg_button
 drawable bg_result_textview
@@ -844,6 +847,7 @@ drawable rectangle_bg2
 drawable setting
 drawable setting_p
 drawable settings
+drawable shape_corner
 drawable user
 drawable uz_icon
 drawable uz_splash_bg
@@ -1300,6 +1304,8 @@ id textView_list_item_id
 id textView_list_item_rssi
 id textView_version
 id textViewreaddata
+id text_content
+id text_title
 id text_understander
 id textview_title_config
 id tidlen_spinner
@@ -1404,6 +1410,7 @@ layout activity_face_identify
 layout activity_group_manager
 layout activity_main
 layout activity_nfcread
+layout activity_notification_window
 layout activity_pdf
 layout activity_pdf_test
 layout activity_readwrite
@@ -2863,6 +2870,7 @@ string title_activity_light_and_psensor
 string title_activity_needle
 string title_activity_network_status
 string title_activity_nfc
+string title_activity_notification_window
 string title_activity_ping
 string title_activity_ping_pop
 string title_activity_printer
@@ -3312,6 +3320,7 @@ style MyActionBarTabStyle
 style MyActionBarTabTextStyle
 style MyDropDownListView
 style MyDropDownNav
+style MyStyle
 style Platform_AppCompat
 style Platform_AppCompat_Light
 style Platform_ThemeOverlay_AppCompat
