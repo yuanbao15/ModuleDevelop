@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">moduleNotification</string>
+    <string name="title_activity_notification_window">NotificationWindowActivity</string>
 </resources>

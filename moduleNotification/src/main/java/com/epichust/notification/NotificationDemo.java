@@ -3,8 +3,6 @@ package com.epichust.notification;
 import com.uzmap.pkg.uzcore.UZWebView;
 import com.uzmap.pkg.uzcore.uzmodule.UZModule;
 import com.uzmap.pkg.uzcore.uzmodule.UZModuleContext;
-
-import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
@@ -35,7 +33,7 @@ public class NotificationDemo extends UZModule {
             ybNotificationManager.showNotification(mModuleContext.getContext(), getContext().getClass(), title, content);
 
             ret.put("status", true);
-        } catch (JSONException e) {
+        } catch (Exception e) {
             try {
                 ret.put("status", false);
                 ret.put("errmsg", "模块调用失败："+e.getMessage());
