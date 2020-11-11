@@ -12,8 +12,6 @@ import android.os.PowerManager;
 import android.support.v7.app.NotificationCompat;
 import android.util.Log;
 
-import static java.lang.Thread.sleep;
-
 /**
  * Created by yuanbao on 2019/7/18
  */
@@ -48,19 +46,19 @@ public class YbNotificationManager {
 
 
         // 先亮屏
-        mPowerManager = (PowerManager) mContext.getSystemService(Context.POWER_SERVICE);
-        boolean isScreenOn = mPowerManager.isScreenOn();
-        if (!isScreenOn) {
-            // 获取PowerManager.WakeLock对象,后面的参数|表示同时传入两个值,最后的是LogCat里用的Tag
-            PowerManager.WakeLock mWakeLock = mPowerManager.newWakeLock(
-                    PowerManager.ACQUIRE_CAUSES_WAKEUP |
-                            PowerManager.FULL_WAKE_LOCK, this.getClass().getName()); // 后边的tag原来是"bright"
-            mWakeLock.acquire(10*1000); // 点亮屏幕
-            mWakeLock.release(); // 释放
-
-            // 线程等待片刻，让机器彻底从休眠中退出，然后推通知才有声音和震动
-            sleep(50);
-        }
+//        mPowerManager = (PowerManager) mContext.getSystemService(Context.POWER_SERVICE);
+//        boolean isScreenOn = mPowerManager.isScreenOn();
+//        if (!isScreenOn) {
+//            // 获取PowerManager.WakeLock对象,后面的参数|表示同时传入两个值,最后的是LogCat里用的Tag
+//            PowerManager.WakeLock mWakeLock = mPowerManager.newWakeLock(
+//                    PowerManager.ACQUIRE_CAUSES_WAKEUP |
+//                            PowerManager.FULL_WAKE_LOCK, this.getClass().getName()); // 后边的tag原来是"bright"
+//            mWakeLock.acquire(10*1000); // 点亮屏幕
+//            mWakeLock.release(); // 释放
+//
+//            // 线程等待片刻，让机器彻底从休眠中退出，然后推通知才有声音和震动
+//            sleep(50);
+//        }
 
 
         // 获取系统通知服务
