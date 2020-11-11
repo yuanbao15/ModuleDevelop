@@ -1,2 +1,0 @@
-demo.superwebview.apicloud.com.moduleappdelegate.test
-string app_name
