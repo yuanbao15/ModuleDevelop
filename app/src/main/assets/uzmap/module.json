@@ -55,6 +55,14 @@
 		{
 			"name":"moduleUHF_I6310",
 			"class":"com.yuanbao.moduleuhf_i6310.UHFDemo"
+		},
+		{
+			"name":"moduleUHF_U8",
+			"class":"com.U8.moduleuhf_u8.UHFDemo"
+		},
+		{
+			"name":"moduleUHF_50",
+			"class":"com.szyd.moduleuhf_50.UHFDemo"
 		}
 	]
 }
