@@ -204,7 +204,7 @@ public class I15693Utils {
 				byte[] bufread = mNfcv.transceive(bufwrite);
 				byte[] bytes = new byte[4];
 				System.arraycopy(bufread,1,bytes,0,4);
-				result+= " block "+address+"       -hex:  "+ Utils.bytesToHexString(bytes)+"\n";
+				result+= " block "+address+"       -hex:  "+ new String(bytes)+"\n";
 			} catch (IOException e) {
 				try {
 					mNfcv.close();
@@ -237,6 +237,13 @@ public class I15693Utils {
 		if((data!=null)&&(mNfcv!=null)&&(address>=0)){
 
 			try {
+				if(mNfcv.isConnected()){
+					try {
+						mNfcv.close();
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+				}
 				mNfcv.connect();
 				byte[] bufwrite =new byte[15];
 				bufwrite[0]=0x22;
@@ -277,20 +284,27 @@ public class I15693Utils {
 	 public String readMultipleBlocks(int start,int blocks){
 		if((mNfcv!=null)&&(start>=0)&&(blocks>=0)){
 			try {
+				if(mNfcv.isConnected()){
+					try {
+						mNfcv.close();
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+				}
 				mNfcv.connect();
 				byte[] bufwrite = new byte[12];
 				bufwrite[0]=0x22;
 				bufwrite[1]=0x23;
 				System.arraycopy(mExtraId,0,bufwrite,2,8);
 				bufwrite[10]=(byte)start;
-				bufwrite[11]=(byte)blocks;
+				bufwrite[11]=(byte)mNfcv.getMaxTransceiveLength();
 				byte[]bufread=mNfcv.transceive(bufwrite);
 				String result = "";
 				int index = start;
 				for (int i = 1; i<bufread.length; i=i+4){
 					byte[] bytes = new byte[4];
 					System.arraycopy(bufread,i,bytes,0,4);
-					result+= " block "+index+"       hex:  "+ Utils.bytesToHexString(bytes)+"\n";
+					result+= " block "+index+"       hex:  "+ new String(bytes)+"\n";
 					index++;
 				}
 				return result;
@@ -315,7 +329,7 @@ public class I15693Utils {
 		return null;
 	}
 
-	 public boolean writeMultipleBlocks(int start,int blocks,byte[]data){
+	public boolean writeMultipleBlocks(int start,int blocks,byte[]data){
 		if((data!=null)&&(mNfcv!=null)&&(start>=0)&&(blocks>=0))
 		{
 			try {
@@ -331,13 +345,13 @@ public class I15693Utils {
 
 				if (bufwrite.length < mNfcv.getMaxTransceiveLength()){
 					byte[] bufread = mNfcv.transceive(bufwrite);
-					Log.d(TAG,"writeMultipleBlocks "+ Utils.bytesToHexString(bufread));
+					Log.d(TAG,"writeMultipleBlocks "+Utils.bytesToHexString(bufread));
 					if(bufread.length==1)
 						return true;
 					else
 						return false;
 				} else {
-					Log.d(TAG,"writeMultipleBlocks bufwrite.length ="+bufwrite.length+" mNfcv.getMaxTransceiveLength()="+mNfcv.getMaxTransceiveLength());
+					android.util.Log.d(TAG,"writeMultipleBlocks bufwrite.length ="+bufwrite.length+" mNfcv.getMaxTransceiveLength()="+mNfcv.getMaxTransceiveLength());
 				}
 			} catch (IOException e) {
 				// TODO Auto-generated catch block

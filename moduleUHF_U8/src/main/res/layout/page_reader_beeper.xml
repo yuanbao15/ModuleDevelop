@@ -1,0 +1,124 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+  	android:layout_height="fill_parent"
+  	android:orientation="vertical"
+  	android:background="@drawable/gradient_bg">
+	
+	<ScrollView
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:fadingEdge="vertical"
+	    android:background="#EEEEEE"
+	    android:fillViewport="true"
+	    android:scrollbars="vertical"
+	    android:layout_above="@id/log_list"
+	    android:layout_below="@id/title_goto_main" >
+
+		<LinearLayout
+		    android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical" >
+			
+		    <TextView
+				android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginBottom="10.0dip"
+	            android:layout_marginTop="10.0dip"
+	            android:gravity="center_vertical"
+	            android:paddingLeft="4.0dip"
+	            android:text="@string/setting_beeper"
+	            android:textColor="#ff222222"
+	            android:textSize="16.0sp" />
+		    
+
+		        <RadioGroup
+		            android:id="@+id/group_beeper"
+            		android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:paddingLeft="10.0dip"
+					android:paddingTop="5.0dip"
+					android:paddingRight="10.0dip"
+					android:paddingBottom="5.0dip"
+		            android:gravity="left"
+		            android:orientation="vertical" >
+	
+		            <RadioButton
+		                android:id="@+id/set_beeper_quiet"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:button="@drawable/radio_button_selector"
+		                android:paddingTop="5sp"
+		            	android:paddingBottom="5sp"
+		                android:text="@string/beeper_quiet"
+		                android:textColor="#ff222222"
+		                android:textSize="16.0sp"
+		                android:singleLine="true" />
+		
+		            <RadioButton
+		                android:id="@+id/set_beeper_all"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:button="@drawable/radio_button_selector"
+		                android:paddingTop="5sp"
+		            	android:paddingBottom="5sp"
+		                android:text="@string/beeper_all"
+		                android:textColor="#ff222222"
+		                android:textSize="16.0sp"
+		                android:singleLine="true" />
+		            
+		            <RadioButton
+		                android:id="@+id/set_beeper_one"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:button="@drawable/radio_button_selector"
+		                android:paddingTop="5sp"
+						android:paddingBottom="5sp"
+		                android:text="@string/beeper_one"
+		                android:textColor="#ff222222"
+		                android:textSize="16.0sp"
+		                android:singleLine="true" />
+	        	</RadioGroup>
+
+		          <TextView
+				android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginBottom="10.0dip"
+	            android:layout_marginTop="20.0dip"
+	            android:gravity="center_vertical"
+	            android:paddingLeft="4.0dip"
+	            android:text="@string/setting_soft_sound"
+	            android:textColor="#ff222222"
+	            android:textSize="16.0sp" />
+		        <CheckBox
+		            android:id="@+id/cb_close_soft_sound"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:textColor="#ff222222"
+		             android:button="@drawable/check_button_selector"
+		            android:text="@string/close_soft_sound" 
+		             android:paddingTop="5sp"
+		            android:singleLine="true"
+		             android:layout_marginLeft="10.0dip"
+		            />
+				
+				<TextView
+				    android:id="@+id/set"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="20.0sp"
+					android:layout_marginTop="20.0sp"
+					android:layout_marginRight="20.0sp"
+					android:layout_marginBottom="5.0sp"
+					android:paddingTop="10.0sp"
+					android:paddingBottom="10.0sp"
+					android:gravity="center_horizontal"
+					android:background="@drawable/button_selector"
+					android:text="@string/str_set"
+					android:textColor="#ff222222"
+					android:textStyle="bold"
+					android:textSize="16.0sp"
+					android:clickable="true" />
+		</LinearLayout>
+	</ScrollView>
+</RelativeLayout>
+

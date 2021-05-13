@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <drawable name="clr_normal">#888888</drawable>
+    <drawable name="clr_pressed">#333333</drawable>
+    <drawable name="list_normal">#00000000</drawable>
+    <drawable name="list_pressed">#FF333333</drawable>
+    <string name="app_name">U8(V2.4)</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">设置</string>
+    <string name="main_inventory">盘询</string>
+    <string name="main_readwrite">读写</string>
+    <string name="main_setting">设置</string>
+    <string name="str_setting_out_power_success">功率设置成功!</string>
+    <string name="str_setting_out_power_fail">功率设置失败!</string>
+    <string name="str_getting_out_power_fail">功率获取失败!</string>
+    
+    <string name="str_setting_base">参数设置</string>
+    <string name="str_setting_out_power">功率设置成功</string>
+    <string name="str_set_out_power">功率设置</string>
+    <string name="Disk_failure">盘询失败,错误码</string>
+      <string name="Read_Tag_Successful">读标签成功</string>
+    <string name="Read_Tag_Failure">读标签失败</string>
+    <string name="Write_Tag_Successful">写标签成功</string>
+    <string name="Write_Tag_Failure">写标签失败 ,</string>
+     <string name="Lock_Tag_Successful">锁标签成功</string>
+    <string name="Lock_Tag_Failure">锁标签失败</string>
+    <string name="ever_Lock_Tag_Successful">永久锁定标签成功</string>
+    <string name="ever_Lock_Tag_Failure">永久锁定标签失败</string>
+    <string name="unLock_Tag_Successful">解锁标签成功</string>
+    <string name="unLock_Tag_Failure">解锁标签失败</string>
+    <string name="ever_unLock_Tag_Successful">永久解锁标签成功</string>
+    <string name="ever_unLock_Tag_Failure">永久解锁标签失败</string>
+    <string name="Kill_Tag_Successful">销毁标签成功</string>
+    <string name="Kill_Tag_Failure">销毁标签失败</string>
+    <string name="Warning">警告：请小心破坏标签的功能。</string>
+    
+    <string name="str_srart_power">0dBm</string>
+    <string name="str_end_power">33dBm</string>
+    
+    <string name="str_set">设置</string>
+    <string name="tag_access_epc">"选择操作标签"</string>
+    <string name="tag_list_title">"标签列表: "</string>
+    <string name="get">读</string>
+    <string name="select">选择</string>
+    <string name="tag_write_read">"读写标签"</string>
+    <string name="area_password">"保留区"</string>
+    <string name="area_epc">"EPC区"</string>
+    <string name="area_tid">"TID区"</string>
+    <string name="area_user">"USER区"</string>
+    <string name="password">"访问密码(HEX): "</string>
+    <string name="start_add">"起始地址(WORD): "</string>
+    <string name="data_length">"长度(WORD): "</string>
+    <string name="data_write">"写数据(HEX): "</string>
+    <string name="read_tag">读标签</string>
+    <string name="write_tag">写标签</string>
+    <string name="str_detection_temperature">温度检测</string>
+    <string name="bt_start">开始</string>
+    <string name="bt_stop">停止</string>
+    <string name="bt_clear">清空</string>
+    <string name="tags_count_unit">"A"</string>
+    <string name="tags_total">"积累数据: "</string>
+    <string name="tags_total_unit">" Article"</string>
+    <string name="tags_speed">"识别速度: "</string>
+    <string name="tags_speed_unit">" a/m"</string>
+    <string name="tags_time">"运行时间: "</string>
+    <string name="tags_time_unit">" ms"</string>
+    <string name="real_list_freq">"载波频率"</string>
+    <string name="fast4ant_list_times">"Count"</string>
+    <string name="fast4ant_list_freq">"RISS"</string>
+    <string name="tag_lock">"锁标签"</string>
+    <string name="area_access_password">"访问密码"</string>
+    <string name="area_kill_password">"销毁密码"</string>
+    <string name="lock_free">"解锁"</string>
+    <string name="lock_lock">"锁"</string>
+    <string name="lock_free_ever">"永久解锁"</string>
+    <string name="lock_lock_ever">"永久锁定"</string>
+    <string name="str_password">"销毁密码(HEX): "</string>
+    <string name="kill_tag">销毁标签</string>
+    <string name="tag_kill">"销毁标签"</string>
+    <string name="lock_tag">锁标签</string>
+    <string name="param_unknown_error">一个未知的错误参数</string>
+    <string name="param_start_addr_error">起始地址格式错误</string>
+    <string name="param_lockpassword_error">密码格式错误</string>
+    <string name="param_killpassword_error">密码格式错误</string>
+    <string name="param_password_error">密码错误</string>
+    <string name="param_data_len_error">长度值格式错误</string>
+    <string name="param_data_error">错误写入数据格式</string>
+    <string name="access_list_data_len">"数据长度"</string>
+    <string name="list_antenna_port">"天线"</string>
+    <string name="access_list_times">"操作频率"</string>
+    <string name="access_list_data">"数据"</string>
+    <string name="str_read_tag_data">"读标签数据"</string>
+    <string name="str_select_tag_readwrite">"读写标签"</string>
+    <string name="str_select_6ctag_readwrite">"读写6C标签"</string>
+    <string name="str_power_set_success">"功率设置成功"</string>
+    <string name="str_hint_epc_set_successful">"EPC设置成功!"</string>
+    
+    <string name="setting_beeper">蜂鸣器状态(暂不可用)</string>
+    <string name="beeper_quiet">安静</string>
+    <string name="beeper_all">存盘后鸣笛</string>
+    <string name="beeper_one">每读到一张标签鸣笛(影响速度，仅供测试)</string>
+    <string name="str_beeper">蜂鸣设置</string>
+    <string name="str_inventory">盘询参数</string>
+    <string name="inventoryCountText" formatted="false">已盘:%d个,总数:%d条,速度:%d个/秒,耗时:%d秒</string>
+    <string name="inventoryFlag">盘询标识</string>
+    
+    <string name="open_soft_sound">开启提示音</string>
+    <string name="close_soft_sound">关闭提示音</string>
+    <string name="setting_soft_sound">软件提示音</string>
+    <string name="setting_soft_sound_failed">操作失败,请重试</string>
+    <string name="setting_soft_sound_switch">软件提示音开关</string>
+    
+    <string name="lose_configurationfile">配置文件丢失</string>
+    <string name="exception_occurred">发生异常,异常信息:%s</string>
+    <string name="version_exception">程序版本有误</string>
+    <string name="serialPort_not_open">串口操作异常</string>
+    
+    <string name="str_set_epc_match_failed">设置标签匹配失败</string>
+    <string name="timeout">读取数据超时</string>
+    <string name="success">success</string>
+    <string name="bt_save">保存</string>
+
+    <string name="str_save_succeed">保存成功,存储路径为:/storage/emulated/0/fn_log/U8/....</string>
+    <string name="str_save_failed">保存失败,失败原因:列表为空或数据存储异常</string>
+    
+    
+    <string name="session">Session</string>
+    
+</resources>

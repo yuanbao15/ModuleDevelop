@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <!-- 功率设置 -->
+		<include layout="@layout/include_power_set"/>
+		<!-- 温度获取 -->
+		<include layout="@layout/include_temperature_get"/>
+        <!-- 蜂鸣设置 -->
+    	<include layout="@layout/include_beep_set"/>
+		<!-- session设置 -->
+		<include layout="@layout/include_session_set"/>
+    <!-- 设置 -->
+
+    <TextView
+        android:id="@+id/set"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_selector"
+        android:clickable="true"
+        android:gravity="center_horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="@string/str_set"
+        android:textColor="#ff222222"
+        android:textSize="16.0sp"
+        android:textStyle="bold" />
+</LinearLayout>
+
+</ScrollView>

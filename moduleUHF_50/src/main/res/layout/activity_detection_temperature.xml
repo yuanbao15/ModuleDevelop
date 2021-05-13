@@ -1,0 +1,86 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+  	android:layout_height="match_parent"
+  	android:orientation="vertical"
+  	android:background="@drawable/gradient_bg">
+  	
+<!-- 	<com.rodinbell.uhf.TitleGoToMain
+		android:id="@+id/title_goto_main"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" />
+	
+	<com.rodinbell.uhf.LogList
+		android:id="@+id/log_list"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true" /> -->
+
+	<ScrollView
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:fadingEdge="vertical"
+	    android:background="#EEEEEE"
+	    android:fillViewport="true"
+	    android:scrollbars="vertical" >
+
+		<LinearLayout
+		    android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical" >
+	    
+		    <TextView
+				android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginBottom="10.0dip"
+	            android:layout_marginTop="10.0dip"
+	            android:gravity="center_vertical"
+	            android:paddingLeft="4.0dip"
+	            android:text="@string/str_detection_temperature"
+	            android:textColor="#ff222222"
+	            android:textSize="16.0sp" />
+		    
+			<LinearLayout 
+			    android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:paddingLeft="10.0dip"
+				android:paddingTop="5.0dip"
+				android:paddingRight="10.0dip"
+				android:paddingBottom="5.0dip"
+				android:orientation="vertical" >
+	
+		        <EditText
+		            android:id="@+id/temperature_text"
+		            android:singleLine="true"
+		            android:layout_width="fill_parent"
+		            android:layout_height="30sp"
+		            android:background="@drawable/readonly_editbox_background"
+		            android:gravity="center_vertical|center_horizontal"
+		            android:inputType="text"
+		            android:enabled="false"
+		            android:textSize="16sp" />
+	        	
+				<TextView
+				    android:id="@+id/get"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="20.0sp"
+					android:layout_marginTop="20.0sp"
+					android:layout_marginRight="20.0sp"
+					android:layout_marginBottom="5.0sp"
+					android:paddingTop="10.0sp"
+					android:paddingBottom="10.0sp"
+					android:gravity="center_horizontal"
+					android:background="@drawable/button_selector"
+					android:text="@string/get"
+					android:textColor="#ff222222"
+					android:textStyle="bold"
+					android:textSize="16.0sp"
+					android:clickable="true" />
+		        
+	        </LinearLayout>
+		</LinearLayout>
+	</ScrollView>
+</RelativeLayout>
+
+
+	

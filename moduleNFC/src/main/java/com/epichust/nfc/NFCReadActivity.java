@@ -120,10 +120,9 @@ public class NFCReadActivity extends Activity implements ParseListener {
                     // 取到data信息
                     if (blockNum == 1){ // 读单块
                         data = I15693Utils.getInstance().readSingleBlock(blockIndex);
-                    }else if (blockNum == 4){ // 读4块
+                    }else if (blockNum > 1){ // 读4块
                         // 这儿实测有个坑，读多块时必须先执行一下读单块的方法
-                        data = I15693Utils.getInstance().readSingleBlock(blockIndex);
-                        data = I15693Utils.getInstance().readMultipleBlocks(blockIndex, 1); // 两种模式，0读两块，1读四块
+                        data = I15693Utils.getInstance().readMultipleBlocks(blockIndex, blockNum); // 两种模式，0读两块，1读四块
                     }
                     if (!TextUtils.isEmpty(data)) {
                         // 截取数据只取hex：后的数据，多块的就拼接起来
