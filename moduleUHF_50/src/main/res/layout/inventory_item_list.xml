@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:orientation="horizontal"
+	android:background="#FFF2F2F2" >  
+    
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#BBBBBB" />
+    
+	<TextView
+	    android:id="@+id/id_text"
+		android:layout_width="50sp"
+		android:layout_height="wrap_content"
+		android:padding="2sp"
+		android:textSize="16sp"
+		android:textColor="#ff333333"
+		android:gravity="center"
+		android:singleLine="true" />
+	
+	<View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#BBBBBB" />
+	
+	<TextView
+	    android:id="@+id/epc_text"
+		android:layout_width="300sp"
+		android:layout_height="wrap_content"
+		android:padding="2sp"
+		android:textSize="16sp"
+		android:textColor="#ff333333"
+		android:gravity="center"
+		android:singleLine="true" />
+
+	<View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#BBBBBB" />
+	
+	<TextView
+	    android:id="@+id/pc_text"
+		android:layout_width="70sp"
+		android:layout_height="wrap_content"
+		android:padding="2sp"
+		android:textSize="16sp"
+		android:textColor="#ff333333"
+		android:gravity="center"
+		android:singleLine="true" />
+
+	<View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#BBBBBB" />
+	
+	<TextView
+	    android:id="@+id/times_text"
+		android:layout_width="80sp"
+		android:layout_height="wrap_content"
+		android:padding="2sp"
+		android:textSize="16sp"
+		android:textColor="#ff333333"
+		android:gravity="center"
+		android:singleLine="true" />
+
+	<View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#BBBBBB" />
+	
+	<TextView
+	    android:id="@+id/rssi_text"
+		android:layout_width="80sp"
+		android:layout_height="wrap_content"
+		android:padding="2sp"
+		android:textSize="16sp"
+		android:textColor="#ff333333"
+		android:gravity="center"
+		android:singleLine="true" />
+
+	<View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#BBBBBB" />
+	
+	<TextView
+	    android:id="@+id/freq_text"
+		android:layout_width="80sp"
+		android:layout_height="wrap_content"
+		android:padding="2sp"
+		android:textSize="16sp"
+		android:textColor="#ff333333"
+		android:gravity="center"
+		android:singleLine="true" />
+	
+	<View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#BBBBBB" />
+    
+</LinearLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/gradient_bg">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10.0dip"
+        android:layout_marginTop="10.0dip"
+        android:gravity="center_vertical"
+        android:paddingLeft="4.0dip"
+        android:text="@string/str_detection_temperature"
+        android:textColor="#ff222222"
+        android:textSize="16.0sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="5.0dip"
+        android:paddingLeft="10.0dip"
+        android:paddingRight="10.0dip"
+        android:paddingTop="5.0dip" >
+
+        <EditText
+            android:id="@+id/temperature_text"
+            android:layout_width="0dp"
+            android:layout_height="30sp"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="2"
+            android:background="@drawable/readonly_editbox_background"
+            android:enabled="false"
+            android:gravity="center_vertical|center_horizontal"
+            android:inputType="text"
+            android:singleLine="true"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/get"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_selector"
+            android:clickable="true"
+            android:gravity="center_horizontal"
+            android:paddingBottom="10.0sp"
+            android:paddingTop="10.0sp"
+            android:text="@string/get"
+            android:textColor="@color/button_color"
+            android:textSize="16.0sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>
