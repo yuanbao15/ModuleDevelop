@@ -28,6 +28,8 @@
 		var moduleNotification = null;
 		var moduleUHF18000_6C = null;
 		var moduleUHF_I6310 = null;
+		var moduleUHF_U8 = null;
+		var moduleUHF_50 = null;
 
 		apiready = function(){
 	    	uzmoduledemo = api.require('moduleDemo');
@@ -41,6 +43,8 @@
 			moduleNotification = api.require('moduleNotification');
 			moduleUHF18000_6C = api.require('moduleUHF18000_6C');
 			moduleUHF_I6310 = api.require('moduleUHF_I6310');
+			moduleUHF_U8 = api.require('moduleUHF_U8');
+			moduleUHF_50 = api.require('moduleUHF_50');
 	    }
 	    
 		function showAlert(){
@@ -200,27 +204,54 @@
 			};
 			moduleNFC.readNFC(params, function(ret, err){
                 if (ret) {
-                    var data = ret.data;
-                    $("#nfc_result").val(JSON.stringify(data));
-                    alert(JSON.stringify(ret));
+                    $("#nfc_uid").val(ret.uid);
+                    $("#nfc_result").val(ret.data);
+                    console.log("读取完成！");
+<!--                    alert(JSON.stringify(ret));-->
                 } else {
-                    alert(JSON.stringify(err));
+<!--                    alert(JSON.stringify(err));-->
                 }
             });
 		}
-		function readNFC4Blocks(){
+		function readNFCBlocks(){
 			var blockIndex = $("#nfc_str").val();
 			var params = {
 				blockIndex : blockIndex,
-				blockNum : 4
+				blockNum : 10
 			};
 			moduleNFC.readNFC(params, function(ret, err){
                 if (ret) {
-                    var data = ret.data;
-                    $("#nfc_result").val(JSON.stringify(data));
-                    alert(JSON.stringify(ret));
+                    $("#nfc_uid").val(ret.uid);
+                    $("#nfc_result").val(ret.data);
+                        api.toast({
+                            msg: "读取完成",
+                            duration: 3000,
+                            location: 'botton'
+                        });
+<!--                    alert(JSON.stringify(ret));-->
                 } else {
-                    alert(JSON.stringify(err));
+<!--                    alert(JSON.stringify(err));-->
+                }
+            });
+		}
+		function writeNFC(){
+			var blockIndex = $("#nfc_str").val();
+			var params = {
+				blockIndex : blockIndex,
+				blockNum : 10,
+                blockData : $("#nfc_result").val()
+			};
+			moduleNFC.writeNFC(params, function(ret, err){
+                if (ret) {
+                    var data = ret.data;
+                    api.toast({
+                            msg: "写入完成1！",
+                            duration: 3000,
+                            location: 'middle'
+                        });
+<!--                    alert(JSON.stringify(ret));-->
+                } else {
+<!--                    alert(JSON.stringify(err));-->
                 }
             });
 		}
@@ -362,11 +393,96 @@
 			};
 			moduleUHF_I6310.writeUHF(params);
 		}
+
+		function readUHF_U8(){
+			var params = {};
+			moduleUHF_U8.readUHF(params);
+		}
+
+		function readUHFData_U8(){
+			var params = {
+				startIndex: 0, // 读取的起始位置，默认为0
+				length: 20, // 读取长度，默认为6
+				memType: 3 // 表示存储区，为0-3，分别对应RESEVER/EPC/TID/USER。默认为3-user
+			};
+			moduleUHF_U8.readUHFData(params);
+		}
+
+        function writeUHFData_U8(){
+        	var str = $("#uhf_str_u8").val();
+			var params = {
+				startIndex: 0, // 读取的起始位置，默认为0
+				length: 20, // 读取长度，默认为6
+				memType: 3, // 表示存储区，为0-3，分别对应RESEVER/EPC/TID/USER。默认为3-user
+				str:str
+			};
+			moduleUHF_U8.writeUHFData(params);
+		}
+
+		function readUHF_50(){
+			var params = {};
+			moduleUHF_50.readUHF(params, function(ret, err){
+			});
+		}
+
+		function readUHFData_50(){
+			var params = {
+				startIndex: 0, // 读取的起始位置，默认为0
+				length: 20, // 读取长度，默认为6
+				memType: 3 // 表示存储区，为0-3，分别对应RESEVER/EPC/TID/USER。默认为3-user
+			};
+			moduleUHF_50.readUHFData(params, function(ret, err){
+			});
+		}
+
+        function writeUHFData_50(){
+        	var str = $("#uhf_str_50").val();
+			var params = {
+				startIndex: 0, // 读取的起始位置，默认为0
+				length: 20, // 读取长度，默认为6
+				memType: 3, // 表示存储区，为0-3，分别对应RESEVER/EPC/TID/USER。默认为3-user
+				str:str
+			};
+			moduleUHF_50.writeUHFData(params);
+		}
+
 	</script>
 </head>
 <body>
     <div id="wrap">
         <div id="main">
+
+			<div class='itemtitle'>0、NFC</div>
+				<div><input type="text" id="nfc_str" value="0"/><div>
+				<div><input type="text" id="nfc_uid"/><div>
+				<div><input type="text" id="nfc_result"/><div>
+						<div class="clickbtn" tapmode="active" onclick="readNFC()" >yb-测试高频NFC读单块的方法</div>
+						<div class="clickbtn" tapmode="active" onclick="readNFCBlocks()" >yb-测试高频NFC读多块的方法</div>
+						<div class="clickbtn" tapmode="active" onclick="writeNFC()" >yb-测试高频NFC写多块的方法</div>
+						<br>
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class='itemtitle'>0、readUHF_50</div>
+			<div class="clickbtn" tapmode="active" onclick="readUHF_50()" >读EPC</div>
+			<div class='itemtitle'>1、writeUHFData_50</div>
+			<div><input type="text" id="uhf_str_50"/><div>
+			<div class="clickbtn" tapmode="active" onclick="writeUHFData_50()" >写数据</div>
+			<div class='itemtitle'>2、readUHFData_50</div>
+			<div class="clickbtn" tapmode="active" onclick="readUHFData_50()" >读数据</div>
+			<br>
+
+			<br>
+			<div class='itemtitle'>0、writeUHF_U8</div>
+			<div class="clickbtn" tapmode="active" onclick="readUHF_U8()" >读EPC</div>
+			<div class='itemtitle'>1、writeUHFData_U8</div>
+			<div><input type="text" id="uhf_str_u8"/><div>
+			<div class="clickbtn" tapmode="active" onclick="writeUHFData_U8()" >写数据</div>
+			<div class='itemtitle'>2、readUHFData_U8/div>
+			<div class="clickbtn" tapmode="active" onclick="readUHFData_U8()" >读数据</div>
+			<br>
+
         	<br>
 			<div class='itemtitle'>1、writeUHF_I6310</div>
 			<div><input type="text" id="uhf_str_i6310"/><div>
@@ -397,12 +513,6 @@
 				<div class="clickbtn" tapmode="active" onclick="startRecognize();" id="id_voice_operate" >开始</div>
                 <div class="clickbtn" tapmode="active" onclick="stopRecognize();" >停止</div>
 				<div class="clickbtn" tapmode="active" onclick="stopOneshot()" >停止唤醒</div>
-			<div class='itemtitle'>0、readNFC_yb</div>
-			    <div><input type="text" id="nfc_str" value="0"/><div>
-                <div><input type="text" id="nfc_result"/><div>
-				<div class="clickbtn" tapmode="active" onclick="readNFC()" >yb-测试高频NFC读单块的方法</div>
-				<div class="clickbtn" tapmode="active" onclick="readNFC4Blocks()" >yb-测试高频NFC读4块的方法</div>
-			<br>
 
 			<div class='itemtitle'>0、writeUHF_yb</div>
 				<div><input type="text" id="uhf_str"/><div>
@@ -418,7 +528,7 @@
 			<div class='itemtitle'>0、testApi_yb</div>
 				<div class="clickbtn" tapmode="active" onclick="testApi()" >yb-测试moduleApi</div>
 			<div class='itemtitle'>1、弹出对话框</div>
-				<div class="clickbtn" tapmode="active" onclick="showAlert()" >点击弹出</div>     
+				<div class="clickbtn" tapmode="active" onclick="showAlert()" >点击弹出</div>
 			<div class='itemtitle'>2、启动Activity</div>
 				<div class="clickbtn" tapmode="active" onclick="startActivity()" >startActivity</div>
 				<div class="clickbtn" tapmode="active" onclick="startActivityForResult()" >startActivityForResult</div>
@@ -430,8 +540,8 @@
 				<div class="clickbtn" tapmode="active" onclick="vibrate()" >开始震动</div>
 				<div class="clickbtn" tapmode="active" onclick="stopVibrate()" >停止震动</div>
 			<div class='itemtitle'>4、自定义UI模块</div>
-				<div class="clickbtn" tapmode="active" onclick="addView()" >添加自定义View到当前Window</div> 
-				<div class="clickbtn" tapmode="active" onclick="removeView()" >从当前Window移除自定义View</div>     
+				<div class="clickbtn" tapmode="active" onclick="addView()" >添加自定义View到当前Window</div>
+				<div class="clickbtn" tapmode="active" onclick="removeView()" >从当前Window移除自定义View</div>
 			<div class='itemtitle'>5、简单ScrollPicture模块</div>
 				<lable>输入ScrollPicture的宽度</lable><br>
 				<input type="number" id="sw" value="300"/>
@@ -439,13 +549,13 @@
 				<div class="clickbtn" tapmode="active" onclick="testclose()" >移除ScrollPicture</div>
 			<div class='itemtitle'>6、自定义简单的下拉刷新模块</div>
 				<div class="clickbtn" tapmode="active" onclick="toRefrash()" >直接进入下拉刷新</div>
-				<div class="clickbtn" tapmode="active" onclick="stopRefrash()" >退出下拉刷新</div> 
-				<div class="clickbtn" tapmode="active" onclick="setRefrashHeader()" >设置自定义下拉刷新模块</div>   
+				<div class="clickbtn" tapmode="active" onclick="stopRefrash()" >退出下拉刷新</div>
+				<div class="clickbtn" tapmode="active" onclick="setRefrashHeader()" >设置自定义下拉刷新模块</div>
 			<div class='itemtitle'>7、同步接口</div>
 				<div class="clickbtn" tapmode="active" onclick="syncInterface(0)" >同步获取整数</div>
 				<div class="clickbtn" tapmode="active" onclick="syncInterface(1)" >同步获取小数</div>
-				<div class="clickbtn" tapmode="active" onclick="syncInterface(2)" >同步获取bool值</div>  
-				<div class="clickbtn" tapmode="active" onclick="syncInterface(3)" >同步获取字符串</div> 
+				<div class="clickbtn" tapmode="active" onclick="syncInterface(2)" >同步获取bool值</div>
+				<div class="clickbtn" tapmode="active" onclick="syncInterface(3)" >同步获取字符串</div>
 				<div class="clickbtn" tapmode="active" onclick="syncInterface(4)" >同步获取JSON对象</div>
 				<div class="clickbtn" tapmode="active" onclick="syncInterface(5)" >同步获取JSON数组对象</div>
 			<div class='itemtitle'>8、模块B弹出对话框</div>

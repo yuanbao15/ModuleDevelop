@@ -13,7 +13,7 @@ android {
         targetSdkVersion Integer.parseInt(project.ANDROID_BUILD_TARGET_SDK_VERSION)
         versionCode Integer.parseInt(project.ANDROID_BUILD_VERSION_CODE)
         versionName project.ANDROID_BUILD_VERSION_NAME
-	    multiDexEnabled true
+        multiDexEnabled true
         minSdkVersion  Integer.parseInt(project.ANDROID_BUILD_MIN_SDK_VERSION)
     }
 
@@ -56,4 +56,6 @@ dependencies {
     compile project(':moduleNotification')
     compile project(':moduleUHF18000_6C')
     compile project(':moduleUHF_I6310')
+    compile project(':moduleUHF_U8')
+    compile project(':moduleUHF_50')
 }
