@@ -56,6 +56,6 @@ dependencies {
     compile project(':moduleNotification')
     compile project(':moduleUHF18000_6C')
     compile project(':moduleUHF_I6310')
-    compile project(':moduleUHF_U8')
-    compile project(':moduleUHF_50')
+//    compile project(':moduleUHF_U8')
+//    compile project(':moduleUHF_50')
 }
