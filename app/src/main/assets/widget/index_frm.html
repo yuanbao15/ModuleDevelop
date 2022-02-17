@@ -43,8 +43,8 @@
 			moduleNotification = api.require('moduleNotification');
 			moduleUHF18000_6C = api.require('moduleUHF18000_6C');
 			moduleUHF_I6310 = api.require('moduleUHF_I6310');
-			moduleUHF_U8 = api.require('moduleUHF_U8');
-			moduleUHF_50 = api.require('moduleUHF_50');
+			// moduleUHF_U8 = api.require('moduleUHF_U8');
+			// moduleUHF_50 = api.require('moduleUHF_50');
 	    }
 	    
 		function showAlert(){
@@ -464,7 +464,9 @@
 				</div>
 			</div>
 			<br>
-			<div class='itemtitle'>0、readUHF_50</div>
+
+<!--		ycf-自定义UHF模块，暂时冻结！			-->
+			<!--<div class='itemtitle'>0、readUHF_50</div>
 			<div class="clickbtn" tapmode="active" onclick="readUHF_50()" >读EPC</div>
 			<div class='itemtitle'>1、writeUHFData_50</div>
 			<div><input type="text" id="uhf_str_50"/><div>
@@ -481,7 +483,7 @@
 			<div class="clickbtn" tapmode="active" onclick="writeUHFData_U8()" >写数据</div>
 			<div class='itemtitle'>2、readUHFData_U8/div>
 			<div class="clickbtn" tapmode="active" onclick="readUHFData_U8()" >读数据</div>
-			<br>
+			<br>-->
 
         	<br>
 			<div class='itemtitle'>1、writeUHF_I6310</div>
