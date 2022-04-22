@@ -352,8 +352,7 @@
 
 		// 延迟执行
 		function showNotification2(){
-			setTimeout("showNotification(1)", 200);
-			setTimeout("showNotification(2)", 20*1000);
+			setTimeout("showNotification(2)", 10*1000);
 		}
 
 		// 针对2020.5.14开发的新PDA的uhf模块
@@ -452,83 +451,85 @@
     <div id="wrap">
         <div id="main">
 
-			<div class='itemtitle'>0、NFC</div>
-				<div><input type="text" id="nfc_str" value="0"/><div>
-				<div><input type="text" id="nfc_uid"/><div>
-				<div><input type="text" id="nfc_result"/><div>
-						<div class="clickbtn" tapmode="active" onclick="readNFC()" >yb-测试高频NFC读单块的方法</div>
-						<div class="clickbtn" tapmode="active" onclick="readNFCBlocks()" >yb-测试高频NFC读多块的方法</div>
-						<div class="clickbtn" tapmode="active" onclick="writeNFC()" >yb-测试高频NFC写多块的方法</div>
-						<br>
-					</div>
-				</div>
-			</div>
-			<br>
+
 
 <!--		ycf-自定义UHF模块，暂时冻结！			-->
-			<!--<div class='itemtitle'>0、readUHF_50</div>
+			<!--<div class='itemtitle'>21-1、readUHF_50</div>
 			<div class="clickbtn" tapmode="active" onclick="readUHF_50()" >读EPC</div>
-			<div class='itemtitle'>1、writeUHFData_50</div>
+			<div class='itemtitle'>21-2、writeUHFData_50</div>
 			<div><input type="text" id="uhf_str_50"/><div>
 			<div class="clickbtn" tapmode="active" onclick="writeUHFData_50()" >写数据</div>
-			<div class='itemtitle'>2、readUHFData_50</div>
+			<div class='itemtitle'>21-3、readUHFData_50</div>
 			<div class="clickbtn" tapmode="active" onclick="readUHFData_50()" >读数据</div>
 			<br>
 
 			<br>
-			<div class='itemtitle'>0、writeUHF_U8</div>
+			<div class='itemtitle'>20-1、writeUHF_U8</div>
 			<div class="clickbtn" tapmode="active" onclick="readUHF_U8()" >读EPC</div>
-			<div class='itemtitle'>1、writeUHFData_U8</div>
+			<div class='itemtitle'>20-2、writeUHFData_U8</div>
 			<div><input type="text" id="uhf_str_u8"/><div>
 			<div class="clickbtn" tapmode="active" onclick="writeUHFData_U8()" >写数据</div>
-			<div class='itemtitle'>2、readUHFData_U8/div>
+			<div class='itemtitle'>20-3、readUHFData_U8/div>
 			<div class="clickbtn" tapmode="active" onclick="readUHFData_U8()" >读数据</div>
 			<br>-->
 
+			<div class='itemtitle'>19、NFC</div>
+			<div><input type="text" id="nfc_str" value="0"/><div>
+			<div><input type="text" id="nfc_uid"/><div>
+			<div><input type="text" id="nfc_result"/><div>
+			<div class="clickbtn" tapmode="active" onclick="readNFC()" >yb-测试高频NFC读单块的方法</div>
+			<div class="clickbtn" tapmode="active" onclick="readNFCBlocks()" >yb-测试高频NFC读多块的方法</div>
+			<div class="clickbtn" tapmode="active" onclick="writeNFC()" >yb-测试高频NFC写多块的方法</div>
         	<br>
-			<div class='itemtitle'>1、writeUHF_I6310</div>
+
+			<div class='itemtitle'>18-1、writeUHF_I6310</div>
 			<div><input type="text" id="uhf_str_i6310"/><div>
 			<div class="clickbtn" tapmode="active" onclick="writeUHF_I6310()" >测试UHF超高频写的方法</div>
-			<div class='itemtitle'>2、readUHF_I6310</div>
+			<div class='itemtitle'>18-2、readUHF_I6310</div>
 			<div class="clickbtn" tapmode="active" onclick="readUHF_I6310()" >测试UHF超高频读的方法</div>
-			<div class='itemtitle'>3、testUHFActivity_I6310</div>
+			<div class='itemtitle'>18-3、testUHFActivity_I6310</div>
 			<div class="clickbtn" tapmode="active" onclick="testUHF_I6310()" >测试UHF超高频读写的activity</div>
 			<br>
 
-			<div class='itemtitle'>1、writeUHF_新PDA</div>
+			<div class='itemtitle'>17-1、writeUHF_新PDA</div>
 				<div><input type="text" id="uhf_str_new"/><div>
 				<div class="clickbtn" tapmode="active" onclick="writeUHFNew()" >测试UHF超高频写的方法</div>
-			<div class='itemtitle'>2、readUHF_新PDA</div>
+			<div class='itemtitle'>17-2、readUHF_新PDA</div>
 				<div class="clickbtn" tapmode="active" onclick="readUHFNew()" >测试UHF超高频读的方法</div>
-			<div class='itemtitle'>3、testUHFActivity_新PDA</div>
+			<div class='itemtitle'>17-3、testUHFActivity_新PDA</div>
 				<div class="clickbtn" tapmode="active" onclick="testUHFNew()" >测试UHF超高频读写的activity</div>
 			<br>
 
-			<div class='itemtitle'>0、showNotification_yb</div>
-				<div class="clickbtn" tapmode="active" onclick="showNotification2()" >yb-推送消息到通知栏</div>
-            <div class='itemtitle'>0、startAlive_yb</div>
+			<div class='itemtitle'>16、showNotification_yb</div>
+				<div class="clickbtn" tapmode="active" onclick="showNotification()" >yb-推送消息到通知栏</div>
+				<div class="clickbtn" tapmode="active" onclick="showNotification2()" >yb-推送消息到通知栏-延迟10秒</div>
+            <div class='itemtitle'>15、startAlive_yb</div>
                 <div class="clickbtn" tapmode="active" onclick="startAlive()" >yb-开启线程常驻</div>
                 <div class="clickbtn" tapmode="active" onclick="stopAlive()" >停止-未成功</div>
-			<div class='itemtitle'>0、startOneshot_yb</div>
+			<div class='itemtitle'>14、startOneshot_yb</div>
 				<div><input type="text" id="voice_str"/><div>
 				<div class="clickbtn" tapmode="active" onclick="startOneshot()" >yb-测试语音唤醒+识别</div>
 				<div class="clickbtn" tapmode="active" onclick="startRecognize();" id="id_voice_operate" >开始</div>
                 <div class="clickbtn" tapmode="active" onclick="stopRecognize();" >停止</div>
 				<div class="clickbtn" tapmode="active" onclick="stopOneshot()" >停止唤醒</div>
+			<br>
 
-			<div class='itemtitle'>0、writeUHF_yb</div>
+			<div class='itemtitle'>13-1、writeUHF_yb</div>
 				<div><input type="text" id="uhf_str"/><div>
                 <div class="clickbtn" tapmode="active" onclick="writeUHF()" >yb-测试UHF超高频写的方法</div>
-			<div class='itemtitle'>0、readUHF_yb</div>
+			<div class='itemtitle'>13-2、readUHF_yb</div>
 				<div class="clickbtn" tapmode="active" onclick="readUHF()" >yb-测试UHF超高频读的方法</div>
-			<div class='itemtitle'>0、testUHFActivity_yb</div>
+			<div class='itemtitle'>13-3、testUHFActivity_yb</div>
 				<div class="clickbtn" tapmode="active" onclick="testUHF()" >yb-测试UHF超高频读写的activity</div>
 			<br>
 
-			<div class='itemtitle'>0、testMyPdfMark_yb</div>
+			<div class='itemtitle'>12、testMyPdfMark_yb</div>
 				<div class="clickbtn" tapmode="active" onclick="testPdfMark()" >yb-测试读取标记pdf的activity</div>
-			<div class='itemtitle'>0、testApi_yb</div>
+			<div class='itemtitle'>11、testApi_yb</div>
 				<div class="clickbtn" tapmode="active" onclick="testApi()" >yb-测试moduleApi</div>
+
+			<br>
+			<div class='itemtitle'>===========以下为官方原始模块===========</div>
 			<div class='itemtitle'>1、弹出对话框</div>
 				<div class="clickbtn" tapmode="active" onclick="showAlert()" >点击弹出</div>
 			<div class='itemtitle'>2、启动Activity</div>
