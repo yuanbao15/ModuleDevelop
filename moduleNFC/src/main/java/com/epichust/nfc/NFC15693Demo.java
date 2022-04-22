@@ -64,12 +64,51 @@ public class NFC15693Demo extends UZModule {
 
     }
 
+    public void jsmethod_writeNFC(final UZModuleContext moduleContext){
+        mModuleContext = moduleContext;
+        ret = null; // 撤掉销毁，并清空内存，防止第二次读取时被第一次数据干扰
+        // 接收到参：起始位置、长度
+        String blockStr = moduleContext.optString("blockIndex");
+        String blockNumStr = moduleContext.optString("blockNum");
+        String blockData = moduleContext.optString("blockData");
+        int blockIndex = blockStr==""? 0:Integer.parseInt(blockStr); // 默认起始位置0
+        int blockNum = blockNumStr==""? 1:Integer.parseInt(blockNumStr); // 默认读块数量1
+
+        // --回调结果
+        Log.w("writeNFC","-------写入初始化1");
+        Intent intent = new Intent(getContext(), NFCWriteActivity.class);
+        intent.putExtra("blockIndex", blockIndex);
+        intent.putExtra("blockNum", blockNum);
+        intent.putExtra("blockData", blockData);
+        startActivityForResult(intent,1);
+
+        new Thread(){
+            @Override
+            public void run() {
+                //需要在子线程中处理的逻辑
+                while (true){
+                    try {
+                        if (ret != null && ret.getBoolean("readFlag")){
+                            ret.put("readFlag", false);
+                            moduleContext.success(ret, true);
+                            break;
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                    continue;
+                }
+            }
+        }.start();
+
+    }
+
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent intent) {
         super.onActivityResult(requestCode, resultCode, intent);
         if (resultCode == 2) {
             if (requestCode == 1) {
-                //                Tag tag = intent.getParcelableExtra("tag");
+//                Tag tag = intent.getParcelableExtra("tag");
 
                 String uid = intent.getStringExtra("uid");
                 String tech = intent.getStringExtra("tech");

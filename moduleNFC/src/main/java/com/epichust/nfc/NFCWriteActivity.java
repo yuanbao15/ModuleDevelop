@@ -20,16 +20,16 @@ import com.olc.nfcmanager.ParseListener;
 import com.olc.nfcmanager.R;
 import com.olc.nfcmanager.Utils;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 /**
  * Created by yuanbao on 2019/3/21
+ * 写也是开启这个activity，识别到tag后写入操作，然后返回写入结果。
+ * 这段逻辑未测试。
  */
-public class NFCReadActivity extends Activity implements ParseListener {
+public class NFCWriteActivity extends Activity implements ParseListener
+{
     private Context mContext = null;
     private NfcAdapter mNfcAdapter = null;
-    private MyHandler mHandler;
+    private NFCReadActivity.MyHandler mHandler;
     private PendingIntent mPendingIntent;
     private Intent mIntent;
     private Tag mTag;
@@ -40,16 +40,19 @@ public class NFCReadActivity extends Activity implements ParseListener {
     private byte[] mExtraId; // 存放读取的标签id，可以放多个
     private int blockIndex = 0; // 需要操作的块位置
     private int blockNum = 1; // 需要操作的块数量
+    private String blockData = ""; // 需要操作写入的数据
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_nfc_read);
+        setContentView(R.layout.activity_nfc_write);
         mContext = getApplicationContext();
         // 处理带过来的参
         mIntent = getIntent();
-        blockIndex = mIntent.getIntExtra("blockIndex",0);
-        blockNum = mIntent.getIntExtra("blockNum",1);
+        blockIndex = mIntent.getIntExtra("blockIndex", 0);
+        blockNum = mIntent.getIntExtra("blockNum", 1);
+        blockData = mIntent.getStringExtra("blockData");
         // NFC模块初始化
         initNfc();
         processIntent(mIntent);
@@ -59,6 +62,7 @@ public class NFCReadActivity extends Activity implements ParseListener {
     protected void onDestroy() {
         super.onDestroy();
     }
+
 
     @Override
     protected void onResume() {
@@ -75,8 +79,8 @@ public class NFCReadActivity extends Activity implements ParseListener {
     private void processIntent(Intent intent) {
         if (intent != null){
             if (NfcAdapter.ACTION_TAG_DISCOVERED.equals(intent.getAction())){
-                Log.w("readNFC","-------activity读取到tag");
-                Tag tag = intent.getParcelableExtra(mNfcAdapter.EXTRA_TAG);
+                Log.w("writeNFC","-------activity写入到tag");
+                Tag tag = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);
                 mTag = tag;
             }
         }
@@ -116,33 +120,24 @@ public class NFCReadActivity extends Activity implements ParseListener {
                 public void onParseComplete(String info) {
                     mInfo = info; // 取到info信息
 
-                    String data = null;
-                    // 取到data信息
-                    if (blockNum == 1){ // 读单块
-                        data = I15693Utils.getInstance().readSingleBlock(blockIndex);
+                    boolean isSuccess = true;
+                    // 待写入的数据转换一下bytes
+                    byte[] blockDataBytes = hexStringToBytes(blockData);
+                    if (blockNum == 1){ // 写单块
+                        isSuccess = I15693Utils.getInstance().writeSingleBlock(blockIndex, blockDataBytes);
                     }else if (blockNum > 1){ // 读4块
                         // 这儿实测有个坑，读多块时必须先执行一下读单块的方法
-                        data = I15693Utils.getInstance().readMultipleBlocks(blockIndex, blockNum); // 两种模式，0读两块，1读四块
-                    }
-                    if (!TextUtils.isEmpty(data)) {
-                        // 截取数据只取hex：后的数据，多块的就拼接起来
-                        String regex = "(?<=hex:).*";
-                        Pattern pattern = Pattern.compile(regex);
-                        Matcher matcher = pattern.matcher(data);
-                        mData = "";
-                        int index = 0;
-                        while (matcher.find()){
-                            mData += matcher.group(0).trim();
-                        }
+                        isSuccess = I15693Utils.getInstance().writeMultipleBlocks(blockIndex, blockNum, blockDataBytes); // 两种模式，0读两块，1读四块
                     }
 
-                    Log.w("readNFC","uid:"+mUid);
-                    Log.w("readNFC","data:"+data);
+                    Log.w("writeNFC","uid:"+mUid);
+                    Log.w("writeNFC","isSuccess:"+isSuccess);
                     mIntent.putExtra("tag", mTag);
                     mIntent.putExtra("uid", mUid);
                     mIntent.putExtra("tech", mTech);
                     mIntent.putExtra("info", mInfo);
-                    mIntent.putExtra("data", mData);
+//                    mIntent.putExtra("data", mData);
+                    mIntent.putExtra("status", isSuccess);  // 返回状态表明是否写入成功
                     setResult(2, mIntent);
                     finish(); // 消除这个activity页面
                 }
@@ -185,8 +180,28 @@ public class NFCReadActivity extends Activity implements ParseListener {
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
             String info = (String)msg.obj;
-            Log.w("readNFC","-------读取info:"+info);
+            Log.w("writeNFC","-------写入info:"+info);
         }
     }
 
+    // 工具：16进制字符串转byte[]
+    /** * Convert hex string to byte[] * @param hexString the hex string * @return byte[] */
+    public static byte[] hexStringToBytes(String hexString) {
+        if (hexString == null || hexString.equals("")) {
+            return null;
+        }
+        hexString = hexString.toUpperCase();
+        int length = hexString.length() / 2;
+        char[] hexChars = hexString.toCharArray();
+        byte[] d = new byte[length];
+        for (int i = 0; i < length; i++) {
+            int pos = i * 2;
+            d[i] = (byte) (charToByte(hexChars[pos]) << 4 | charToByte(hexChars[pos + 1]));
+        }
+        return d;
+    }
+    /** * Convert char to byte * @param c char * @return byte */
+    private static byte charToByte(char c) {
+        return (byte) "0123456789ABCDEF".indexOf(c);
+    }
 }
