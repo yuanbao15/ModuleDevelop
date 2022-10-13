@@ -14,7 +14,7 @@ import realid.rfidlib.MyLib;
 /**
  * UHFReadWrite:作为调用方法的管理类，提供方法去读写
  * <p>
- * Created by yuanbao on 2019/5/20.
+ * Created by yqf on 2019/5/20.
  */
 public class UHFReadWrite {
     private MyLib mb;

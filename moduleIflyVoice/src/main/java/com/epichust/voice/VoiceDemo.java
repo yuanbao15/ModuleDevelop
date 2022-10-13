@@ -75,8 +75,8 @@ public class VoiceDemo extends UZModule {
                 manager.startOneshot(mGrammarId, mWakeuperListener);
                 showTips("语音唤醒初始化成功，唤醒词：元宝哥哥");
             } else {
-                Log.e(TAG,"语法构建失败,错误码：" + error.getErrorCode());
-                showTips("语音唤醒初始化失败，错误码：" + error.getErrorCode());
+                Log.e(TAG,"语法构建失败,错误码：" + error.getErrorCode() + "，错误信息：" + error.toString());
+                showTips("语音唤醒初始化失败，错误码：" + error.getErrorCode() + "，错误信息：" + error.toString());
             }
         }
     }
@@ -270,6 +270,7 @@ public class VoiceDemo extends UZModule {
                     }catch (Exception e2){
                     }
                     e.printStackTrace();
+                    Log.w("IAT", "模块调用失败："+e.getMessage());
                 }finally {
                     mModuleContext.success(ret, false);
                 }
@@ -408,7 +409,7 @@ public class VoiceDemo extends UZModule {
         // 构建语法开启监听之后的回调中去返回数据
 
         // 锁屏管理器初始化
-        initKeyguardAndPower();
+//        initKeyguardAndPower();
     }
 
     /**

@@ -43,7 +43,7 @@
 			moduleNotification = api.require('moduleNotification');
 			moduleUHF18000_6C = api.require('moduleUHF18000_6C');
 			moduleUHF_I6310 = api.require('moduleUHF_I6310');
-			// moduleUHF_U8 = api.require('moduleUHF_U8');
+			// moduleUHF_U8 = api.require('moduleUHF_U8'); // 代码被加密了此模块无法使用
 			// moduleUHF_50 = api.require('moduleUHF_50');
 	    }
 	    
@@ -262,10 +262,7 @@
                 if (ret) {
                     var data = ret.data;
                     $("#voice_str").val(JSON.stringify(data));
-                    alert(JSON.stringify(ret));
-
-                    <!--// 延时执行一次，不需要，已开启持续性唤醒识别并返回-->
-                    <!--setTimeout("startOneshot()","500");-->
+                    // alert(JSON.stringify(ret));
                 } else {
                     alert(JSON.stringify(err));
                 }
@@ -291,7 +288,6 @@
 				if (ret) {
 					var data = ret.data;
 					var data2 = ret.data2;
-					alert(data2);
 					$("#voice_str").val(JSON.stringify(data));
 				} else {
 					alert(JSON.stringify(err));

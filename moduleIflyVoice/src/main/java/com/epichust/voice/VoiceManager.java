@@ -100,7 +100,7 @@ public class VoiceManager {
         // 初始化唤醒对象
         mIvw = VoiceWakeuper.createWakeuper(context, null);
         // 初始化识别对象--唤醒+识别
-        mAsr = SpeechRecognizer.createRecognizer(context, null);
+        mAsr = SpeechRecognizer.createRecognizer(context, null); // 好像是弃用了，改成了唤醒+听写
         // 初始化听写对象
         mIat = SpeechRecognizer.createRecognizer(context, mInitListener);
         // 初始化语法文件
@@ -142,7 +142,7 @@ public class VoiceManager {
                 Log.e(TAG,"语法构建失败,错误码：" + ret);
             }
         }
-
+        Log.w(TAG,"语法构建成功！");
     }
 
     public void startOneshot(String grammarId, WakeuperListener wakeuperListener) {

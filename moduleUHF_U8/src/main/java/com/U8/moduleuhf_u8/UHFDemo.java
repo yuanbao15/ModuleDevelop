@@ -19,7 +19,8 @@ import java.util.Map;
  * <p>
  * var module = api.require('moduleUHF_I6310');
  * module.xxx();
- * Created by yuanbao on 2020/5/20.
+ * Created by yqf on 2020/5/20.
+ * UHFReadWrite.java类被加密了，此模块无法使用
  */
 public class UHFDemo extends UZModule {
     public static UZModuleContext mModuleContext;
