@@ -5,9 +5,9 @@ import android.preference.EditTextPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
-import android.support.annotation.Nullable;
 import android.view.Window;
 
+import androidx.annotation.Nullable;
 import com.epichust.voice.R;
 
 /**

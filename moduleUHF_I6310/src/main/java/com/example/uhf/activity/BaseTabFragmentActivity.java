@@ -4,13 +4,13 @@ import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.util.DisplayMetrics;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.widget.Toast;
 
+import androidx.fragment.app.FragmentActivity;
 import com.example.uhf.adapter.ViewPagerAdapter;
 import com.example.uhf.fragment.KeyDwonFragment;
 import com.example.uhf.tools.UIHelper;
@@ -28,7 +28,8 @@ import java.util.List;
 /**
  * Created by Administrator on 2015-03-10.
  */
-public class BaseTabFragmentActivity extends FragmentActivity {
+public class BaseTabFragmentActivity extends FragmentActivity
+{
 
 	private final int offscreenPage = 2; //����ViewPager���ڵļ���ҳ��
 

@@ -1,6 +1,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.chainway.caredemo.MainActivity" >
+    tools:context="com.chainway.caredemo.com.seuic.nfctest.MainActivity" >
 
     <!--
     <item

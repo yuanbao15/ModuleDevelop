@@ -3,10 +3,7 @@ apply plugin: 'com.android.application'
 android {
 
     compileSdkVersion Integer.parseInt(project.ANDROID_BUILD_SDK_VERSION)
-    buildToolsVersion "25.0.2"
-
-    aaptOptions.cruncherEnabled = false
-    aaptOptions.useNewCruncher = false
+    buildToolsVersion project.ANDROID_BUILD_TOOLS_VERSION
 
     defaultConfig {
         applicationId project.ANDROID_BUILD_APP_PKG
@@ -15,10 +12,16 @@ android {
         versionName project.ANDROID_BUILD_VERSION_NAME
         multiDexEnabled true
         minSdkVersion  Integer.parseInt(project.ANDROID_BUILD_MIN_SDK_VERSION)
+        vectorDrawables.useSupportLibrary =true
     }
 
     lintOptions {
         abortOnError false
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
 
     sourceSets{
@@ -34,26 +37,30 @@ repositories{
         dirs 'libs'
     }
 }
+
 //  compileSdkVersion 与compile'com.android.support'的大版本号需要一致yb
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.android.support:appcompat-v7:25.2.0'
-    compile 'com.android.support:multidex:1.0.1'
-    //5个模块+1            +1
-    compile project(':moduleDemo')
-    compile project(':moduleScrollPicture')
-    compile project(':moduleSyncInterface')
-    compile project(':moduleRefresh')
-    compile project(':moduleAppdelegate')
-    compile project(':moduleApi')
-    compile project(':modulePdf')
-    compile project(':moduleUHF')
-    compile project(':moduleNFC')
-    compile project(':moduleIflyVoice')
-    compile project(':moduleProcessAlive')
-    compile project(':moduleNotification')
-    compile project(':moduleUHF18000_6C')
-    compile project(':moduleUHF_I6310')
-    //    compile project(':moduleUHF_U8')
-    //    compile project(':moduleUHF_50')
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.multidex:multidex:2.0.0'
+    // 6个官方模块DEMO
+    implementation project(':moduleDemo')
+    implementation project(':moduleScrollPicture')
+    implementation project(':moduleSyncInterface')
+    implementation project(':moduleRefresh')
+    implementation project(':moduleAppdelegate')
+    implementation project(':moduleApi')
+    // 新开发的自定义模块
+    implementation project(':modulePdf')
+    implementation project(':moduleUHF')
+    implementation project(':moduleNFC')
+    implementation project(':moduleNFC_2023')
+    implementation project(':moduleIflyVoice')
+    implementation project(':moduleProcessAlive')
+    implementation project(':moduleNotification')
+    implementation project(':moduleUHF18000_6C')
+    implementation project(':moduleUHF_I6310')
+    // YQF-开发的UHF模块未提交代码被加密-弃掉
+    //    implementation project(':moduleUHF_U8')
+    //    implementation project(':moduleUHF_50')
 }

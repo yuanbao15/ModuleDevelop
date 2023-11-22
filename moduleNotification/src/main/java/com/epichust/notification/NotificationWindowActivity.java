@@ -7,11 +7,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.PowerManager;
-import android.support.v7.app.AppCompatDelegate;
 import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
+import androidx.appcompat.app.AppCompatDelegate;
 
 public class NotificationWindowActivity extends Activity
 {

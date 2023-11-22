@@ -3,15 +3,16 @@ package cn.yuanbao.processalive;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * @fileName MainActivity
  * @description 程序入口：实现进程保活，暂时实现了双进程守护、JobService 检测与拉起
  * Created by yuanbao on 2019/7/17
  */
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity
+{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

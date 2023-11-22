@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:text="等待写入RFID"
+        android:text="等待写入NFC"
         android:textStyle="bold"
         android:textColor="@color/colorAccent"
         android:textSize="50sp" />

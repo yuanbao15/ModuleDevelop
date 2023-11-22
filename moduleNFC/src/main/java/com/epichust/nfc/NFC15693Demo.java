@@ -103,6 +103,16 @@ public class NFC15693Demo extends UZModule {
 
     }
 
+    /**
+     * @MethodName: onActivityResult
+     * @Description: 重写intent回调方法，将读取标签的activity里读到的内容带回来
+     * @Param requestCode
+     * @Param resultCode
+     * @Param intent
+     * @Return void
+     * @Author: yuanbao
+     * @Date: 2019/3/22
+     **/
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent intent) {
         super.onActivityResult(requestCode, resultCode, intent);

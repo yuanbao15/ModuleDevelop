@@ -24,15 +24,13 @@ import android.graphics.drawable.Drawable;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.os.SystemClock;
-import android.support.v4.os.ParcelableCompat;
-import android.support.v4.os.ParcelableCompatCreatorCallbacks;
-import android.support.v4.view.KeyEventCompat;
-import android.support.v4.view.MotionEventCompat;
-import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.VelocityTrackerCompat;
-import android.support.v4.view.ViewCompat;
-import android.support.v4.view.ViewConfigurationCompat;
-import android.support.v4.widget.EdgeEffectCompat;
+import androidx.core.os.ParcelableCompat;
+import androidx.core.os.ParcelableCompatCreatorCallbacks;
+import androidx.core.view.MotionEventCompat;
+import androidx.core.view.VelocityTrackerCompat;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.ViewConfigurationCompat;
+import androidx.core.widget.EdgeEffectCompat;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.FocusFinder;
@@ -47,6 +45,7 @@ import android.view.ViewParent;
 import android.view.accessibility.AccessibilityEvent;
 import android.view.animation.Interpolator;
 import android.widget.Scroller;
+import androidx.viewpager.widget.PagerAdapter;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -55,7 +54,7 @@ import java.util.Comparator;
 /**
  * Layout manager that allows the user to flip left and right
  * through pages of data.  You supply an implementation of a
- * {@link android.support.v4.view.PagerAdapter} to generate the pages that the view shows.
+ * {@link androidx.core.view.PagerAdapter} to generate the pages that the view shows.
  *
  * <p>Note this class is currently under early design and
  * development.  The API will likely change in later updates of
@@ -202,9 +201,9 @@ public class LazyViewPager extends ViewGroup {
          * or when it is fully stopped/idle.
          *
          * @param state The new scroll state.
-         * @see android.support.v4.view.ViewPager#SCROLL_STATE_IDLE
-         * @see android.support.v4.view.ViewPager#SCROLL_STATE_DRAGGING
-         * @see android.support.v4.view.ViewPager#SCROLL_STATE_SETTLING
+         * @see androidx.core.view.ViewPager#SCROLL_STATE_IDLE
+         * @see androidx.core.view.ViewPager#SCROLL_STATE_DRAGGING
+         * @see androidx.core.view.ViewPager#SCROLL_STATE_SETTLING
          */
         public void onPageScrollStateChanged(int state);
     }
@@ -1545,9 +1544,9 @@ public class LazyViewPager extends ViewGroup {
                     handled = arrowScroll(FOCUS_RIGHT);
                     break;
                 case KeyEvent.KEYCODE_TAB:
-                    if (KeyEventCompat.hasNoModifiers(event)) {
+                    if (event.hasNoModifiers()) {
                         handled = arrowScroll(FOCUS_FORWARD);
-                    } else if (KeyEventCompat.hasModifiers(event, KeyEvent.META_SHIFT_ON)) {
+                    } else if (event.hasModifiers(KeyEvent.META_SHIFT_ON)) {
                         handled = arrowScroll(FOCUS_BACKWARD);
                     }
                     break;

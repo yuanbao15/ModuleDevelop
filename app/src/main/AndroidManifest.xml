@@ -4,6 +4,8 @@
     package="com.apicloud.pkg.sdk"
     android:versionCode="1" android:versionName="1.0">
 
+    <uses-sdk  android:targetSdkVersion="28"/>
+
     <supports-screens
         android:anyDensity="true"
         android:largeScreens="true"

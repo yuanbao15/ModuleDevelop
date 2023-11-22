@@ -9,8 +9,8 @@ import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.media.RingtoneManager;
 import android.os.PowerManager;
-import android.support.v7.app.NotificationCompat;
 import android.util.Log;
+import androidx.core.app.NotificationCompat;
 
 /**
  * Created by yuanbao on 2019/7/18

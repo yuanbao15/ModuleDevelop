@@ -2,6 +2,9 @@ package com.apicloud.moduleScrollPicture;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 import org.json.JSONObject;
 import com.uzmap.pkg.uzcore.UZAppActivity;
 import com.uzmap.pkg.uzcore.UZResourcesIDFinder;
@@ -10,8 +13,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.os.Handler;
 import android.os.Message;
-import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,7 +25,8 @@ import android.widget.ImageView.ScaleType;
  * 简单的ScrollPicture，即图片轮播
  *
  */
-public class ScrollPictureView extends ViewPager {
+public class ScrollPictureView extends ViewPager
+{
 
 	private Activity mContext;
 	private int mDefaultIndex;
@@ -143,7 +145,7 @@ public class ScrollPictureView extends ViewPager {
         }
     }
 	
-	class FramesAdapter extends PagerAdapter implements android.support.v4.view.ViewPager.OnPageChangeListener {
+	class FramesAdapter extends PagerAdapter implements ViewPager.OnPageChangeListener {
 		
 		JSONObject mCallbackInfo;
 		

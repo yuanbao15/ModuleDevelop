@@ -9,11 +9,11 @@ import android.nfc.Tag;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.support.annotation.Nullable;
 import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
 import com.olc.nfcmanager.Constants;
 import com.olc.nfcmanager.ISO15693.I15693Utils;
 import com.olc.nfcmanager.ParseListener;
@@ -76,7 +76,7 @@ public class NFCReadActivity extends Activity implements ParseListener {
         if (intent != null){
             if (NfcAdapter.ACTION_TAG_DISCOVERED.equals(intent.getAction())){
                 Log.w("readNFC","-------activity读取到tag");
-                Tag tag = intent.getParcelableExtra(mNfcAdapter.EXTRA_TAG);
+                Tag tag = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);
                 mTag = tag;
             }
         }
