@@ -37,6 +37,10 @@
 			"class":"com.epichust.nfc.NFC15693Demo"
 		},
 		{
+			"name":"moduleNFC_2023",
+			"class":"com.epichust.nfc_2023.NFC2023Demo"
+		},
+		{
 			"name":"moduleIflyVoice",
 			"class":"com.epichust.voice.VoiceDemo"
 		},

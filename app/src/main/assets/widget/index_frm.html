@@ -23,6 +23,7 @@
 		var modulePdf = null;
 		var moduleUHF = null;
 		var moduleNFC = null;
+		var moduleNFC_2023 = null;
 		var moduleIflyVoice = null;
 		var moduleProcessAlive = null;
 		var moduleNotification = null;
@@ -38,6 +39,7 @@
 			modulePdf = api.require('modulePdf');
 			moduleUHF = api.require('moduleUHF');
 			moduleNFC = api.require('moduleNFC');
+			moduleNFC_2023 = api.require('moduleNFC_2023');
 			moduleIflyVoice = api.require('moduleIflyVoice');
 			moduleProcessAlive = api.require('moduleProcessAlive');
 			moduleNotification = api.require('moduleNotification');
@@ -197,6 +199,7 @@
 			};
 			moduleUHF.writeUHF(params);
 		}
+		// 读单块，传参读块起始位
 		function readNFC(){
 			var blockIndex = $("#nfc_str").val();
 			var params = {
@@ -213,6 +216,7 @@
                 }
             });
 		}
+		// 读多块，默认读10块，传参读块起始位
 		function readNFCBlocks(){
 			var blockIndex = $("#nfc_str").val();
 			var params = {
@@ -224,7 +228,7 @@
                     $("#nfc_uid").val(ret.uid);
                     $("#nfc_result").val(ret.data);
                         api.toast({
-                            msg: "读取完成",
+                            msg: "读取完成！",
                             duration: 3000,
                             location: 'botton'
                         });
@@ -245,7 +249,7 @@
                 if (ret) {
                     var data = ret.data;
                     api.toast({
-                            msg: "写入完成1！",
+                            msg: "写入完成！",
                             duration: 3000,
                             location: 'middle'
                         });
@@ -255,6 +259,55 @@
                 }
             });
 		}
+
+
+		// moduleNFC_2023模块的读操作，直接读标签的文本信息
+		function readNFC_2023(){
+			let params = {
+			};
+			moduleNFC_2023.readNFC(params, function(ret, err){
+				if (ret) {
+					$("#nfc_2023_text").val(ret.data);
+					api.toast({
+						msg: ret.info,
+						duration: 3000,
+						location: 'middle'
+					});
+				} else {
+					api.toast({
+						msg: "读取失败！" + JSON.stringify(err),
+						duration: 3000,
+						location: 'middle'
+					});
+				}
+			});
+		}
+		// moduleNFC_2023模块的写操作，直接写标签的文本信息
+		function writeNFC_2023(){
+			let text = $("#nfc_2023_text").val();
+			var params = {
+				text : text,
+			};
+			moduleNFC_2023.writeNFC(params, function(ret, err){
+				if (ret) {
+					var data = ret.data;
+					api.toast({
+						msg: "写入完成！",
+						duration: 3000,
+						location: 'middle'
+					});
+					<!--                    alert(JSON.stringify(ret));-->
+				} else {
+					api.toast({
+						msg: "写入失败！" + JSON.stringify(err),
+						duration: 3000,
+						location: 'middle'
+					});
+				}
+			});
+		}
+
+		// 开启语音唤醒
 		function startOneshot(){
 			var params = {
 			};
@@ -268,6 +321,7 @@
                 }
             });
 		}
+		// 停止语音唤醒-未成功
 		function stopOneshot(){
 			var params = {
 			};
@@ -279,6 +333,7 @@
             });
 		}
 
+		// 开始语音识别听写
 		function startRecognize(){
 			console.log("-------------:开始识别");
 			var params = {
@@ -294,6 +349,7 @@
 				}
 			});
 		}
+		// 停止语音识别听写
 		function stopRecognize(){
 			console.log("-------------:停止识别");
 			var params = {
@@ -447,7 +503,11 @@
     <div id="wrap">
         <div id="main">
 
-
+			<div class='itemtitle'>22、NFC-2023</div>
+			<div><input type="text" id="nfc_2023_text"/><div>
+			<div class="clickbtn" tapmode="active" onclick="readNFC_2023()" >yb-测试高频NFC2023-读文本</div>
+			<div class="clickbtn" tapmode="active" onclick="writeNFC_2023()" >yb-测试高频NFC2023-写文本</div>
+			<br>
 
 <!--		ycf-自定义UHF模块，暂时冻结！			-->
 			<!--<div class='itemtitle'>21-1、readUHF_50</div>
