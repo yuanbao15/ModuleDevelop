@@ -1,9 +1,9 @@
 package com.seuic.nfctest;
 
+import android.app.Activity;
 import android.app.PendingIntent;
 import android.content.Intent;
 import android.nfc.NfcAdapter;
-import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * 子类在onNewIntent方法中进行NFC标签相关操作。
@@ -11,7 +11,8 @@ import androidx.appcompat.app.AppCompatActivity;
  * 在onNewIntent方法中执行intent传递过来的Tag数据
  * 将NFC标签卡靠近手机后部（NFC标签卡可网上自行购买）
  */
-public class BaseNfcActivity extends AppCompatActivity {
+public class BaseNfcActivity extends Activity
+{
     protected NfcAdapter mNfcAdapter;
     private PendingIntent mPendingIntent;
 

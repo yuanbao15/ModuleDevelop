@@ -117,6 +117,8 @@ public class NFCWriteActivity extends BaseNfcActivity
                     Toast.makeText(this, "写入失败", Toast.LENGTH_SHORT).show();
                 }
             }catch (Exception e){
+                operateStatus = false;
+                operateMsg = e.getMessage();
                 Toast.makeText(this,""+e.toString(),Toast.LENGTH_SHORT).show();
             }
 

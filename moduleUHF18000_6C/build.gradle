@@ -37,6 +37,6 @@ dependencies {
 
     provided files('libs/SerialPort.jar')
     provided files('libs/uhfcom13_v15.jar')
-    provided files('../app/libs/apiEngine v1.1.0.jar')
+    provided files('../app/libs/apiEngine v3.0.0.jar')
 //    implementation 'com.alibaba:fastjson:1.2.41' // 使用implementation输出模块包不可用，不知道compile是否可以，暂不需要
 }

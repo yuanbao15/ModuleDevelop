@@ -9,9 +9,9 @@
     </style>
 
     <!-- 自定义一个透明背景的样式 -->
-    <style name="TransparentTheme" parent="Theme.AppCompat.NoActionBar">
+    <!--<style name="TransparentTheme" parent="Theme.AppCompat.NoActionBar">
         <item name="android:windowBackground">@color/transparent</item>
         <item name="android:windowIsTranslucent">true</item>
-    </style>
+    </style>-->
 
 </resources>

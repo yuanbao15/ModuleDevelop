@@ -18,6 +18,8 @@ import com.seuic.nfctest.R;
 import java.util.Arrays;
 import java.util.logging.Logger;
 
+import static android.content.Intent.getIntent;
+
 /**
  * @ClassName: NFCReadActivity
  * @Description: 读取的activity <br>
@@ -117,9 +119,13 @@ public class NFCReadActivity extends BaseNfcActivity
                     Log.w("readNFC","-------tagData：" + mTagText);
                 } catch (Exception ex)
                 {
+                    operateStatus = false;
+                    operateMsg = ex.toString();
                     Toast.makeText(this, "" + ex.toString(), Toast.LENGTH_SHORT).show();
                 }
             } else {
+                operateStatus = false;
+                operateMsg = "读取失败，未读取到NFC标签！";
                 Toast.makeText(this, "读取失败，未读取到NFC标签！", Toast.LENGTH_SHORT).show();
             }
 
@@ -164,6 +170,7 @@ public class NFCReadActivity extends BaseNfcActivity
                     mTagInfo += "读取内容：[为空]";
                     mTagText = null;
                 }
+                operateStatus = true;
             } catch (Exception e)
             {
                 Log.e("readNFC", "读取失败：" + e.getMessage());
