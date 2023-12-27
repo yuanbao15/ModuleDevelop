@@ -148,8 +148,31 @@ public class NFCWriteActivity extends Activity implements ParseListener
                         isSuccess = I15693Utils.getInstance().writeSingleBlock(blockIndex, blockDataBytes);
                     } else if (blockNum > 1)
                     {
-                        // 写多块-不成功
-                        isSuccess = I15693Utils.getInstance().writeMultipleBlocks(blockIndex, blockNum, blockDataBytes);
+                        // 写多块-不成功，于是改。
+                        // isSuccess = I15693Utils.getInstance().writeMultipleBlocks(blockIndex, blockNum, blockDataBytes);
+
+                        // YB-上面的直接调用写多块的方法不成功，会返回010f。所以调整方式改为多次调用写单块的方式
+                        int actTotalBlocks = 0; // 实际能写块的数量
+                        // 写入字节数/4 不超过块数时，按实际数据的长度进行写入；超出块数时，进行截断只取块数内的长度的数值
+                        actTotalBlocks = blockDataBytes.length < (blockNum * 4)? (blockDataBytes.length/4+1) : blockNum; //
+
+                        byte[] onceBlockDataBytes = null;
+                        for (int i = 0; i < actTotalBlocks; i++)
+                        {
+                            // 处理每块中的4位字节
+                            onceBlockDataBytes = new byte[4];
+                            for (int j = 0; j < 4; j++)
+                            {
+                                // 末位需要能正确匹配，不超过原始长度
+                                if (i * 4 + j < blockDataBytes.length)
+                                {
+                                    onceBlockDataBytes[j] = blockDataBytes[i * 4 + j];
+                                }
+                            }
+                            isSuccess = I15693Utils.getInstance().writeSingleBlock(blockIndex + i, onceBlockDataBytes);
+                            if (!isSuccess) // 若写入失败则直接结束返回
+                                break;
+                        }
                     }
 
                     Log.w("writeNFC", "uid:" + mUid);
