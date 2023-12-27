@@ -7,7 +7,6 @@
         android:supportsRtl="true">
         <activity
             android:name="com.handheld.uhfdemo1.UHFActivity"
-            android:screenOrientation="portrait"
             android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar"
             android:configChanges="orientation|locale" />
     </application>

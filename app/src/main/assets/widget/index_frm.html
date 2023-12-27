@@ -24,6 +24,7 @@
 		var moduleUHF = null;
 		var moduleNFC = null;
 		var moduleNFC_2023 = null;
+		var moduleNFC_ZBL = null;
 		var moduleIflyVoice = null;
 		var moduleProcessAlive = null;
 		var moduleNotification = null;
@@ -40,6 +41,7 @@
 			moduleUHF = api.require('moduleUHF');
 			moduleNFC = api.require('moduleNFC');
 			moduleNFC_2023 = api.require('moduleNFC_2023');
+			moduleNFC_ZBL = api.require('moduleNFC_ZBL');
 			moduleIflyVoice = api.require('moduleIflyVoice');
 			moduleProcessAlive = api.require('moduleProcessAlive');
 			moduleNotification = api.require('moduleNotification');
@@ -307,6 +309,118 @@
 			});
 		}
 
+
+		// 2023-朱博龙的NFC标签（ISO15693）-读写功能
+		// 读单块，传参读块起始位、显示值的格式。支持16进制和UTF8
+		function readNFCZbl() {
+			var blockIndex = $("#nfc_str_zbl").val();
+
+			// 获取值类型的radio设置的值
+			var dataType = $('input[name="radioNFCZbl"]:checked').val();
+
+			var params = {
+				blockIndex: blockIndex,
+				dataType: dataType,
+			};
+			moduleNFC_ZBL.readNFC(params, function (ret, err) {
+				if (ret) {
+					$("#nfc_uid_zbl").val(ret.uid);
+					$("#nfc_result_zbl").val(ret.data);
+					api.toast({
+						msg: "读取完成！NFC-ZBL-1",
+						duration: 3000,
+						location: 'botton'
+					});
+					console.log("读取完成！NFC-ZBL-1");
+					<!--                    alert(JSON.stringify(ret));-->
+				} else {
+					<!--                    alert(JSON.stringify(err));-->
+				}
+			});
+		}
+		// 读多块，默认读10块，传参读块起始位。
+		function readNFCBlocksZbl(){
+			var blockIndex = $("#nfc_str_zbl").val();
+
+			// 获取值类型的radio设置的值
+			var dataType = $('input[name="radioNFCZbl"]:checked').val();
+
+			var params = {
+				blockIndex : blockIndex,
+				blockNum : 3,
+				dataType: dataType,
+			};
+			moduleNFC_ZBL.readNFC(params, function(ret, err){
+				if (ret) {
+					$("#nfc_uid_zbl").val(ret.uid);
+					$("#nfc_result_zbl").val(ret.data);
+					api.toast({
+						msg: "读取完成！NFC-ZBL-2",
+						duration: 3000,
+						location: 'botton'
+					});
+					console.log("读取完成！NFC-ZBL-2");
+					<!--                    alert(JSON.stringify(ret));-->
+				} else {
+					<!--                    alert(JSON.stringify(err));-->
+				}
+			});
+		}
+		// 写入单块-支持16进制和UTF8
+		function writeNFCZbl(){
+			var blockIndex = $("#nfc_str_zbl").val();
+
+			// 获取值类型的radio设置的值
+			var dataType = $('input[name="radioNFCZbl"]:checked').val();
+
+			var params = {
+				blockIndex : blockIndex,
+				blockNum : 1,
+				blockData : $("#nfc_result_zbl").val(),
+				dataType: dataType,
+			};
+			moduleNFC_ZBL.writeNFC(params, function(ret, err){
+				if (ret) {
+					var data = ret.data;
+					api.toast({
+						msg: "写入状态：" + ret.status + ". NFC-ZBL-3",
+						duration: 3000,
+						location: 'middle'
+					});
+					<!--                    alert(JSON.stringify(ret));-->
+				} else {
+					<!--                    alert(JSON.stringify(err));-->
+				}
+			});
+		}
+		// 写入多块，默认UTF-8，自行传参决定写入块的数量。
+		function writeNFCBlocksZbl(){
+			var blockIndex = $("#nfc_str_zbl").val();
+			// 获取值类型的radio设置的值
+			var dataType = $('input[name="radioNFCZbl"]:checked').val();
+
+			var params = {
+				blockIndex : blockIndex,
+				blockNum : 3,
+				blockData : $("#nfc_result_zbl").val(),
+				dataType: dataType, // 默认0为16进制，1为utf8
+			};
+			moduleNFC_ZBL.writeNFC(params, function(ret, err){
+				if (ret) {
+					var data = ret.data;
+					api.toast({
+						msg: "写入状态：" + ret.status + ". NFC-ZBL-4",
+						duration: 3000,
+						location: 'middle'
+					});
+					<!--                    alert(JSON.stringify(ret));-->
+				} else {
+					<!--                    alert(JSON.stringify(err));-->
+				}
+			});
+		}
+
+
 		// 开启语音唤醒
 		function startOneshot(){
 			var params = {
@@ -503,8 +617,22 @@
     <div id="wrap">
         <div id="main">
 
-			<div class='itemtitle'>22、NFC-2023</div>
-			<div><input type="text" id="nfc_2023_text"/><div>
+			<div class='itemtitle'>23、NFC-朱博龙ISO-15693</div>
+			<div><input type="text" id="nfc_str_zbl" value="0" placeholder="设置读块的起始位"/><div>
+			<div><input type="text" id="nfc_uid_zbl" placeholder="展示读取NFC芯片的UID" /><div>
+			<div><input type="text" id="nfc_result_zbl" placeholder="对NFC芯片进行读写的内容"/><div>
+			<form> 值类型：
+				<input type="radio" name="radioNFCZbl" value="0" checked> 16进制
+				<input type="radio" name="radioNFCZbl" value="1"> UTF8
+			</form>
+			<div class="clickbtn" tapmode="active" onclick="readNFCZbl()" >yb-测试高频NFC读单块的方法</div>
+			<div class="clickbtn" tapmode="active" onclick="readNFCBlocksZbl()" >yb-测试高频NFC读多块的方法</div>
+			<div class="clickbtn" tapmode="active" onclick="writeNFCZbl()" >yb-测试高频NFC写单块的方法</div>
+			<div class="clickbtn" tapmode="active" onclick="writeNFCBlocksZbl()" >yb-测试高频NFC写多块的方法</div>
+			<br>
+
+			<div class='itemtitle'>22、NFC-2023-14443A</div>
+			<div><input type="text" id="nfc_2023_text" placeholder="对NFC芯片进行读写的内容"/><div>
 			<div class="clickbtn" tapmode="active" onclick="readNFC_2023()" >yb-测试高频NFC2023-读文本</div>
 			<div class="clickbtn" tapmode="active" onclick="writeNFC_2023()" >yb-测试高频NFC2023-写文本</div>
 			<br>

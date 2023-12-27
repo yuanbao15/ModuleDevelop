@@ -41,6 +41,10 @@
 			"class":"com.epichust.nfc_2023.NFC2023Demo"
 		},
 		{
+			"name":"moduleNFC_ZBL",
+			"class":"com.epichust.nfczbl.NFC2023ZblDemo"
+		},
+		{
 			"name":"moduleIflyVoice",
 			"class":"com.epichust.voice.VoiceDemo"
 		},

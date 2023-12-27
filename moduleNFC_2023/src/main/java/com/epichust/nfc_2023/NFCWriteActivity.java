@@ -10,14 +10,12 @@ import android.nfc.Tag;
 import android.nfc.tech.Ndef;
 import android.nfc.tech.NdefFormatable;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.util.Log;
 import android.widget.Toast;
 import com.seuic.nfctest.BaseNfcActivity;
 import com.seuic.nfctest.R;
 
 import java.nio.charset.Charset;
-import java.util.Arrays;
 import java.util.Locale;
 
 /**

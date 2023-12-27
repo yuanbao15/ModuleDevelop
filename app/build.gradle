@@ -54,7 +54,8 @@ dependencies {
     implementation project(':modulePdf')
     implementation project(':moduleUHF')
     implementation project(':moduleNFC')
-    implementation project(':moduleNFC_2023')
+    implementation project(':moduleNFC_2023') // 2023-解放传动项目的NFC读写标签
+    implementation project(':moduleNFC_ZBL') // 2023-朱博龙的NFC
     implementation project(':moduleIflyVoice')
     implementation project(':moduleProcessAlive')
     implementation project(':moduleNotification')

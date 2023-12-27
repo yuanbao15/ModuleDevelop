@@ -9,7 +9,6 @@
 
         <activity
             android:name="com.epichust.modulepdf.PdfActivity"
-            android:screenOrientation="portrait"
             android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar"
             android:configChanges="orientation|locale"
             tools:targetApi="ice_cream_sandwich" />

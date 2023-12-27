@@ -16,9 +16,6 @@ import com.seuic.nfctest.BaseNfcActivity;
 import com.seuic.nfctest.R;
 
 import java.util.Arrays;
-import java.util.logging.Logger;
-
-import static android.content.Intent.getIntent;
 
 /**
  * @ClassName: NFCReadActivity

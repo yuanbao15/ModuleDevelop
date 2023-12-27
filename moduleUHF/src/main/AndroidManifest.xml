@@ -8,7 +8,6 @@
         android:supportsRtl="true">
         <activity
             android:name="com.cus.maguhf.ReadWriteActivity"
-            android:screenOrientation="portrait"
             android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar"
             android:configChanges="orientation|locale" />
     </application>

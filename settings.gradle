@@ -1,3 +1,3 @@
 include ':app', ':moduleDemo', ':moduleScrollPicture', ':moduleSyncInterface', ':moduleRefresh', ':moduleAppdelegate', ':moduleApi', ':modulePdf', ':moduleUHF', ':moduleNFC', ':moduleIflyVoice', ':moduleProcessAlive', ':moduleNotification', ':moduleUHF18000_6C', ':moduleUHF_I6310'
-include 'moduleNFC_2023'
+include 'moduleNFC_2023', 'moduleNFC_ZBL'
 

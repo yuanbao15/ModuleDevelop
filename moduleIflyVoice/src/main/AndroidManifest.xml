@@ -8,7 +8,6 @@
         android:supportsRtl="true">
         <activity
             android:name="com.iflytek.voicedemo.IvwActivity"
-            android:screenOrientation="portrait"
             android:configChanges="orientation|locale" />
 
         <activity android:name="com.iflytek.speech.setting.TtsSettings" >
@@ -18,62 +17,62 @@
         <activity
             android:name="com.iflytek.voicedemo.IatDemo"
             android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|fontScale"
-            android:screenOrientation="unspecified" >
+            >
         </activity>
         <activity
             android:name="com.iflytek.voicedemo.AsrDemo"
             android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|fontScale"
-            android:screenOrientation="unspecified" >
+            >
         </activity>
         <activity
             android:name="com.iflytek.voicedemo.TtsDemo"
             android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|fontScale"
-            android:screenOrientation="unspecified" >
+            >
         </activity>
         <activity
             android:name="com.iflytek.voicedemo.IseDemo"
             android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|fontScale"
-            android:screenOrientation="unspecified" >
+            >
         </activity>
         <activity
             android:name="com.iflytek.voicedemo.vocalverify.VocalVerifyDemo"
             android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|fontScale"
-            android:screenOrientation="unspecified" >
+            >
         </activity>
         <activity
             android:name="com.iflytek.voicedemo.faceonline.OnlineFaceDemo"
             android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|fontScale"
-            android:screenOrientation="portrait" >
+            >
         </activity>
         <activity
             android:name="com.iflytek.voicedemo.IdentifyGroup.GroupManagerActivity"
             android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|fontScale"
-            android:screenOrientation="unspecified">
+            >
         </activity>
         <activity
             android:name="com.iflytek.voicedemo.IdentifyGroup.FaceIdentifyActivity"
             android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|fontScale"
-            android:screenOrientation="unspecified">
+            >
         </activity>
         <activity
             android:name="com.iflytek.voicedemo.IdentifyGroup.VocalIdentifyActivity"
             android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|fontScale"
-            android:screenOrientation="unspecified">
+            >
         </activity>
         <activity
             android:name="com.iflytek.voicedemo.IdentifyGroup.ResultIdentifyActivity"
             android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|fontScale"
-            android:screenOrientation="unspecified">
+            >
         </activity>
         <activity
             android:name="com.iflytek.speech.setting.IseSettings"
             android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|fontScale"
-            android:screenOrientation="unspecified" >
+             >
         </activity>
         <activity
             android:name="com.iflytek.speech.setting.UrlSettings"
             android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|fontScale"
-            android:screenOrientation="unspecified" >
+             >
         </activity>
 
         <!--<activity-->
@@ -84,12 +83,12 @@
         <activity
             android:name="com.iflytek.voicedemo.WakeDemo"
             android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|fontScale"
-            android:screenOrientation="unspecified" >
+             >
         </activity>
         <activity
             android:name="com.iflytek.voicedemo.OneShotDemo"
             android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|fontScale"
-            android:screenOrientation="unspecified" >
+             >
         </activity>
         <!-- 移动统计分析 -->
         <meta-data
