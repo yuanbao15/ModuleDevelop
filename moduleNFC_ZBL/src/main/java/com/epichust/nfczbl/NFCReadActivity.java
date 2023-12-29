@@ -43,6 +43,10 @@ public class NFCReadActivity extends Activity implements ParseListener
     private int blockNum = 1; // 需要操作的块数量
     private int dataType = 0; // 写入数据值的类型，0为16进制，1为utf8，默认为0
 
+    // YB-新增状态和失败信息的返回
+    private Boolean operateStatus = false; // 操作状态，成功or失败，默认false
+    private String operateMsg; // 操作信息、报错信息
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState)
     {
@@ -94,93 +98,120 @@ public class NFCReadActivity extends Activity implements ParseListener
         // 取到标签就结束activity，把tag信息和tag中数据回传
         if (mTag != null)
         {
-            // 取到uid和tech信息
-            String[] techList = mTag.getTechList();
-            byte[] tagId = mTag.getId();
-            mExtraId = tagId;
-            String supportStr = "ID: " + Utils.bytesToHexString(tagId) + "\n";
-            supportStr += "type: " + mTag.describeContents() + "\n";
-            boolean is15693 = false;
-            String techStr = "";
-            for (String tech : techList)
-            {
-                supportStr += tech + " \n ";
-                techStr += tech.substring(tech.lastIndexOf(".") + 1) + " ";
-                if (tech.equals(Constants.NFCV))
+            try {
+                // 取到uid和tech信息
+                String[] techList = mTag.getTechList();
+                byte[] tagId = mTag.getId();
+                mExtraId = tagId;
+                String supportStr = "ID: " + Utils.bytesToHexString(tagId) + "\n";
+                supportStr += "type: " + mTag.describeContents() + "\n";
+                boolean is15693 = false;
+                String techStr = "";
+                for (String tech : techList)
                 {
-                    is15693 = true;
-                }
-            }
-            String uid = "";
-            for (int i = 0; i < tagId.length; i++)
-            {
-                if (i != 0)
-                {
-                    uid += ":";
-                }
-                uid += Utils.bytesToHexString(new byte[] { tagId[i] });
-            }
-            uid = uid.toUpperCase();
-            // 保存相关信息
-            mUid = uid;
-            mTech = techStr;
-
-            // 模块标签实例化，便于取data信息
-            I15693Utils.getInstance().parse15693Tag(mTag, mExtraId, new ParseListener()
-            {
-                @Override
-                public void onParseComplete(String info)
-                {
-                    mInfo = info; // 取到info信息
-
-                    String data = null;
-                    // 取到data信息
-                    if (blockNum == 1)
-                    { // 读单块
-                        data = I15693Utils.getInstance().readSingleBlock(blockIndex);
-                    } else if (blockNum > 1)
-                    { // 读多块
-                        data = I15693Utils.getInstance().readMultipleBlocks(blockIndex, blockNum); // 传递读块的数量，问题已解决
-                    }
-                    if (!TextUtils.isEmpty(data))
+                    supportStr += tech + " \n ";
+                    techStr += tech.substring(tech.lastIndexOf(".") + 1) + " ";
+                    if (tech.equals(Constants.NFCV))
                     {
-                        // 截取数据只取hex：后的数据，多块的就拼接起来
-                        String regex = "(?<=hex:).*";
-                        Pattern pattern = Pattern.compile(regex);
-                        Matcher matcher = pattern.matcher(data);
-                        mData = "";
-                        while (matcher.find())
+                        is15693 = true;
+                    }
+                }
+                String uid = "";
+                for (int i = 0; i < tagId.length; i++)
+                {
+                    if (i != 0)
+                    {
+                        uid += ":";
+                    }
+                    uid += Utils.bytesToHexString(new byte[] { tagId[i] });
+                }
+                uid = uid.toUpperCase();
+                // 保存相关信息
+                mUid = uid;
+                mTech = techStr;
+
+                // 模块标签实例化，便于取data信息
+                I15693Utils.getInstance().parse15693Tag(mTag, mExtraId, new ParseListener()
+                {
+                    @Override
+                    public void onParseComplete(String info)
+                    {
+
+                        try
                         {
-                            mData += matcher.group(0).trim();
+                            mInfo = info; // 取到info信息
+
+                            String data = null;
+                            // 取到data信息
+                            if (blockNum == 1)
+                            { // 读单块
+                                data = I15693Utils.getInstance().readSingleBlock(blockIndex);
+                            } else if (blockNum > 1)
+                            { // 读多块
+                                data = I15693Utils.getInstance().readMultipleBlocks(blockIndex, blockNum); // 传递读块的数量，问题已解决
+                            }
+                            if (!TextUtils.isEmpty(data))
+                            {
+                                // 截取数据只取hex：后的数据，多块的就拼接起来
+                                String regex = "(?<=hex:).*";
+                                Pattern pattern = Pattern.compile(regex);
+                                Matcher matcher = pattern.matcher(data);
+                                mData = "";
+                                while (matcher.find())
+                                {
+                                    mData += matcher.group(0).trim();
+                                }
+                            }
+
+                            Log.w("readNFC", "uid:" + mUid);
+                            Log.w("readNFC", "data:（读取到的完整数据）" + data);
+                            Log.w("readNFC", "data:（转码前）" + mData);
+
+                            // 默认读到的为16进制字符串，如果需要再转换为UTF8
+                            if (dataType == 1)
+                            {
+                                // 转换成16进制字符
+                                String originStr = mData;
+                                String newStr = convertHexStr2Str(originStr);
+                                mData = newStr;
+                                Log.w("readNFC", "data:（转码后）" + mData);
+                            }
+
+                            operateStatus = true;
+                            operateMsg = "操作成功";
+                        } catch (Exception e2)
+                        {
+                            operateStatus = false;
+                            operateMsg = e2.toString();
+                        } finally
+                        {
+                            mIntent.putExtra("uid", mUid);
+                            mIntent.putExtra("tech", mTech);
+                            mIntent.putExtra("info", mInfo);
+                            mIntent.putExtra("data", mData);
+                            mIntent.putExtra("operateStatus", operateStatus);  // 返回状态表明是否读取成功
+                            mIntent.putExtra("operateMsg", operateMsg);
+                            setResult(2, mIntent);
+                            finish(); // 消除这个activity页面
                         }
                     }
+                });
+            } catch (Exception ex)
+            {
+                operateStatus = false;
+                operateMsg = ex.toString();
+                Toast.makeText(this, "读取失败：" + ex.toString(), Toast.LENGTH_SHORT).show();
 
-                    Log.w("readNFC", "uid:" + mUid);
-                    Log.w("readNFC", "data:（读取到的完整数据）" + data);
-                    Log.w("readNFC", "data:（转码前）" + mData);
-
-                    // 默认读到的为16进制字符串，如果需要再转换为UTF8
-                    if (dataType == 1)
-                    {
-                        // 转换成16进制字符
-                        String originStr = mData;
-                        String newStr = convertHexStr2Str(originStr);
-                        mData = newStr;
-                        Log.w("readNFC", "data:（转码后）" + mData);
-                    }
-
-                    mIntent.putExtra("tag", mTag);
-                    mIntent.putExtra("uid", mUid);
-                    mIntent.putExtra("tech", mTech);
-                    mIntent.putExtra("info", mInfo);
-                    mIntent.putExtra("data", mData);
-                    mIntent.putExtra("status", true);  // 返回状态表明是否读取成功
-                    setResult(2, mIntent);
-                    finish(); // 消除这个activity页面
-                }
-            });
+                mIntent.putExtra("uid", mUid);
+                mIntent.putExtra("tech", mTech);
+                mIntent.putExtra("info", mInfo);
+                mIntent.putExtra("data", mData);
+                mIntent.putExtra("operateStatus", operateStatus);  // 返回状态表明是否读取成功
+                mIntent.putExtra("operateMsg", operateMsg);
+                setResult(2, mIntent);
+                finish(); // 消除这个activity页面
+            }
         }
-
     }
 
     @Override

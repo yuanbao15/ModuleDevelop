@@ -150,8 +150,10 @@ public class NFC2023ZblDemo extends UZModule
                 String tech = intent.getStringExtra("tech");
                 String info = intent.getStringExtra("info");
                 String data = intent.getStringExtra("data");
-                Boolean status = intent.getBooleanExtra("status", false);
-                Log.w("readNFC", "----------uid:" + uid + ",tech:" + tech + ",info:" + info + ",data:" + data + ",status:" + status);
+                Boolean operateStatus = intent.getBooleanExtra("operateStatus", false);
+                String operateMsg = intent.getStringExtra("operateMsg");
+                Log.w("readNFC", "----------uid:" + uid + ",tech:" + tech + ",info:" + info + ",data:" + data
+                        + ",operateStatus:" + operateStatus + ",operateMsg:" + operateMsg);
 
                 // --回调结果
                 ret = new JSONObject();
@@ -161,7 +163,8 @@ public class NFC2023ZblDemo extends UZModule
                     ret.put("tech", tech);
                     ret.put("info", info);
                     ret.put("data", data);
-                    ret.put("status", status);
+                    ret.put("operateStatus", operateStatus);
+                    ret.put("operateMsg", operateMsg);
                     ret.put("readFlag", true); // 作为是否新解析到的标志位
                 } catch (JSONException e)
                 {

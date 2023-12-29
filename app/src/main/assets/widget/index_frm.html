@@ -331,7 +331,7 @@
 						duration: 3000,
 						location: 'botton'
 					});
-					console.log("读取完成！NFC-ZBL-1");
+					console.log("读取完成！NFC-ZBL-1 " + JSON.stringify(ret));
 					<!--                    alert(JSON.stringify(ret));-->
 				} else {
 					<!--                    alert(JSON.stringify(err));-->
@@ -359,7 +359,7 @@
 						duration: 3000,
 						location: 'botton'
 					});
-					console.log("读取完成！NFC-ZBL-2");
+					console.log("读取完成！NFC-ZBL-2 " + JSON.stringify(ret));
 					<!--                    alert(JSON.stringify(ret));-->
 				} else {
 					<!--                    alert(JSON.stringify(err));-->
@@ -383,10 +383,11 @@
 				if (ret) {
 					var data = ret.data;
 					api.toast({
-						msg: "写入状态：" + ret.status + ". NFC-ZBL-3",
+						msg: "写入状态：" + ret.operateStatus + ". NFC-ZBL-3 \n" + ret.operateMsg,
 						duration: 3000,
 						location: 'middle'
 					});
+					console.log("写入完成！NFC-ZBL-3 " + JSON.stringify(ret));
 					<!--                    alert(JSON.stringify(ret));-->
 				} else {
 					<!--                    alert(JSON.stringify(err));-->
@@ -409,10 +410,11 @@
 				if (ret) {
 					var data = ret.data;
 					api.toast({
-						msg: "写入状态：" + ret.status + ". NFC-ZBL-4",
+						msg: "写入状态：" + ret.operateStatus + ". NFC-ZBL-4 \n" + ret.operateMsg,
 						duration: 3000,
 						location: 'middle'
 					});
+					console.log("写入完成！NFC-ZBL-4 " + JSON.stringify(ret));
 					<!--                    alert(JSON.stringify(ret));-->
 				} else {
 					<!--                    alert(JSON.stringify(err));-->

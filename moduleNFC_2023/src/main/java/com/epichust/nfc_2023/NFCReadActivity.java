@@ -118,7 +118,7 @@ public class NFCReadActivity extends BaseNfcActivity
                 {
                     operateStatus = false;
                     operateMsg = ex.toString();
-                    Toast.makeText(this, "" + ex.toString(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "读取失败：" + ex.toString(), Toast.LENGTH_SHORT).show();
                 }
             } else {
                 operateStatus = false;

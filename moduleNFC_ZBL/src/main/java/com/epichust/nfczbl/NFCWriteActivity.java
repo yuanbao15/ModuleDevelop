@@ -40,6 +40,10 @@ public class NFCWriteActivity extends Activity implements ParseListener
     private String blockData = ""; // 需要操作写入的数据
     private int dataType = 0; // 写入数据值的类型，0为16进制，1为utf8，默认为0
 
+    // YB-新增状态和失败信息的返回
+    private Boolean operateStatus = false; // 操作状态，成功or失败，默认false
+    private String operateMsg; // 操作信息、报错信息
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState)
     {
@@ -101,94 +105,125 @@ public class NFCWriteActivity extends Activity implements ParseListener
         // 取到标签就结束activity，把tag信息和tag中数据回传
         if (mTag != null)
         {
-            // 取到uid和tech信息
-            String[] techList = mTag.getTechList();
-            byte[] tagId = mTag.getId();
-            mExtraId = tagId;
-            String supportStr = "ID: " + Utils.bytesToHexString(tagId) + "\n";
-            supportStr += "type: " + mTag.describeContents() + "\n";
-            boolean is15693 = false;
-            String techStr = "";
-            for (String tech : techList)
+            try
             {
-                supportStr += tech + " \n ";
-                techStr += tech.substring(tech.lastIndexOf(".") + 1) + " ";
-                if (tech.equals(Constants.NFCV))
+                // 取到uid和tech信息
+                String[] techList = mTag.getTechList();
+                byte[] tagId = mTag.getId();
+                mExtraId = tagId;
+                String supportStr = "ID: " + Utils.bytesToHexString(tagId) + "\n";
+                supportStr += "type: " + mTag.describeContents() + "\n";
+                boolean is15693 = false;
+                String techStr = "";
+                for (String tech : techList)
                 {
-                    is15693 = true;
-                }
-            }
-            String uid = "";
-            for (int i = 0; i < tagId.length; i++)
-            {
-                if (i != 0)
-                {
-                    uid += ":";
-                }
-                uid += Utils.bytesToHexString(new byte[] { tagId[i] });
-            }
-            uid = uid.toUpperCase();
-            // 保存相关信息
-            mUid = uid;
-            mTech = techStr;
-
-            // 模块标签实例化，便于取data信息
-            I15693Utils.getInstance().parse15693Tag(mTag, mExtraId, new ParseListener()
-            {
-                @Override
-                public void onParseComplete(String info)
-                {
-                    mInfo = info; // 取到info信息
-
-                    boolean isSuccess = true;
-                    // 待写入的数据转换一下bytes
-                    byte[] blockDataBytes = hexStringToBytes(blockData);
-                    if (blockNum == 1)
-                    { // 写单块
-                        isSuccess = I15693Utils.getInstance().writeSingleBlock(blockIndex, blockDataBytes);
-                    } else if (blockNum > 1)
+                    supportStr += tech + " \n ";
+                    techStr += tech.substring(tech.lastIndexOf(".") + 1) + " ";
+                    if (tech.equals(Constants.NFCV))
                     {
-                        // 写多块-不成功，于是改。
-                        // isSuccess = I15693Utils.getInstance().writeMultipleBlocks(blockIndex, blockNum, blockDataBytes);
+                        is15693 = true;
+                    }
+                }
+                String uid = "";
+                for (int i = 0; i < tagId.length; i++)
+                {
+                    if (i != 0)
+                    {
+                        uid += ":";
+                    }
+                    uid += Utils.bytesToHexString(new byte[] { tagId[i] });
+                }
+                uid = uid.toUpperCase();
+                // 保存相关信息
+                mUid = uid;
+                mTech = techStr;
 
-                        // YB-上面的直接调用写多块的方法不成功，会返回010f。所以调整方式改为多次调用写单块的方式
-                        int actTotalBlocks = 0; // 实际能写块的数量
-                        // 写入字节数/4 不超过块数时，按实际数据的长度进行写入；超出块数时，进行截断只取块数内的长度的数值
-                        actTotalBlocks = blockDataBytes.length < (blockNum * 4)? (blockDataBytes.length/4+1) : blockNum; //
+                // 模块标签实例化，便于取data信息
+                I15693Utils.getInstance().parse15693Tag(mTag, mExtraId, new ParseListener()
+                {
+                    @Override
+                    public void onParseComplete(String info)
+                    {
 
-                        byte[] onceBlockDataBytes = null;
-                        for (int i = 0; i < actTotalBlocks; i++)
+                        try
                         {
-                            // 处理每块中的4位字节
-                            onceBlockDataBytes = new byte[4];
-                            for (int j = 0; j < 4; j++)
+                            mInfo = info; // 取到info信息
+
+                            boolean isSuccess = true;
+                            // 待写入的数据转换一下bytes
+                            byte[] blockDataBytes = hexStringToBytes(blockData);
+                            if (blockNum == 1)
+                            { // 写单块
+                                isSuccess = I15693Utils.getInstance().writeSingleBlock(blockIndex, blockDataBytes);
+                            } else if (blockNum > 1)
                             {
-                                // 末位需要能正确匹配，不超过原始长度
-                                if (i * 4 + j < blockDataBytes.length)
+                                // 写多块-不成功，于是改。
+                                // isSuccess = I15693Utils.getInstance().writeMultipleBlocks(blockIndex, blockNum, blockDataBytes);
+
+                                // YB-上面的直接调用写多块的方法不成功，会返回010f。所以调整方式改为多次调用写单块的方式
+                                int actTotalBlocks = 0; // 实际能写块的数量
+                                // 写入字节数/4 不超过块数时，按实际数据的长度进行写入；超出块数时，进行截断只取块数内的长度的数值
+                                actTotalBlocks = blockDataBytes.length < (blockNum * 4)? (blockDataBytes.length/4+1) : blockNum; //
+
+                                byte[] onceBlockDataBytes = null;
+                                for (int i = 0; i < actTotalBlocks; i++)
                                 {
-                                    onceBlockDataBytes[j] = blockDataBytes[i * 4 + j];
+                                    // 处理每块中的4位字节
+                                    onceBlockDataBytes = new byte[4];
+                                    for (int j = 0; j < 4; j++)
+                                    {
+                                        // 末位需要能正确匹配，不超过原始长度
+                                        if (i * 4 + j < blockDataBytes.length)
+                                        {
+                                            onceBlockDataBytes[j] = blockDataBytes[i * 4 + j];
+                                        }
+                                    }
+                                    isSuccess = I15693Utils.getInstance().writeSingleBlock(blockIndex + i, onceBlockDataBytes);
+                                    operateStatus = isSuccess;
+                                    if (!isSuccess) // 若写入失败则直接结束返回
+                                        break;
                                 }
                             }
-                            isSuccess = I15693Utils.getInstance().writeSingleBlock(blockIndex + i, onceBlockDataBytes);
-                            if (!isSuccess) // 若写入失败则直接结束返回
-                                break;
+
+                            Log.w("writeNFC", "uid:" + mUid);
+                            Log.w("writeNFC", "isSuccess:" + isSuccess);
+                            operateStatus = isSuccess;
+                            operateMsg = "操作成功";
+                        } catch (Exception e2)
+                        {
+                            operateStatus = false;
+                            operateMsg = e2.toString();
+                        }  finally
+                        {
+                            mIntent.putExtra("tag", mTag);
+                            mIntent.putExtra("uid", mUid);
+                            mIntent.putExtra("tech", mTech);
+                            mIntent.putExtra("info", mInfo);
+                            //                    mIntent.putExtra("data", mData);
+                            mIntent.putExtra("operateStatus", operateStatus);  // 返回状态表明是否写入成功
+                            mIntent.putExtra("operateMsg", operateMsg);
+                            setResult(2, mIntent);
+                            finish(); // 消除这个activity页面
                         }
                     }
+                });
+            } catch (Exception ex)
+            {
+                operateStatus = false;
+                operateMsg = ex.toString();
+                Toast.makeText(this, "字符处理时报错：" + ex.toString(), Toast.LENGTH_SHORT).show();
 
-                    Log.w("writeNFC", "uid:" + mUid);
-                    Log.w("writeNFC", "isSuccess:" + isSuccess);
-                    mIntent.putExtra("tag", mTag);
-                    mIntent.putExtra("uid", mUid);
-                    mIntent.putExtra("tech", mTech);
-                    mIntent.putExtra("info", mInfo);
-                    //                    mIntent.putExtra("data", mData);
-                    mIntent.putExtra("status", isSuccess);  // 返回状态表明是否写入成功
-                    setResult(2, mIntent);
-                    finish(); // 消除这个activity页面
-                }
-            });
+                mIntent.putExtra("tag", mTag);
+                mIntent.putExtra("uid", mUid);
+                mIntent.putExtra("tech", mTech);
+                mIntent.putExtra("info", mInfo);
+                //                    mIntent.putExtra("data", mData);
+                mIntent.putExtra("operateStatus", operateStatus);  // 返回状态表明是否写入成功
+                mIntent.putExtra("operateMsg", operateMsg);
+                setResult(2, mIntent);
+                finish(); // 消除这个activity页面
+            }
         }
-
     }
 
     @Override
