@@ -25,6 +25,7 @@ import java.util.regex.Pattern;
 
 /**
  * Created by yuanbao on 2023/12/21
+ * 读取的Activity，支持读单块、读多块及数据格式的转换，读取成功销毁Activity
  */
 public class NFCReadActivity extends Activity implements ParseListener
 {
@@ -34,10 +35,10 @@ public class NFCReadActivity extends Activity implements ParseListener
     private PendingIntent mPendingIntent;
     private Intent mIntent;
     private Tag mTag;
-    private String mUid; //标签的相关信息
-    private String mTech;
-    private String mInfo;
-    private String mData;
+    private String mUid; // 标签的地址码信息，作为序列号
+    private String mTech; // 不重要：标签的技术标准信息
+    private String mInfo; // 不重要：标签的外部信息
+    private String mData; // 读取到的块内存信息
     private byte[] mExtraId; // 存放读取的标签id，可以放多个
     private int blockIndex = 0; // 需要操作的块位置
     private int blockNum = 1; // 需要操作的块数量

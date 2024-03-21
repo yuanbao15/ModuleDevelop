@@ -11,7 +11,7 @@ import org.json.JSONObject;
 
 /***
  * @ClassName: NFC2023ZblDemo
- * @Description: NFC自定义模块的调用方法类：此支持标签文本的读写，协议为ISO-14443B
+ * @Description: NFC自定义模块的调用方法类：对内存块进行读写操作，协议为ISO-15693
  * @Author: yuanbao
  * @Date: 2023/12/21
  **/
@@ -26,10 +26,13 @@ public class NFC2023ZblDemo extends UZModule
     }
 
     /**
-     * @methodName 读取NFC标签，传参为读单个模块的模块位置
-     * @author yuanbao
-     * @date 2019/3/22
-     */
+     * @MethodName: jsmethod_readNFC
+     * @Description: 读取NFC标签-15693，可读取任意数量的块，不仅限单块，设置读取起始块位置、数据类型为16进制或UTF。返回值中会额外携带UID地址码。
+     * @Param moduleContext
+     * @Return void
+     * @Author: yuanbao
+     * @Date: 2023/12/21
+     **/
     public void jsmethod_readNFC(final UZModuleContext moduleContext)
     {
         mModuleContext = moduleContext;
@@ -77,17 +80,25 @@ public class NFC2023ZblDemo extends UZModule
 
     }
 
+    /**
+     * @MethodName: jsmethod_writeNFC
+     * @Description: 写值到NFC标签-15693，设置写入起始块位置、块数、待写入的数据、数据类型为16进制或UTF
+     * @Param moduleContext
+     * @Return void
+     * @Author: yuanbao
+     * @Date: 2023/12/21
+     **/
     public void jsmethod_writeNFC(final UZModuleContext moduleContext)
     {
         mModuleContext = moduleContext;
         ret = null; // 撤掉销毁，并清空内存，防止第二次读取时被第一次数据干扰
         // 接收到参：起始位置、长度
         String blockStr = moduleContext.optString("blockIndex");
-        String blockNumStr = moduleContext.optString("blockNum");
-        String blockData = moduleContext.optString("blockData");
+        String blockNumStr = moduleContext.optString("blockNum"); // 设置写入的块数。 写入字节数/4 不超过块数时，按实际数据的长度进行写入；超出块数时，进行截断只取块数内的长度的数值
+        String blockData = moduleContext.optString("blockData"); // 待写入的数据
         String dataTypeStr = moduleContext.optString("dataType");
         int blockIndex = blockStr == "" ? 0 : Integer.parseInt(blockStr); // 默认起始位置0
-        int blockNum = blockNumStr == "" ? 1 : Integer.parseInt(blockNumStr); // 默认读块数量1
+        int blockNum = blockNumStr == "" ? 1 : Integer.parseInt(blockNumStr); // 默认写块数量1
         int dataType = dataTypeStr == "" ? 0 : Integer.parseInt(dataTypeStr); // 默认数据类型0为16进制，1为utf8
 
         // --回调结果
@@ -134,7 +145,7 @@ public class NFC2023ZblDemo extends UZModule
      * @Param intent
      * @Return void
      * @Author: yuanbao
-     * @Date: 2019/3/22
+     * @Date: 2023/12/21
      **/
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent intent)
@@ -150,8 +161,8 @@ public class NFC2023ZblDemo extends UZModule
                 String tech = intent.getStringExtra("tech");
                 String info = intent.getStringExtra("info");
                 String data = intent.getStringExtra("data");
-                Boolean operateStatus = intent.getBooleanExtra("operateStatus", false);
-                String operateMsg = intent.getStringExtra("operateMsg");
+                Boolean operateStatus = intent.getBooleanExtra("operateStatus", false); // 记录操作是否成功，布尔值
+                String operateMsg = intent.getStringExtra("operateMsg"); // 操作失败时给出失败信息
                 Log.w("readNFC", "----------uid:" + uid + ",tech:" + tech + ",info:" + info + ",data:" + data
                         + ",operateStatus:" + operateStatus + ",operateMsg:" + operateMsg);
 
@@ -165,7 +176,7 @@ public class NFC2023ZblDemo extends UZModule
                     ret.put("data", data);
                     ret.put("operateStatus", operateStatus);
                     ret.put("operateMsg", operateMsg);
-                    ret.put("readFlag", true); // 作为是否新解析到的标志位
+                    ret.put("readFlag", true); // 作为是否新解析到的标志位-无实际意义，仅用于正确返回时机。
                 } catch (JSONException e)
                 {
                     e.printStackTrace();

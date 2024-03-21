@@ -20,7 +20,8 @@ import com.olc.nfcmanager2.ParseListener;
 import com.olc.nfcmanager2.Utils;
 
 /**
- * Created by yuanbao on 2019/3/21 写也是开启这个activity，识别到tag后写入操作，然后返回写入结果。 这段逻辑未测试。
+ * Created by yuanbao on 2023/12/21
+ * 写入的Activity，优化了写多块的逻辑，通过for循环写单块实现写多块。写入成功销毁Activity
  */
 public class NFCWriteActivity extends Activity implements ParseListener
 {
@@ -30,10 +31,10 @@ public class NFCWriteActivity extends Activity implements ParseListener
     private PendingIntent mPendingIntent;
     private Intent mIntent;
     private Tag mTag;
-    private String mUid; //标签的相关信息
-    private String mTech;
-    private String mInfo;
-    private String mData;
+    private String mUid; // 标签的地址码信息，作为序列号
+    private String mTech; // 不重要：标签的技术标准信息
+    private String mInfo; // 不重要：标签的外部信息
+    private String mData; // 废弃
     private byte[] mExtraId; // 存放读取的标签id，可以放多个
     private int blockIndex = 0; // 需要操作的块位置
     private int blockNum = 1; // 需要操作的块数量
@@ -163,7 +164,7 @@ public class NFCWriteActivity extends Activity implements ParseListener
                                 // YB-上面的直接调用写多块的方法不成功，会返回010f。所以调整方式改为多次调用写单块的方式
                                 int actTotalBlocks = 0; // 实际能写块的数量
                                 // 写入字节数/4 不超过块数时，按实际数据的长度进行写入；超出块数时，进行截断只取块数内的长度的数值
-                                actTotalBlocks = blockDataBytes.length < (blockNum * 4)? (blockDataBytes.length/4+1) : blockNum; //
+                                actTotalBlocks = blockDataBytes.length < (blockNum * 4)? (blockDataBytes.length/4+1) : blockNum;
 
                                 byte[] onceBlockDataBytes = null;
                                 for (int i = 0; i < actTotalBlocks; i++)
