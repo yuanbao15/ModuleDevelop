@@ -505,6 +505,10 @@
 		}
 
 		function showNotification(num){
+			if (num === null || num === undefined)
+			{
+				num = 0;
+			}
 			var params = {
 				title : '设备任务消息',
 				content : '缸盖线xx工位停台，待处理' + num

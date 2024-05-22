@@ -1,6 +1,7 @@
 package com.epichust.notification;
 
 import android.app.Notification;
+import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
@@ -8,6 +9,7 @@ import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.media.RingtoneManager;
+import android.os.Build;
 import android.os.PowerManager;
 import android.util.Log;
 import androidx.core.app.NotificationCompat;
@@ -73,15 +75,46 @@ public class YbNotificationManager {
         PendingIntent pendingIntent = PendingIntent.getActivity(mContext, requestCode, intent, flags); // getActivity跳转到一个activity组件
 
         // 创建通知
-        Notification notification = new NotificationCompat.Builder(mContext).setContentTitle(title)
-                .setContentText(content).setWhen(System.currentTimeMillis()).setSmallIcon(R.mipmap.ic_launcher)
+//        Notification notification = new NotificationCompat.Builder(mContext).setContentTitle(title)
+//                .setContentText(content).setWhen(System.currentTimeMillis()).setSmallIcon(R.mipmap.ic_launcher)
+//                .setLargeIcon(BitmapFactory.decodeResource(mContext.getResources(), R.mipmap.ic_launcher))
+//                .setContentIntent(pendingIntent).setAutoCancel(true) // 设置跳转和自动取消
+//                .setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)) // 设置消息声音
+//                .setVibrate(new long[]{100, 200, 100, 200}) // 设置震动
+//                .setLights(Color.rgb(0,0,255),5000,5000) // 设置呼吸灯
+//                .build();
+//        manager.notify(notifyId++, notification);
+
+
+        // 解决android 8.0以上开启Notification闪退问题
+        Notification.Builder builder = new Notification.Builder(mContext.getApplicationContext())
+                .setContentTitle(title)
+                .setContentText(content).setSmallIcon(R.mipmap.ic_launcher)
                 .setLargeIcon(BitmapFactory.decodeResource(mContext.getResources(), R.mipmap.ic_launcher))
                 .setContentIntent(pendingIntent).setAutoCancel(true) // 设置跳转和自动取消
                 .setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)) // 设置消息声音
                 .setVibrate(new long[]{100, 200, 100, 200}) // 设置震动
                 .setLights(Color.rgb(0,0,255),5000,5000) // 设置呼吸灯
-                .build();
+                .setWhen(System.currentTimeMillis());
+        String CHANNEL_ONE_ID = "Channel One";
+        String CHANNEL_ONE_NAME = "Channel One";
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            // 修改安卓8.1以上系统报错，要求设置通知渠道
+            NotificationChannel notificationChannel = new NotificationChannel(CHANNEL_ONE_ID, CHANNEL_ONE_NAME, NotificationManager.IMPORTANCE_MIN);
+            notificationChannel.enableLights(true);//如果使用中的设备支持通知灯，则说明此通知通道是否应显示灯
+            notificationChannel.setShowBadge(true);//是否显示角标
+            notificationChannel.setLockscreenVisibility(Notification.VISIBILITY_SECRET);
+            manager.createNotificationChannel(notificationChannel);
+            builder.setChannelId(CHANNEL_ONE_ID);
+        }
+        Notification notification = builder.build(); // 获取构建好的Notification
+        notification.defaults = Notification.DEFAULT_SOUND; //设置为默认的声音
+        // 推送通知
+//        startForeground(1, notification);
         manager.notify(notifyId++, notification);
+
+
+
 
         Log.w(TAG, "推送广播通知："+title+"|"+content);
         FileLogUtils.write("推送广播通知："+title+"|"+content);
