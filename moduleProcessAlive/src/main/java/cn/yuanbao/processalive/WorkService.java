@@ -1,11 +1,11 @@
 package cn.yuanbao.processalive;
 
-import android.app.Notification;
-import android.app.Service;
+import android.app.*;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.os.Build;
 import android.os.IBinder;
 import android.os.RemoteException;
 import android.util.Log;
@@ -19,7 +19,7 @@ import androidx.annotation.Nullable;
 public class WorkService extends Service {
     private final static String TAG = "WorkService";
     private String packageName = "";
-    public static final int NOTIFICATION_ID=0x11;
+    public static final int NOTIFICATION_ID = 1;
 
     @Override
     public void onCreate() {
@@ -56,9 +56,32 @@ public class WorkService extends Service {
         }
         packageName = intent.getStringExtra("packageName"); // 记录是哪个应用进程启动的服务
 
-        startForeground(1, new Notification());
+
+        // 解决android 8.0以上开启Notification闪退问题
+        Notification.Builder builder = new Notification.Builder(this.getApplicationContext())
+                .setContentIntent(PendingIntent.getActivity(this, 0, intent, 0)) // 设置PendingIntent
+                .setContentTitle(getResources().getString(R.string.app_name))
+                .setContentText("守护进程...") // 设置上下文内容
+                .setWhen(System.currentTimeMillis()); // 设置该通知发生的时间
+        String CHANNEL_ONE_ID = "Channel One";
+        String CHANNEL_ONE_NAME = "Channel One";
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            //修改安卓8.1以上系统报错
+            NotificationChannel notificationChannel = new NotificationChannel(CHANNEL_ONE_ID, CHANNEL_ONE_NAME, NotificationManager.IMPORTANCE_MIN);
+            notificationChannel.enableLights(false);//如果使用中的设备支持通知灯，则说明此通知通道是否应显示灯
+            notificationChannel.setShowBadge(false);//是否显示角标
+            notificationChannel.setLockscreenVisibility(Notification.VISIBILITY_SECRET);
+            NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+            manager.createNotificationChannel(notificationChannel);
+            builder.setChannelId(CHANNEL_ONE_ID);
+        }
+        Notification notification = builder.build(); // 获取构建好的Notification
+        notification.defaults = Notification.DEFAULT_SOUND; //设置为默认的声音
+        startForeground(NOTIFICATION_ID, notification);
+
         bindService(new Intent(this, DaemonService.class), mServiceConnection, Context.BIND_IMPORTANT);
 
+        // 前期Notification的使用方式，在Android 8.0以上系统会闪退
         /*PendingIntent contentIntent = PendingIntent.getService(this, 0, intent, 0);
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this);
         builder.setTicker("XXX")
@@ -127,6 +150,7 @@ public class WorkService extends Service {
     @Override
     public void onDestroy() {
         super.onDestroy();
+        unbindService(mServiceConnection);
         Log.w(TAG,"WorkService onDestroy");
     }
 

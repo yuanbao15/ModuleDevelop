@@ -41,16 +41,29 @@ public class ProcessManager {
     public void startAlive(Context context) {
         this.mContext = context;
 
-        mLocalIntent = new Intent(mContext, WorkService.class);
+
+
+        // 三个服务
+        mLocalIntent = new Intent(mContext, WorkService.class); // 开启本地进程
+        mRemoteIntent = new Intent(mContext, DaemonService.class);  // 开启守护进程
+        mJobIntent = new Intent(mContext, JobWakeUpService.class); // 定时任务保证服务常驻进程
+
         String packageName =  mContext.getPackageName();
         mLocalIntent.putExtra("packageName", packageName); // 把应用名称传过去给服务
-        mContext.startService(mLocalIntent); // 开启本地进程
-        mRemoteIntent = new Intent(mContext, DaemonService.class);
-        mContext.startService(mRemoteIntent); // 开启守护进程
+        mRemoteIntent.putExtra("packageName", packageName); // 把应用名称传过去给服务
 
-        mJobIntent = new Intent(mContext, JobWakeUpService.class);
-        // 定时任务保证服务常驻进程
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) { // api版本不低于21
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) { // api版本不低于21
+//            mContext.startService(mJobIntent);
+//        }
+
+        // 根据android版本调用对应的开启方式-20240522
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            context.startForegroundService(mLocalIntent);
+            context.startForegroundService(mRemoteIntent);
+            context.startForegroundService(mJobIntent);
+        } else {
+            mContext.startService(mLocalIntent);
+            mContext.startService(mRemoteIntent);
             mContext.startService(mJobIntent);
         }
 
