@@ -32,6 +32,7 @@
 		var moduleUHF_I6310 = null;
 		var moduleUHF_U8 = null;
 		var moduleUHF_50 = null;
+		var moduleUHF_ZHXX_2025 = null;
 
 		apiready = function(){
 	    	uzmoduledemo = api.require('moduleDemo');
@@ -49,6 +50,7 @@
 			moduleUHF_I6310 = api.require('moduleUHF_I6310');
 			// moduleUHF_U8 = api.require('moduleUHF_U8'); // 代码被加密了此模块无法使用
 			// moduleUHF_50 = api.require('moduleUHF_50');
+			moduleUHF_ZHXX_2025 = api.require('moduleUHF_ZHXX_2025');
 	    }
 	    
 		function showAlert(){
@@ -263,7 +265,108 @@
 		}
 
 
-		// moduleNFC_2023模块的读操作，直接读标签的文本信息
+		// moduleUHF_ZHXX_2025模块的读操作，直接读标签的文本信息
+		function readUHF_ZHXX_2025(){
+            // 获取值类型的radio设置的值
+            var dataType = $('input[name="radioNFCZhxx"]:checked').val();
+
+            var params = {
+                dataType: dataType,
+            };
+			moduleUHF_ZHXX_2025.readUHF(params, function(ret, err){
+				if (ret) {
+					console.log("读取完成！" + JSON.stringify(ret));
+					if (ret.flag == "yes") {
+						api.toast({
+							msg: "读取成功：" + JSON.stringify(ret),
+							duration: 3000,
+							location: 'middle'
+						});
+					} else {
+						api.toast({
+							msg: "读取失败！" + JSON.stringify(ret),
+							duration: 3000,
+							location: 'middle'
+						});
+					}
+					$("#nfc_2025_text").val(ret.info);
+				} else {
+					api.toast({
+						msg: "读取失败！" + JSON.stringify(err),
+						duration: 3000,
+						location: 'middle'
+					});
+				}
+			});
+		}
+		// moduleUHF_ZHXX_2025模块的写操作，直接写标签的文本信息
+		function writeUHF_ZHXX_2025(){
+			let text = $("#nfc_2025_text").val();
+            // 获取值类型的radio设置的值
+            var dataType = $('input[name="radioNFCZhxx"]:checked').val();
+
+			var params = {
+				str : text,
+                dataType: dataType,
+			};
+			moduleUHF_ZHXX_2025.writeUHF(params, function(ret, err){
+				if (ret) {
+					console.log("写入完成！" + JSON.stringify(ret));
+					if (ret.flag == "yes") {
+						api.toast({
+							msg: "写入成功：" + JSON.stringify(ret),
+							duration: 3000,
+							location: 'middle'
+						});
+					} else {
+						api.toast({
+							msg: "读取失败！" + JSON.stringify(ret),
+							duration: 3000,
+							location: 'middle'
+						});
+					}
+				} else {
+					api.toast({
+						msg: "写入失败！" + JSON.stringify(err),
+						duration: 3000,
+						location: 'middle'
+					});
+				}
+			});
+		}
+
+        // moduleUHF_ZHXX_2025模块的读取序列号操作
+        function readEPC_ZHXX_2025(){
+            var params = {
+            };
+            moduleUHF_ZHXX_2025.readEPC(params, function(ret, err){
+                if (ret) {
+                    console.log("读取完成！" + JSON.stringify(ret));
+                    if (ret.flag == "yes") {
+                        api.toast({
+                            msg: "读取序列号成功：" + ret.epc,
+                            duration: 3000,
+                            location: 'middle'
+                        });
+                    } else {
+                        api.toast({
+                            msg: "读取失败！" + JSON.stringify(ret),
+                            duration: 3000,
+                            location: 'middle'
+                        });
+                    }
+                } else {
+                    api.toast({
+                        msg: "读取失败！" + JSON.stringify(err),
+                        duration: 3000,
+                        location: 'middle'
+                    });
+                }
+            });
+        }
+
+
+        // moduleNFC_2023模块的读操作，直接读标签的文本信息
 		function readNFC_2023(){
 			let params = {
 			};
@@ -482,9 +585,11 @@
 		}
 
 		function startAlive(){
+			console.log("-------------:点击了保活的开关");
 			var params = {
 			};
 			moduleProcessAlive.startAlive(params, function(ret, err){
+				console.log("-------------:开始保活");
                 if (ret) {
                     var data = ret.data;
                 } else {
@@ -622,6 +727,16 @@
 <body>
     <div id="wrap">
         <div id="main">
+			<div class='itemtitle'>NFC-2025-14443A-重汽项目</div>
+			<div><input type="text" id="nfc_2025_text" placeholder="对NFC芯片进行读写的内容"/><div>
+            <form> 值类型：
+                <input type="radio" name="radioNFCZhxx" value="0" checked> 16进制
+                <input type="radio" name="radioNFCZhxx" value="1"> UTF8
+            </form>
+			<div class="clickbtn" tapmode="active" onclick="readUHF_ZHXX_2025()" >yb-测试高频NFC2025-读字符串</div>
+			<div class="clickbtn" tapmode="active" onclick="writeUHF_ZHXX_2025()" >yb-测试高频NFC2025-写字符串</div>
+            <div class="clickbtn" tapmode="active" onclick="readEPC_ZHXX_2025()" >yb-测试高频NFC2025-获取EPC标签号</div>
+			<br>
 
 			<div class='itemtitle'>23、NFC-朱博龙ISO-15693</div>
 			<div><input type="text" id="nfc_str_zbl" value="0" placeholder="设置读块的起始位"/><div>

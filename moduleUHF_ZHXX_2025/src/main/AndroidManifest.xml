@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.example.uhfdemo">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- 模块中要用到四大组件的话，需要先在这里注册-->
+    <application
+            android:allowBackup="true"
+            android:label="@string/app_name"
+            android:supportsRtl="true">
+        <activity
+                android:name="com.magicrf.uhfreader.MainActivity"
+                android:launchMode="singleTop"/>
+
+    </application>
+
+
+</manifest>

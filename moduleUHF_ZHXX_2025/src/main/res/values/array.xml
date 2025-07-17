@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+      <string-array name="arr_lockType">
+    <item >Open</item>
+    <item >Lock</item>
+    <item >Open forever</item>
+    <item >Lock forever</item>
+    </string-array>  
+   <string-array name="arr_sensitivity">
+    <item >High</item>
+    <item >Mid</item>
+    <item >Low</item>
+    <item >Very Low</item>
+    </string-array>  
+    <string-array name="arr_area">
+    <item >China2</item>
+    <item >USA</item>
+    <item >Europe</item>
+    <item >China1</item>
+    <item >Korea</item>
+    </string-array>  
+    <string-array name="arr_mixerGain">
+    <item >0dB</item>
+    <item >3dB</item>
+    <item >6dB</item>
+    <item >9dB</item>
+    <item >12dB</item> 
+    <item >15dB</item> 
+    <item >16dB</item> 
+    </string-array>
+    <string-array name="arr_IFampGain">
+    <item >12dB</item>
+    <item >18dB</item>
+    <item >21dB</item>
+    <item >24dB</item>
+    <item >27dB</item> 
+    <item >30dB</item> 
+    <item >36dB</item> 
+    <item >40dB</item> 
+    </string-array>
+</resources>

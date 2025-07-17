@@ -199,7 +199,7 @@ public class VoiceDemo extends UZModule {
                     }
                     e.printStackTrace();
                 }finally {
-                    mModuleContext.success(ret, false);
+                    mModuleContext.success(ret, false); // 为false时表示能持续给js回调返回结果，而不只是一次性返回
                 }
 			}
         }
@@ -272,7 +272,7 @@ public class VoiceDemo extends UZModule {
                     e.printStackTrace();
                     Log.w("IAT", "模块调用失败："+e.getMessage());
                 }finally {
-                    mModuleContext.success(ret, false);
+                    mModuleContext.success(ret, false); // 为false时表示能持续给js回调返回结果，而不只是一次性返回
                 }
 
                 if (!manualStopFlag)

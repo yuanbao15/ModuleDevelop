@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="10dp" >
+    
+      <TextView
+        android:id="@+id/textView_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text=""
+         />
+
+    <TextView
+        android:id="@+id/textView_epc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:gravity="center"
+        android:text="barcode"
+        android:textSize="12sp"
+         />
+
+    <TextView
+        android:id="@+id/textView_count"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text=""
+        android:layout_weight="1" />
+    <ImageView 
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:src="@drawable/compose_icon_nextlevel"
+        android:layout_weight="1" />
+
+   
+
+</LinearLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:text="@string/power_dBm" />
+
+    <Button
+        android:id="@+id/button_set_sensitivity"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/textView1"
+        android:text="@string/minus"
+         />
+
+    <EditText
+        android:id="@+id/editText_power"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/button_set_sensitivity"
+        android:layout_toRightOf="@+id/button_set_sensitivity"
+        android:focusable="false"
+        android:ems="5" >
+    </EditText>
+
+    <Button
+        android:id="@+id/button_set_power"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/button_set_sensitivity"
+        android:layout_marginLeft="19dp"
+        android:layout_toRightOf="@+id/editText_power"
+        android:text="@string/plus"
+         />
+
+    <Button
+        android:id="@+id/button_set_work_area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_set_power"
+        android:layout_marginTop="41dp"
+        android:layout_toRightOf="@+id/editText_power"
+        android:text="@string/set" />
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/button_set_work_area"
+        android:layout_marginTop="48dp"
+        android:text="@string/serialPortPath" />
+
+    <Button
+        android:id="@+id/button_set_path"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button_set_work_area"
+        android:layout_alignTop="@+id/editText_port_path"
+        android:text="@string/set" />
+
+    <EditText
+        android:id="@+id/editText_port_path"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/TextView01"
+        android:layout_alignBottom="@+id/TextView01"
+        android:layout_alignRight="@+id/editText_power"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/TextView01"
+        android:ems="5" />
+
+</RelativeLayout>

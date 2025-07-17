@@ -1,0 +1,184 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <LinearLayout 
+        android:id="@+id/linearlayout0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <Button 
+            android:id="@+id/button_connect"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/connect"/>
+        <TextView android:id="@+id/textView_version"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            />
+		<Button
+			android:id="@+id/btn_set"
+			android:layout_width="100dp"
+			android:layout_height="wrap_content"
+			android:layout_gravity="right"
+			android:text="写卡" />
+    </LinearLayout>
+
+	<LinearLayout
+		android:id="@+id/ll_read"
+		android:layout_below="@+id/linearlayout0"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		android:visibility="gone">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+
+
+		<EditText
+			android:id="@+id/readBlockEditText"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"
+			android:layout_marginTop="10dp"
+			android:text=""
+			android:hint="读取的数据"
+			android:textColor="#0051ff" />
+
+		<Button
+			android:id="@+id/readBlockBnt"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"
+			android:layout_marginBottom="10dp"
+			android:text="读块5数据（第1扇区第2块）" />
+
+
+	</LinearLayout>
+
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+
+
+			<EditText
+				android:id="@+id/WriteDataeditText"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="10dp"
+				android:layout_marginTop="40dp"
+				android:text="00112233445566778899AABBCCDDEEFF"
+				android:hint="写入的数据"
+				android:textColor="#0051ff" />
+
+			<Button
+				android:id="@+id/writeBlockBnt"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="10dp"
+				android:layout_marginBottom="10dp"
+				android:text="写块5数据（第1扇区第2块）" />
+
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+<LinearLayout
+	android:id="@+id/ll_inv"
+	android:layout_below="@+id/linearlayout0"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:visibility="visible">
+
+	<LinearLayout 
+	     android:id="@+id/receive_txt"
+     	 android:layout_width="match_parent"
+     	 android:layout_height="wrap_content"
+     	 android:orientation="horizontal"
+     	 android:layout_marginLeft="10dp"
+     	 android:layout_marginTop="10dp"
+	    >
+	  <TextView
+     	 android:layout_width="0dp"
+     	 android:layout_height="wrap_content"
+     	 android:layout_weight="1"
+    	 android:text="@string/id"	
+    	 android:gravity="center"
+    	 android:textSize="18sp" />
+
+	  	  <TextView
+     	 android:layout_width="0dp"
+     	 android:layout_height="wrap_content"
+     	 android:layout_weight="4"
+     	 android:gravity="center"
+    	 android:text="UID"
+    	 android:textSize="18sp" />
+
+	  	  	  <TextView
+	  	  	      android:layout_width="0dp"
+	  	  	      android:layout_height="wrap_content"
+	  	  	      android:layout_weight="1.60"
+	  	  	      android:gravity="center"
+	  	  	      android:text="@string/count"
+	  	  	      android:textSize="18sp" />
+	  	  	  
+	  	  <TextView
+     	 android:layout_width="0dp"
+     	 android:layout_height="wrap_content"
+     	 android:layout_weight="1"
+     	 android:gravity="center"
+    	 android:text=""
+    	 android:textSize="18sp" />
+	</LinearLayout>
+     
+     <ListView 
+         android:id="@+id/listView_data"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginLeft="2dp"
+         android:layout_marginRight="2dp"
+         android:divider="#0a0f0b"
+         android:dividerHeight="1dp"
+         android:background="@drawable/corners_background"
+         ></ListView>
+
+</LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+		android:visibility="gone">
+
+        <Button
+            android:id="@+id/button_start"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="@string/inventory" />
+
+        <Button
+            android:id="@+id/button_clear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/clear" />
+    </LinearLayout>
+
+
+
+</RelativeLayout>

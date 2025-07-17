@@ -71,6 +71,10 @@
 		{
 			"name":"moduleUHF_50",
 			"class":"com.szyd.moduleuhf_50.UHFDemo"
-		}
+		},
+        {
+            "name":"moduleUHF_ZHXX_2025",
+            "class":"com.epichust.rfid.moduleuhf_zhxx.HFDemo"
+        }
 	]
 }
