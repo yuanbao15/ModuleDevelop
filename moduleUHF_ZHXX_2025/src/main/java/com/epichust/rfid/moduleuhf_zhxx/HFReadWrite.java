@@ -399,7 +399,11 @@ public class HFReadWrite
     }
 
     /**
-     * @Description: 开启子线程读卡和写卡，通过串口调用实现
+     * @Description: 读卡和写卡后，此处主要是开启子线程接收串口回调的数据，来进行分析处理。
+     *      具体逻辑：
+     *          该 run() 方法定义了一个线程，持续从输入流 mInputStream 中读取数据，每次读取 64 字节。
+     *          若读取成功且数据长度大于 0，则调用 onDataReceived() 处理数据；
+     *          若发生 IO 异常或线程被中断、标志位 readThreadFlag 为 false，则退出循环并终止线程。
      * @Author: yuanbao
      * @Date: 2025/7/14
      **/
