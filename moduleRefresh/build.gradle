@@ -2,17 +2,14 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 30
-    buildToolsVersion "30.0.2"
 
     defaultConfig {
         minSdkVersion 9
-        versionCode 1
-        versionName "1.0"
     }
 
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    provided files('../app/libs/apiEngine v3.0.0.jar')
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    compileOnly files('../app/libs/apiEngine v3.0.0.jar')
 }

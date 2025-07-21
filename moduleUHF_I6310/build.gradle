@@ -5,8 +5,6 @@ android {
 
     defaultConfig {
         minSdkVersion 15
-        versionCode 1
-        versionName "1.0"
 
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
 
@@ -35,7 +33,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
 
-    provided files('../app/libs/apiEngine v3.0.0.jar')
+    compileOnly files('../app/libs/apiEngine v3.0.0.jar')
     implementation files('libs/xUtils-2.5.5.jar')
     implementation files('libs/jxl.jar')
 //    implementation 'com.alibaba:fastjson:1.2.41' // 使用implementation输出模块包不可用，不知道compile是否可以，暂不需要

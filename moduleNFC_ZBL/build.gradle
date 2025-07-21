@@ -5,8 +5,6 @@ android {
 
     defaultConfig {
         minSdkVersion 16
-        versionCode 1
-        versionName "1.0"
         targetSdkVersion 28
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
 
@@ -21,7 +19,7 @@ android {
     sourceSets {
         main {
             jniLibs.srcDirs = ['libs']
-            res.srcDirs = ['src/main/res', 'src/main/res/values-zh']
+            res.srcDirs = ['src/main/res', 'src/main/res/values']
         }
     }
 

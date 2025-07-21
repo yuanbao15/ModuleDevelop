@@ -6,8 +6,6 @@ android {
     defaultConfig {
         minSdkVersion 16
         targetSdkVersion 25
-        versionCode 1
-        versionName "1.0"
     }
     buildTypes {
         release {
@@ -17,6 +15,6 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    provided files('../app/libs/apiEngine v3.0.0.jar')
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    compileOnly files('../app/libs/apiEngine v3.0.0.jar')
 }

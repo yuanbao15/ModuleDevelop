@@ -3,7 +3,6 @@ apply plugin: 'com.android.application'
 android {
 
     compileSdkVersion Integer.parseInt(project.ANDROID_BUILD_SDK_VERSION)
-    buildToolsVersion project.ANDROID_BUILD_TOOLS_VERSION
 
     defaultConfig {
         applicationId project.ANDROID_BUILD_APP_PKG
@@ -33,6 +32,13 @@ android {
 }
 
 repositories{
+    // 阿里云镜像（国内首选）
+//    maven { url 'https://maven.aliyun.com/repository/public' }
+//    maven { url 'https://maven.aliyun.com/repository/google' }
+//    maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+//    // 中央仓库（备用）
+//    mavenCentral()
+
     flatDir{
         dirs 'libs'
     }
