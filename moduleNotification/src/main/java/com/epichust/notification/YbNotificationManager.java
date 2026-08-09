@@ -1,9 +1,7 @@
 package com.epichust.notification;
 
-import android.app.Notification;
-import android.app.NotificationChannel;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
+import android.app.*;
+import android.app.admin.DevicePolicyManager;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
@@ -11,16 +9,48 @@ import android.graphics.Color;
 import android.media.RingtoneManager;
 import android.os.Build;
 import android.os.PowerManager;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
 import android.util.Log;
 import androidx.core.app.NotificationCompat;
+
+import static java.lang.Thread.sleep;
 
 /**
  * Created by yuanbao on 2019/7/18
  */
 public class YbNotificationManager {
-    private static final String TAG = "TAG";
+    private static final String TAG = "YbNotification";
+    // 默认渠道信息（不同 App 可调用 setChannelInfo() 自定义）
+    private static final String DEFAULT_CHANNEL_ID_PREFIX = "yb-notification";
+    private static final String DEFAULT_CHANNEL_NAME_PREFIX = "YB-任务通知";
+    private String mChannelIdPrefix = DEFAULT_CHANNEL_ID_PREFIX;
+    private String mChannelNamePrefix = DEFAULT_CHANNEL_NAME_PREFIX;
+    // 默认短震动模式：开始→振100ms→停200ms→振100ms→停200ms
+    private static final long[] DEFAULT_VIBRATE_PATTERN = new long[]{100, 200, 100, 200};
     // 弄个单例模式
     private static YbNotificationManager singleton = null;
+
+    // 点亮屏幕+解锁
+    PowerManager mPowerManager; // 电源管理器对象
+    KeyguardManager mKeyguardManager; // 键盘锁管理器对象
+    KeyguardManager.KeyguardLock mKeyguardLock;
+    DevicePolicyManager mDPM; // 获取设备策略服务
+
+    private Context mContext;
+    private int notifyId = 100;
+
+    /**
+     * 通知配置（可选参数，不设则走默认值）
+     */
+    public static class Config {
+        public String channelId;           // 渠道ID前缀，null=使用全局默认。实际会生成 {prefix}-sound / {prefix}-silent 两个渠道
+        public String channelName;         // 渠道名称前缀（用户可见），null=使用全局默认
+        public boolean soundEnabled = true;     // 是否响铃
+        public boolean vibrateEnabled = true;   // 是否震动
+        public int vibrateDurationSec;     // 震动持续秒数，0=使用默认短震动
+    }
+
     private YbNotificationManager() {
     }
     public static synchronized YbNotificationManager getInstance() {
@@ -30,37 +60,89 @@ public class YbNotificationManager {
         return singleton;
     }
 
-    private Context mContext;
-    private int notifyId = 100;
-    PowerManager mPowerManager; // 电源管理器对象
+    /**
+     * 自定义渠道信息（可选，不调用则用默认值）
+     * 不同 App 建议设置不同的渠道前缀，推荐格式："包名.类别"，如 "com.xxx.app.task"
+     *
+     * @param channelIdPrefix   渠道ID前缀，实际生成 {prefix}-sound 和 {prefix}-silent
+     * @param channelNamePrefix 渠道名称前缀，实际显示 "{prefix}" 和 "{prefix}-静音"
+     */
+    public void setChannelInfo(String channelIdPrefix, String channelNamePrefix) {
+        this.mChannelIdPrefix = channelIdPrefix;
+        this.mChannelNamePrefix = channelNamePrefix;
+    }
 
     /**
-     * @method    推送消息通知
-     * @param    
-     * 
-     * @author  yuanbao
-     * @date    2019/7/18 
+     * 根据持续秒数生成间歇式震动模式
+     * 模式：振2000ms → 停2000ms → 振2000ms → ... 循环至目标时长
+     * @param durationSec 持续秒数
+     * @return 震动模式数组，格式 {延迟, 振, 停, 振, 停, ...}
      */
-    public void showNotification(Context context, Class clazz, String title, String content) throws Exception
+    private static long[] buildVibratePattern(int durationSec) {
+        if (durationSec <= 0) {
+            return DEFAULT_VIBRATE_PATTERN;
+        }
+        // 每4秒 = 振2s + 停2s = 2个元素，每个元素 2000ms
+        int elementCount = durationSec / 2;
+        if (elementCount < 2) {
+            elementCount = 2; // 最少保证一次完整的 振2s+停2s
+        }
+        long[] pattern = new long[elementCount + 1]; // +1 给开头的 delay
+        pattern[0] = 0; // 立即开始，无延迟
+        for (int i = 0; i < elementCount; i++) {
+            pattern[i + 1] = 2000;
+        }
+        return pattern;
+    }
+
+    /**
+     * 推送消息通知（兼容旧版调用，使用默认配置）
+     */
+    public void showNotification(Context context, Class clazz, String title, String content) throws Exception {
+        showNotification(context, clazz, title, content, null);
+    }
+
+    /**
+     * @method    推送消息通知（支持自定义配置）
+     *      20260809 升级：兼容 Android 4.1 ~ Android 16+，并适配 Android 8.0+ 的通知渠道，支持铃声和震动
+     * @param     config 可选配置，传 null 则全部使用默认值
+     *
+     * @author  yuanbao
+     * @date    2019/7/18
+     */
+    public void showNotification(Context context, Class clazz, String title, String content, Config config) throws Exception
     {
         this.mContext = context;
         FileLogUtils.init(this.mContext);
 
+        // 配置为 null 则使用默认
+        if (config == null) {
+            config = new Config();
+        }
+        long[] vibratePattern = buildVibratePattern(config.vibrateDurationSec);
 
-        // 先亮屏
-//        mPowerManager = (PowerManager) mContext.getSystemService(Context.POWER_SERVICE);
-//        boolean isScreenOn = mPowerManager.isScreenOn();
-//        if (!isScreenOn) {
-//            // 获取PowerManager.WakeLock对象,后面的参数|表示同时传入两个值,最后的是LogCat里用的Tag
-//            PowerManager.WakeLock mWakeLock = mPowerManager.newWakeLock(
-//                    PowerManager.ACQUIRE_CAUSES_WAKEUP |
-//                            PowerManager.FULL_WAKE_LOCK, this.getClass().getName()); // 后边的tag原来是"bright"
-//            mWakeLock.acquire(10*1000); // 点亮屏幕
-//            mWakeLock.release(); // 释放
-//
-//            // 线程等待片刻，让机器彻底从休眠中退出，然后推通知才有声音和震动
-//            sleep(50);
-//        }
+        // 电源组件初始化
+        mPowerManager = (PowerManager) mContext.getSystemService(Context.POWER_SERVICE);
+        mKeyguardManager = (KeyguardManager)mContext.getSystemService(Context.KEYGUARD_SERVICE);
+        mKeyguardLock = mKeyguardManager.newKeyguardLock("unLock"); // 只能禁用滑动锁，不能操作指纹、密码
+        mDPM = (DevicePolicyManager) mContext.getSystemService(Context.DEVICE_POLICY_SERVICE);
+
+
+
+        // 锁屏时点亮屏幕：但发现亮屏后无法响通知铃声和震动了，未解决。 -废弃，已通过 NotificationChannel 方式解决
+        /*mPowerManager = (PowerManager) mContext.getSystemService(Context.POWER_SERVICE);
+        boolean isScreenOn = mPowerManager.isScreenOn();
+        if (!isScreenOn) {
+            // 获取PowerManager.WakeLock对象,后面的参数|表示同时传入两个值,最后的是LogCat里用的Tag
+            PowerManager.WakeLock mWakeLock = mPowerManager.newWakeLock(
+                    PowerManager.ACQUIRE_CAUSES_WAKEUP |
+                            PowerManager.FULL_WAKE_LOCK, this.getClass().getName()); // 后边的tag原来是"bright"
+            mWakeLock.acquire(10*1000); // 点亮屏幕
+            mWakeLock.release(); // 释放
+
+            // 线程等待片刻，让机器彻底从休眠中退出，然后推通知才有声音和震动 -- 无效
+            sleep(100);
+        }*/
 
 
         // 获取系统通知服务
@@ -74,7 +156,25 @@ public class YbNotificationManager {
         intent.setClass(mContext, clazz);
         PendingIntent pendingIntent = PendingIntent.getActivity(mContext, requestCode, intent, flags); // getActivity跳转到一个activity组件
 
-        // 创建通知
+
+        // ============================================================
+        // 创建通知（兼容 Android 4.1 ~ Android 16+）
+        // ============================================================
+        //
+        // 【铃声 & 震动的适配策略】
+        //
+        // 铃声：
+        //   → 预建两个渠道：有声渠道（带铃声）+ 无声渠道（无铃声）
+        //   → 根据 config.soundEnabled 选择对应渠道
+        //   → MIUI 无法动态改渠道，但可以切换渠道，所以二选一
+        //
+        // 震动：
+        //   → 渠道层面关闭震动（enableVibration=false）
+        //   → 改用系统 Vibrator 服务独立控制，完全绕过通知系统的限制
+        //   → 好处：震动时长、模式可逐条动态控制，不受渠道束缚
+        // ============================================================
+
+        // 构建通知-已废弃的旧方案（NotificationCompat.Builder，8.0+ 无 Channel 会闪退）
 //        Notification notification = new NotificationCompat.Builder(mContext).setContentTitle(title)
 //                .setContentText(content).setWhen(System.currentTimeMillis()).setSmallIcon(R.mipmap.ic_launcher)
 //                .setLargeIcon(BitmapFactory.decodeResource(mContext.getResources(), R.mipmap.ic_launcher))
@@ -86,36 +186,79 @@ public class YbNotificationManager {
 //        manager.notify(notifyId++, notification);
 
 
-        // 解决android 8.0以上开启Notification闪退问题
+        // Android 8.0+：预建有声/无声两个渠道（是否铃声需通过APP通知渠道权限里分别控制两个渠道，是否震动则不走渠道控制），使用时根据配置选择其中一个
+        String selectedChannelId;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            // 渠道ID/名称前缀：优先用单条通知指定的，否则用全局设置的
+            String idPrefix = config.channelId != null ? config.channelId : mChannelIdPrefix;
+            String namePrefix = config.channelName != null ? config.channelName : mChannelNamePrefix;
+            String soundChannelId = idPrefix + "-sound";
+            String silentChannelId = idPrefix + "-silent";
+
+            // 创建有声渠道
+            NotificationChannel soundChannel = new NotificationChannel(soundChannelId, namePrefix, NotificationManager.IMPORTANCE_HIGH);
+            soundChannel.enableLights(true);
+            soundChannel.enableVibration(true);
+            soundChannel.setVibrationPattern(new long[]{0}); // 骗过 MIUI：允许震但震0秒，避免系统默认短震打断 Vibrator
+            android.net.Uri soundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+            if (soundUri != null) {
+                soundChannel.setSound(soundUri, Notification.AUDIO_ATTRIBUTES_DEFAULT);
+            }
+            soundChannel.setShowBadge(true);
+            soundChannel.setLockscreenVisibility(Notification.VISIBILITY_PRIVATE);
+            manager.createNotificationChannel(soundChannel);
+
+            // 创建无声渠道
+            NotificationChannel silentChannel = new NotificationChannel(silentChannelId, namePrefix + "-静音", NotificationManager.IMPORTANCE_HIGH);
+            silentChannel.enableLights(true);
+            silentChannel.enableVibration(true);
+            silentChannel.setVibrationPattern(new long[]{0});
+            silentChannel.setSound(null, null); // 无声
+            silentChannel.setShowBadge(true);
+            silentChannel.setLockscreenVisibility(Notification.VISIBILITY_PRIVATE);
+            manager.createNotificationChannel(silentChannel);
+
+            // 根据配置选择渠道
+            selectedChannelId = config.soundEnabled ? soundChannelId : silentChannelId;
+        } else {
+            // Android < 8.0 无渠道概念，只用 Builder
+            selectedChannelId = null;
+        }
+
+        // 构建通知
         Notification.Builder builder = new Notification.Builder(mContext.getApplicationContext())
                 .setContentTitle(title)
                 .setContentText(content).setSmallIcon(R.mipmap.ic_launcher)
                 .setLargeIcon(BitmapFactory.decodeResource(mContext.getResources(), R.mipmap.ic_launcher))
                 .setContentIntent(pendingIntent).setAutoCancel(true) // 设置跳转和自动取消
-                .setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)) // 设置消息声音
-                .setVibrate(new long[]{100, 200, 100, 200}) // 设置震动
                 .setLights(Color.rgb(0,0,255),5000,5000) // 设置呼吸灯
                 .setWhen(System.currentTimeMillis());
-        String CHANNEL_ONE_ID = "Channel One";
-        String CHANNEL_ONE_NAME = "Channel One";
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            // 修改安卓8.1以上系统报错，要求设置通知渠道
-            NotificationChannel notificationChannel = new NotificationChannel(CHANNEL_ONE_ID, CHANNEL_ONE_NAME, NotificationManager.IMPORTANCE_MIN);
-            notificationChannel.enableLights(true);//如果使用中的设备支持通知灯，则说明此通知通道是否应显示灯
-            notificationChannel.setShowBadge(true);//是否显示角标
-            notificationChannel.setLockscreenVisibility(Notification.VISIBILITY_SECRET);
-            manager.createNotificationChannel(notificationChannel);
-            builder.setChannelId(CHANNEL_ONE_ID);
+            builder.setChannelId(selectedChannelId);
+        } else {
+            // Android < 8.0：Builder 直接控音震
+            builder.setSound(config.soundEnabled
+                    ? RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION) : null);
+            builder.setVibrate(config.vibrateEnabled ? vibratePattern : null);
         }
         Notification notification = builder.build(); // 获取构建好的Notification
-        notification.defaults = Notification.DEFAULT_SOUND; //设置为默认的声音
-        // 推送通知
-//        startForeground(1, notification);
         manager.notify(notifyId++, notification);
 
+        // 震动：使用 Vibrator 服务独立控制，不依赖通知渠道
+        if (config.vibrateEnabled) {
+            Vibrator vibrator = (Vibrator) mContext.getSystemService(Context.VIBRATOR_SERVICE);
+            if (vibrator != null) {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                    vibrator.vibrate(VibrationEffect.createWaveform(vibratePattern, -1));
+                } else {
+                    vibrator.vibrate(vibratePattern, -1);
+                }
+            }
+        }
 
-
-
+        NotificationChannel created = manager.getNotificationChannel(selectedChannelId);
+        Log.w(TAG, "渠道重要性: " + created.getImportance() + " 震动: " + created.shouldVibrate());
         Log.w(TAG, "推送广播通知："+title+"|"+content);
         FileLogUtils.write("推送广播通知："+title+"|"+content);
 
@@ -132,5 +275,6 @@ public class YbNotificationManager {
         it.putExtra("title", title);
         it.putExtra("content", content);
         this.mContext.startActivity(it);*/
+
     }
 }

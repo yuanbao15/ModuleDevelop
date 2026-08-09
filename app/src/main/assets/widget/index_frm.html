@@ -736,9 +736,17 @@
 			{
 				num = 0;
 			}
+			// 读取用户开关设置
+			var soundOn = document.getElementById('chk_sound').checked;
+			var vibrateOn = document.getElementById('chk_vibrate').checked;
+			var vibrateDuration = parseInt(document.getElementById('txt_vibrate_duration').value) || 0;
+
 			var params = {
 				title : '设备任务消息',
-				content : '缸盖线xx工位停台，待处理' + num
+				content : '缸盖线xx工位停台，待处理' + num,
+				soundEnabled : soundOn,
+				vibrateEnabled : vibrateOn,
+				vibrateDuration : vibrateDuration
 			};
 			moduleNotification.showNotification(params, function(ret, err){
                 if (ret) {
@@ -928,8 +936,13 @@
 			<br>
 
 			<div class='itemtitle'>16、showNotification_yb</div>
-				<div class="clickbtn" tapmode="active" onclick="showNotification()" >yb-推送消息到通知栏</div>
-				<div class="clickbtn" tapmode="active" onclick="showNotification2()" >yb-推送消息到通知栏-延迟10秒</div>
+				<div style="padding:5px;">
+					<label><input type="checkbox" id="chk_sound" checked /> 铃声</label>
+					<label><input type="checkbox" id="chk_vibrate" checked /> 震动</label>
+					<label>震动时长(秒):<input type="number" id="txt_vibrate_duration" value="0" min="0" max="120" style="width:50px;" /></label>
+				</div>
+				<div class="clickbtn" tapmode="active" onclick="showNotification()" >yb-发送通知</div>
+				<div class="clickbtn" tapmode="active" onclick="showNotification2()" >yb-发送通知-延迟10秒</div>
             <div class='itemtitle'>15、startAlive_yb</div>
                 <div class="clickbtn" tapmode="active" onclick="startAlive()" >yb-开启线程常驻</div>
                 <div class="clickbtn" tapmode="active" onclick="stopAlive()" >停止-未成功</div>

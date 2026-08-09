@@ -21,16 +21,31 @@ public class NotificationDemo extends UZModule {
         String titleStr = moduleContext.optString("title");
         String contentStr = moduleContext.optString("content");
 
+        // 可选参数：渠道、铃声开关、震动开关、震动时长
+        String channelId = moduleContext.optString("channelId");
+        String channelName = moduleContext.optString("channelName");
+        boolean soundEnabled = moduleContext.optBoolean("soundEnabled", true);
+        boolean vibrateEnabled = moduleContext.optBoolean("vibrateEnabled", true);
+        int vibrateDuration = moduleContext.optInt("vibrateDuration", 0);
+
         YbNotificationManager ybNotificationManager = YbNotificationManager.getInstance();
         String title = titleStr!=null? titleStr:"元宝哥哥";
         String content = contentStr!=null? contentStr:"元宝哥哥爆红网络";
+
+        // 组装配置
+        YbNotificationManager.Config config = new YbNotificationManager.Config();
+        config.channelId = channelId != null && channelId.length() > 0 ? channelId : null;
+        config.channelName = channelName != null && channelName.length() > 0 ? channelName : null;
+        config.soundEnabled = soundEnabled;
+        config.vibrateEnabled = vibrateEnabled;
+        config.vibrateDurationSec = vibrateDuration;
 
         // --回调结果
         JSONObject ret = new JSONObject();
         try {
             // UZModule.getContext()：获取当前模块运行所在的Activity的上下文
             // 第二个参为本activity的class，用于跳转打开这个activity
-            ybNotificationManager.showNotification(mModuleContext.getContext(), getContext().getClass(), title, content);
+            ybNotificationManager.showNotification(mModuleContext.getContext(), getContext().getClass(), title, content, config);
 
             ret.put("status", true);
         } catch (Exception e) {
