@@ -4,8 +4,11 @@ import android.app.*;
 import android.app.admin.DevicePolicyManager;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
+import android.hardware.camera2.CameraCharacteristics;
+import android.hardware.camera2.CameraManager;
 import android.media.RingtoneManager;
 import android.os.Build;
 import android.os.PowerManager;
@@ -48,7 +51,9 @@ public class YbNotificationManager {
         public String channelName;         // 渠道名称前缀（用户可见），null=使用全局默认
         public boolean soundEnabled = true;     // 是否响铃
         public boolean vibrateEnabled = true;   // 是否震动
-        public int vibrateDurationSec;     // 震动持续秒数，0=使用默认短震动
+        /** 闪光灯闪烁模式：0=不闪（默认），1=闪两下停2s再闪两下结束，2=闪两下停2s循环持续60s */
+        public int flashMode = 0;
+        public int vibrateDurationSec;     // 震动持续秒数，0=使用默认短震动；同时复用为闪光灯模式2的总时长（秒）
     }
 
     private YbNotificationManager() {
@@ -276,5 +281,153 @@ public class YbNotificationManager {
         it.putExtra("content", content);
         this.mContext.startActivity(it);*/
 
+        // 20260815 推送通知时闪光灯按模式闪烁；模式2的总时长复用 vibrateDurationSec 参数控制
+        flashByMode(mContext, config.flashMode, config.vibrateDurationSec);
+    }
+
+    /** 当前正在执行的闪光灯线程（新通知到来时打断旧的，避免叠加错乱） */
+    private static volatile Thread sFlashThread = null;
+
+    /**
+     * 终止正在进行的震动和闪光灯循环闪烁（手动停止接口）
+     * <p>震动：直接调用 Vibrator.cancel() 停止循环震动
+     * <p>闪光灯：打断当前闪烁线程，并立即关灯
+     * @param context 上下文
+     */
+    public void closeVibrateFlash(Context context) {
+        // 1. 停止循环震动
+        try {
+            Vibrator vibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
+            if (vibrator != null) {
+                vibrator.cancel();
+                Log.w(TAG, "已手动停止震动");
+            }
+        } catch (Exception e) {
+            Log.w(TAG, "停止震动失败: " + e.getMessage());
+        }
+
+        // 2. 打断闪光灯闪烁线程
+        Thread flashThread = sFlashThread;
+        if (flashThread != null && flashThread.isAlive()) {
+            flashThread.interrupt();
+        }
+
+        // 3. 立即关灯，防止线程响应 interrupt 前灯还亮着
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            try {
+                CameraManager cameraManager = (CameraManager) context.getSystemService(Context.CAMERA_SERVICE);
+                if (cameraManager != null) {
+                    for (String cameraId : cameraManager.getCameraIdList()) {
+                        cameraManager.setTorchMode(cameraId, false);
+                    }
+                }
+            } catch (Exception e) {
+                Log.w(TAG, "关闭闪光灯失败: " + e.getMessage());
+            }
+        }
+        FileLogUtils.init(context);
+        FileLogUtils.write("已手动终止震动与闪光灯");
+    }
+
+    /**
+     * 闪光灯按模式闪烁，在后台线程中执行，不阻塞主线程
+     * <p>通过 CameraManager.setTorchMode 控制闪光灯，需要 Android 5.0+ 及 CAMERA 权限
+     * @param mode        0=不闪（默认），1=闪两下停2s再闪两下结束，2=闪两下停2s循环闪烁
+     * @param durationSec 模式2的总时长（秒），复用震动时长参数；&lt;=0 时默认 60s
+     */
+    private void flashByMode(final Context context, final int mode, final int durationSec) {
+        if (mode <= 0) {
+            return; // 0=不开闪光灯
+        }
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
+            Log.w(TAG, "Android 5.0 以下不支持闪光灯闪烁");
+            FileLogUtils.write("闪光灯闪烁失败：Android 5.0 以下不支持");
+            return;
+        }
+        // Android 6.0+ 需要运行时 CAMERA 权限
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M
+                && context.checkSelfPermission(android.Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+            Log.w(TAG, "无 CAMERA 权限，跳过闪光灯闪烁");
+            FileLogUtils.write("闪光灯闪烁失败：无 CAMERA 权限，请在系统设置中授予相机权限");
+            return;
+        }
+        final Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                CameraManager cameraManager = null;
+                String torchCameraId = null;
+                try {
+                    cameraManager = (CameraManager) context.getSystemService(Context.CAMERA_SERVICE);
+                    if (cameraManager == null) {
+                        FileLogUtils.write("闪光灯闪烁失败：CameraManager 为 null");
+                        return;
+                    }
+                    // 找带有闪光灯的摄像头
+                    for (String cameraId : cameraManager.getCameraIdList()) {
+                        CameraCharacteristics chars = cameraManager.getCameraCharacteristics(cameraId);
+                        Boolean flashAvailable = chars.get(CameraCharacteristics.FLASH_INFO_AVAILABLE);
+                        if (flashAvailable != null && flashAvailable) {
+                            torchCameraId = cameraId;
+                            break;
+                        }
+                    }
+                    if (torchCameraId == null) {
+                        Log.w(TAG, "设备无闪光灯");
+                        FileLogUtils.write("闪光灯闪烁失败：设备无闪光灯");
+                        return;
+                    }
+
+                    long startTime = System.currentTimeMillis();
+                    if (mode == 1) {
+                        // 模式1：闪两下 → 停2s → 闪两下 → 结束
+                        flashTwiceOnce(cameraManager, torchCameraId);
+                        sleep(2000);
+                        flashTwiceOnce(cameraManager, torchCameraId);
+                    } else {
+                        // 模式2：闪两下 → 停2s，循环闪烁；总时长由 durationSec 控制，默认60s
+                        long totalMillis = (durationSec > 0) ? durationSec * 1000L : 60_000L;
+                        while (System.currentTimeMillis() - startTime < totalMillis) {
+                            flashTwiceOnce(cameraManager, torchCameraId);
+                            sleep(2000);
+                        }
+                    }
+                    FileLogUtils.write("闪光灯闪烁完成，mode=" + mode);
+                } catch (InterruptedException e) {
+                    // 被新通知打断，属正常现象
+                    Log.i(TAG, "闪光灯闪烁被新通知打断");
+                } catch (Exception e) {
+                    Log.w(TAG, "闪光灯闪烁失败: " + e.getMessage());
+                    FileLogUtils.write("闪光灯闪烁失败：" + e.toString());
+                } finally {
+                    // 无论哪种方式结束，都要确保关灯
+                    if (cameraManager != null && torchCameraId != null) {
+                        try {
+                            cameraManager.setTorchMode(torchCameraId, false);
+                        } catch (Exception ignored) {
+                        }
+                    }
+                    sFlashThread = null;
+                }
+            }
+        }, "yb-notification-flash");
+        // 若上一次闪烁还在进行，先打断它，避免两个线程同时控制闪光灯
+        Thread oldThread = sFlashThread;
+        if (oldThread != null && oldThread.isAlive()) {
+            oldThread.interrupt();
+        }
+        sFlashThread = thread;
+        thread.start();
+    }
+
+    /**
+     * 闪烁两下：开200ms → 关200ms → 开200ms → 关200ms
+     */
+    private void flashTwiceOnce(CameraManager cameraManager, String torchCameraId) throws Exception {
+        for (int i = 0; i < 2; i++) {
+            cameraManager.setTorchMode(torchCameraId, true);
+            sleep(200);
+            cameraManager.setTorchMode(torchCameraId, false);
+            sleep(200);
+        }
     }
 }

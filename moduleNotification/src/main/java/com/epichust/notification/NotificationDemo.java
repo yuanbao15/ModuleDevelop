@@ -26,6 +26,8 @@ public class NotificationDemo extends UZModule {
         String channelName = moduleContext.optString("channelName");
         boolean soundEnabled = moduleContext.optBoolean("soundEnabled", true);
         boolean vibrateEnabled = moduleContext.optBoolean("vibrateEnabled", true);
+        // 闪光灯模式：0=不闪（默认），1=闪两下停2s再闪两下结束，2=闪两下停2s循环持续60s
+        int flashMode = moduleContext.optInt("flashMode", 0);
         int vibrateDuration = moduleContext.optInt("vibrateDuration", 0);
 
         YbNotificationManager ybNotificationManager = YbNotificationManager.getInstance();
@@ -38,6 +40,7 @@ public class NotificationDemo extends UZModule {
         config.channelName = channelName != null && channelName.length() > 0 ? channelName : null;
         config.soundEnabled = soundEnabled;
         config.vibrateEnabled = vibrateEnabled;
+        config.flashMode = flashMode;
         config.vibrateDurationSec = vibrateDuration;
 
         // --回调结果
@@ -47,6 +50,29 @@ public class NotificationDemo extends UZModule {
             // 第二个参为本activity的class，用于跳转打开这个activity
             ybNotificationManager.showNotification(mModuleContext.getContext(), getContext().getClass(), title, content, config);
 
+            ret.put("status", true);
+        } catch (Exception e) {
+            try {
+                ret.put("status", false);
+                ret.put("errmsg", "模块调用失败："+e.getMessage());
+            }catch (Exception e2){
+            }
+            e.printStackTrace();
+        }
+        moduleContext.success(ret, true);
+    }
+
+    /**
+     * 终止正在循环的震动和闪光灯闪烁
+     * <p>若之前推送的通知还在循环震动或循环闪烁闪光灯（如模式2未到时长），调用此方法立即停止
+     * <p>调用方式：moduleNotification.closeVibrateFlash(callback)
+     */
+    public void jsmethod_closeVibrateFlash(UZModuleContext moduleContext){
+        mModuleContext = moduleContext;
+
+        JSONObject ret = new JSONObject();
+        try {
+            YbNotificationManager.getInstance().closeVibrateFlash(getContext());
             ret.put("status", true);
         } catch (Exception e) {
             try {

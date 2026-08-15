@@ -739,6 +739,7 @@
 			// 读取用户开关设置
 			var soundOn = document.getElementById('chk_sound').checked;
 			var vibrateOn = document.getElementById('chk_vibrate').checked;
+			var flashMode = parseInt(document.getElementById('sel_flash_mode').value) || 0;
 			var vibrateDuration = parseInt(document.getElementById('txt_vibrate_duration').value) || 0;
 
 			var params = {
@@ -746,8 +747,35 @@
 				content : '缸盖线xx工位停台，待处理' + num,
 				soundEnabled : soundOn,
 				vibrateEnabled : vibrateOn,
+				flashMode : flashMode,
 				vibrateDuration : vibrateDuration
 			};
+			// 选择闪光灯模式时，先申请相机权限（Android 6.0+ 运行时权限），否则闪光灯无法点亮
+			if (flashMode > 0) {
+				api.requestPermission({
+					list: ['camera'],
+					code: 100
+				}, function(ret, err){
+					var granted = false;
+					if (ret && ret.list) {
+						for (var i = 0; i < ret.list.length; i++) {
+							if (ret.list[i].granted) {
+								granted = true;
+							}
+						}
+					}
+					if (!granted) {
+						api.toast({msg: '未授予相机权限，闪光灯将无法闪烁'});
+						return;
+					}
+					sendNotification(params);
+				});
+			} else {
+				sendNotification(params);
+			}
+		}
+
+		function sendNotification(params){
 			moduleNotification.showNotification(params, function(ret, err){
                 if (ret) {
                     var status = ret.status;
@@ -755,6 +783,17 @@
                     alert(JSON.stringify(err));
                 }
             });
+		}
+
+		// 停止正在循环的震动和闪光灯闪烁
+		function closeVibrateFlash(){
+			moduleNotification.closeVibrateFlash({}, function(ret, err){
+				if (ret && ret.status) {
+					api.toast({msg: '已停止震动/闪光灯'});
+				} else {
+					alert(JSON.stringify(err));
+				}
+			});
 		}
 
 		// 延迟执行
@@ -939,10 +978,16 @@
 				<div style="padding:5px;">
 					<label><input type="checkbox" id="chk_sound" checked /> 铃声</label>
 					<label><input type="checkbox" id="chk_vibrate" checked /> 震动</label>
-					<label>震动时长(秒):<input type="number" id="txt_vibrate_duration" value="0" min="0" max="120" style="width:50px;" /></label>
+					<label>闪光灯模式:<select id="sel_flash_mode">
+						<option value="0" selected>0-不闪烁</option>
+						<option value="1">1-闪两下停2s闪两次</option>
+						<option value="2">2-闪两下停2s循环</option>
+					</select></label>
+					<label>震动/闪光时长(秒):<input type="number" id="txt_vibrate_duration" value="0" min="0" max="120" style="width:50px;" />&nbsp;模式2循环时长，0=默认60s</label>
 				</div>
 				<div class="clickbtn" tapmode="active" onclick="showNotification()" >yb-发送通知</div>
 				<div class="clickbtn" tapmode="active" onclick="showNotification2()" >yb-发送通知-延迟10秒</div>
+				<div class="clickbtn" tapmode="active" onclick="closeVibrateFlash()" >yb-停止震动/闪光灯</div>
             <div class='itemtitle'>15、startAlive_yb</div>
                 <div class="clickbtn" tapmode="active" onclick="startAlive()" >yb-开启线程常驻</div>
                 <div class="clickbtn" tapmode="active" onclick="stopAlive()" >停止-未成功</div>
