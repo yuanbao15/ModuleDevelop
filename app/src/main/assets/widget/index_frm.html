@@ -27,6 +27,7 @@
 		var moduleNFC_ZBL = null;
 		var moduleIflyVoice = null;
 		var moduleProcessAlive = null;
+		var moduleProcessAlive_2026 = null;
 		var moduleNotification = null;
 		var moduleUHF18000_6C = null;
 		var moduleUHF_I6310 = null;
@@ -45,6 +46,7 @@
 			moduleNFC_ZBL = api.require('moduleNFC_ZBL');
 			moduleIflyVoice = api.require('moduleIflyVoice');
 			moduleProcessAlive = api.require('moduleProcessAlive');
+			moduleProcessAlive_2026 = api.require('moduleProcessAlive_2026');
 			moduleNotification = api.require('moduleNotification');
 			moduleUHF18000_6C = api.require('moduleUHF18000_6C');
 			moduleUHF_I6310 = api.require('moduleUHF_I6310');
@@ -730,6 +732,37 @@
                 }
             });
 		}
+		// ========== moduleProcessAlive_2026 前台服务常驻方案(8.0~16.0) ==========
+		function startAlive2026(){
+			// 兜底：apiready 时 require 若失败，点击时重试
+			if(!moduleProcessAlive_2026){ moduleProcessAlive_2026 = api.require('moduleProcessAlive_2026'); }
+			if(!moduleProcessAlive_2026){ api.toast({msg: '模块未就绪，请稍后重试'}); return; }
+			// Android 13+ 前台服务常驻通知需要通知权限，先申请再开启
+			api.requestPermission({
+				list: ['notification'],
+				code: 200
+			}, function(ret, err){
+				moduleProcessAlive_2026.startAlive({}, function(ret, err){
+					if (ret) {
+						api.toast({msg: '已开启进程常驻'});
+					} else {
+						alert(JSON.stringify(err));
+					}
+				});
+			});
+		}
+		function stopAlive2026(){
+			// 兜底：apiready 时 require 若失败，点击时重试
+			if(!moduleProcessAlive_2026){ moduleProcessAlive_2026 = api.require('moduleProcessAlive_2026'); }
+			if(!moduleProcessAlive_2026){ api.toast({msg: '模块未就绪，请稍后重试'}); return; }
+			moduleProcessAlive_2026.stopAlive({}, function(ret, err){
+				if (ret) {
+					api.toast({msg: '已停止进程常驻'});
+				} else {
+					alert(JSON.stringify(err));
+				}
+			});
+		}
 
 		function showNotification(num){
 			if (num === null || num === undefined)
@@ -988,9 +1021,12 @@
 				<div class="clickbtn" tapmode="active" onclick="showNotification()" >yb-发送通知</div>
 				<div class="clickbtn" tapmode="active" onclick="showNotification2()" >yb-发送通知-延迟10秒</div>
 				<div class="clickbtn" tapmode="active" onclick="closeVibrateFlash()" >yb-停止震动/闪光灯</div>
-            <div class='itemtitle'>15、startAlive_yb</div>
+            <div class='itemtitle'>15、startAlive_yb（已作废）</div>
                 <div class="clickbtn" tapmode="active" onclick="startAlive()" >yb-开启线程常驻</div>
                 <div class="clickbtn" tapmode="active" onclick="stopAlive()" >停止-未成功</div>
+            <div class='itemtitle'>15.1、moduleProcessAlive_2026（8.0~16.0 稳定版）</div>
+                <div class="clickbtn" tapmode="active" onclick="startAlive2026()" >2026-开启进程常驻</div>
+                <div class="clickbtn" tapmode="active" onclick="stopAlive2026()" >2026-停止进程常驻</div>
 			<div class='itemtitle'>14、startOneshot_yb</div>
 				<div><input type="text" id="voice_str"/><div>
 				<div class="clickbtn" tapmode="active" onclick="startOneshot()" >yb-测试语音唤醒+识别</div>

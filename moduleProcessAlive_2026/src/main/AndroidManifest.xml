@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 前台服务权限（Android 8.0+ 启动前台服务必需） -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <!-- 常驻型前台服务类型 connectedDevice（API 30 引入，Android 14+ 强制类型声明） -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE" />
+    <!-- 通知权限（Android 13+ 运行时申请，用于前台服务常驻通知） -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <!-- 电池优化白名单跳转 -->
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+
+    <application>
+        <service
+            android:name=".WorkService"
+            android:exported="false"
+            android:foregroundServiceType="connectedDevice" />
+    </application>
+</manifest>

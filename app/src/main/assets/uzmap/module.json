@@ -75,6 +75,10 @@
         {
             "name":"moduleUHF_ZHXX_2025",
             "class":"com.epichust.rfid.moduleuhf_zhxx.HFDemo"
+        },
+        {
+            "name":"moduleProcessAlive_2026",
+            "class":"com.epichust.processalive2026.ProcessAliveDemo"
         }
 	]
 }
