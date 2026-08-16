@@ -6,7 +6,10 @@ import com.uzmap.pkg.uzcore.uzmodule.UZModuleContext;
 import org.json.JSONObject;
 
 /**
- * Created by yuanbao on 2019/7/18
+ * 消息通知模块入口（UZModule），接收 JS 调用并委托 YbNotificationManager 发送通知
+ *   （最早版本 2019/7/18，后经多次迭代升级）
+ * @author yuanbao
+ * @date 2026-08-16
  */
 public class NotificationDemo extends UZModule {
     public static UZModuleContext mModuleContext;

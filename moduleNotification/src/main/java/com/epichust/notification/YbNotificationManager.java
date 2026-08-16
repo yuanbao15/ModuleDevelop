@@ -20,7 +20,11 @@ import androidx.core.app.NotificationCompat;
 import static java.lang.Thread.sleep;
 
 /**
- * Created by yuanbao on 2019/7/18
+ * 通知管理器（单例）：兼容 Android 4.1 ~ Android 16+，
+ * 支持通知渠道、铃声/震动开关、动态震动时长、闪光灯三档闪烁模式、手动停止震动/闪烁
+ *      （最早版本 2019/7/18，后经多次迭代升级）
+ * @author yuanbao
+ * @date 2026-08-16
  */
 public class YbNotificationManager {
     private static final String TAG = "YbNotification";

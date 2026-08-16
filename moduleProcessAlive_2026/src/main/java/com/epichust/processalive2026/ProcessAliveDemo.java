@@ -11,6 +11,9 @@ import org.json.JSONObject;
  * 进程守护模块入口（2026 版）
  * 方法名与旧模块 moduleProcessAlive 保持一致：
  * jsmethod_startAlive / jsmethod_stopAlive
+ *
+ * @author yuanbao
+ * @date 2026-08-16
  */
 public class ProcessAliveDemo extends UZModule {
     public static UZModuleContext mModuleContext;

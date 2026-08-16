@@ -17,6 +17,9 @@ import android.util.Log;
  * - Android 8.0+：由 startForegroundService 启动，onStartCommand 内必须尽快 startForeground，否则崩溃
  * - START_STICKY：被系统杀死后自动重建，此时 intent==null，同样要 startForeground 兜底
  * - 停止开关：ProcessManager.sStopFlag == true 时自毁，返回 START_NOT_STICKY，杜绝复活
+ *
+ * @author yuanbao
+ * @date 2026-08-16
  */
 public class WorkService extends Service {
     private static final String TAG = "WorkService2026";

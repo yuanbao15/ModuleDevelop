@@ -11,6 +11,9 @@ import android.provider.Settings;
  * 单前台服务方案：常驻 + 被杀自动恢复(START_STICKY) + 干净停止(全局停止开关)
  * 兼容 Android 8.0 (API 26) ~ Android 16 (API 36)
  * 已砍掉旧方案的双进程 Binder 守护与 JobScheduler 轮询
+ *
+ * @author yuanbao
+ * @date 2026-08-16
  */
 public class ProcessManager {
     private static ProcessManager singleton = null;
